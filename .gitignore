@@ -3,13 +3,6 @@
 # web application files
 /web-app/WEB-INF/classes
 
-# default HSQL database files for production mode
-/prodDb.*
-
-# general HSQL database files
-*Db.properties
-*Db.script
-
 # logs
 /stacktrace.log
 /test/reports
@@ -28,3 +21,5 @@
 
 # "temporary" build files
 /target
+
+/grails-app/conf/secret*.properties
