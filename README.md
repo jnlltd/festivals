@@ -115,7 +115,7 @@ Errors that occur within the application are recorded by [Airbake](https://airbr
 add the following configuration
 
 ````
-grails.plugins.airbrake.apiKey=8a01082544f249c44601e955e96efb8e
+grails.plugins.airbrake.apiKey=changeme
 ````
 
 To disable Airbrake, simply uninstall the [Grails Airbrake plugin](https://github.com/domurtag/festivals/blob/master/grails-app/conf/BuildConfig.groovy).
