@@ -6,7 +6,7 @@ the application include:
 * Maps that show festivals by location
 * Artist alerts - registered users can subscribe to an artist and will receive an email when that artist is added to
 a festival's lineup
-* Festival alerts - registered users can subscribe to an artist and will receive an email when that festival's lineup
+* Festival alerts - registered users can subscribe to a festival and will receive an email when that festival's lineup
 changes
 * Registered users can rate and review festivals
 * Reminders - registered users can request to receive a reminder about a festival by email up to 10 days before it starts
