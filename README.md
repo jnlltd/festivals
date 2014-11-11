@@ -4,10 +4,10 @@ A [Grails website](http://festivals.ie) that provides information about festival
 
 # Run Locally
 If you wish to run the application locally, you must have access to a MySQL server and [the 
-relevant Grails version](https://github.com/domurtag/festivals/blob/master/application.properties).
+relevant Grails version](https://github.com/domurtag/festivals/blob/master/application.properties) installed.
 
 ## Secret Configuration
-Additionally, a config file containing various sensitive parameters should be added to the 
+After cloning this repository, a config file containing various sensitive parameters should be added to the 
 [conf](https://github.com/domurtag/festivals/tree/master/grails-app/conf) directory, before the application is built.
 The name of this file must be `secret.properties`. You can provide environment-specific overrides for these settings by
 adding a file named for the environment. For example, to override some/all of the settings in `secret.properties` for
