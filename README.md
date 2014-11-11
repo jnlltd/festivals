@@ -1,4 +1,4 @@
-# festivals.ie
+## festivals.ie
 A responsive [Grails website](http://festivals.ie) that provides information about festivals in Ireland and beyond. Features of
 the application include:
 
@@ -18,8 +18,7 @@ add festivals to the application, but they will not appear until approved by an 
 * In addition to artist and festival data entered manually by users, content is also automatically imported from sources
 such as last.fm, Skiddle, Eventbrite, Muzu
 
-
-# Run Locally
+## Prerequisites
 If you wish to run the application locally, you must have access to a MySQL server and [the 
 relevant Grails version](https://github.com/domurtag/festivals/blob/master/application.properties) installed.
 
@@ -30,7 +29,7 @@ The name of this file must be `secret.properties`. You can provide environment-s
 adding a file named for the environment. For example, to override some/all of the settings in `secret.properties` for
 the production environment add these settings to a file named `secret-PRODUCTION.properties` in the same directory. 
 
-The contents of this configuration file are described in the following subsections
+The contents of the secret configuration file(s) are described in the following subsections
 
 ### Mandatory Secret Configuration
 
@@ -146,6 +145,34 @@ via the setting below
 systemWidePasswordSalt=choose-any-random-string-but-dont-ever-change-it
 ````
 
+## Database Configuration
+
+When the application is run in the development environment, it is assumed that the MySQL server is running on localhost,
+the name of the schema is festival. To change these defaults update `dataSource.url` in [DataSource.groovy](https://github.com/domurtag/festivals/blob/master/grails-app/conf/DataSource.groovy).
+
+The database tables will be automatically created by the application on startup, but the schema itself
+must already exist beforehand. Run `show databases` from the MySQL console to verify the existence of a schema with
+the correct name.
+
+To fully support the most esoteric Unicode characters, MySQL server should be changed to [use utf8mb4 encoding](https://mathiasbynens.be/notes/mysql-utf8mb4) 
+by adding the following to the MySQL configuration file
+
+````
+[client]
+default-character-set = utf8mb4
+
+[mysql]
+default-character-set = utf8mb4
+
+[mysqld]
+character-set-client-handshake = FALSE
+character-set-server = utf8mb4
+collation-server = utf8mb4_unicode_ci
+````
+
+But in most cases, the default configuration should suffice.
+
+
 ## Local Filesystem Access
 
 The application requires write access to the local filesystem in order to
@@ -156,6 +183,18 @@ stored is controlled by the `compassConnection` setting in [Searchable.groovy](h
 * Save custom images that are chosen when a new artist is added to a festival lineup. The location where these images
 are saved is controller by the `festival.images.artistDir` setting in [Config.groovy](https://github.com/domurtag/festivals/blob/master/grails-app/conf/Config.groovy)
 
+## Launch Application
+
+If the steps described above have been followed it should be possible to start the application (in development mode) simply 
+by running `grails run-app` from the application's root directory. By default the following users will automatically be
+created 
+
+| Username                       | Password | Role          |
+| ------------------------------ | ---------| ------------- |
+| festival-admin@mailinator.com  | password | Administrator |
+| festival-user@mailinator.com   | password | User          |
+
+These defaults can be changed in [BootStrap.groovy](https://github.com/domurtag/festivals/blob/master/grails-app/conf/BootStrap.groovy)
 
 ## License
 
