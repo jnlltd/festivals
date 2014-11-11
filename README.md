@@ -82,7 +82,7 @@ festival.lastFM.apiKey=changeme
 
 #### Booking.com
 
-To earn commission when users are successfully referred to booking.com, add the following:
+To earn commission when users are successfully referred to http://booking.com, add the following:
  
 ````
 festivals.bookingDotComAffiliateId=changeme
@@ -128,3 +128,21 @@ via the setting below
 ````
 systemWidePasswordSalt=choose-any-random-string-but-dont-ever-change-it
 ````
+
+## Local Filesystem Access
+
+The application requires write access to the local filesystem in order to
+
+* Store the index created by the [Searchable plugin](http://grails.org/plugin/searchable). The location where this is
+stored is controlled by the `compassConnection` setting in [Searchable.groovy](https://github.com/domurtag/festivals/blob/master/grails-app/conf/Searchable.groovy)
+
+* Save custom images that are chosen when a new artist is added to a festival lineup. The location where these images
+are saved is controller by the `festival.images.artistDir` setting in [Config.groovy](https://github.com/domurtag/festivals/blob/master/grails-app/conf/Config.groovy)
+
+
+## License
+
+This application is made available under the Apache 2 license. It includes a copy of the [Highcharts](http://www.highcharts.com/) 
+library, which is *not* free for commercial purposes, so if you wish to use this application for commercial purposes you must either remove
+Highcharts, or purchase a license for it. All other third-party software included in this application may be used
+free-of-charge for both commercial and non-commercial purposes.
