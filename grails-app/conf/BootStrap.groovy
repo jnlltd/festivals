@@ -1,3 +1,4 @@
+import grails.util.Environment
 import ie.festivals.*
 import org.codehaus.groovy.grails.commons.GrailsApplication
 import org.codehaus.groovy.grails.commons.GrailsDomainClass
@@ -14,9 +15,11 @@ class BootStrap {
         def userRole = createRole(festivalConfig.userRoleName)
         def adminRole = createRole(festivalConfig.adminRoleName)
 
-        // create some users
-        createUser('Donal', 'domurtag@yahoo.co.uk', adminRole)
-        createUser('Niall', 'niall@electricmedia.ie', adminRole)
+        if (Environment.developmentMode) {
+            // create some users
+            createUser('Default Admin', 'festival-admin@mailinator.com', adminRole)
+            createUser('Default User', 'festival-user@mailinator.com', adminRole)
+        }
 
         // Override the default maxSize of 191 on the body property of BlogEntry and Comment
         // We can't add this constraint directly to these classes because they're in plugins
