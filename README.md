@@ -118,11 +118,11 @@ add the following configuration
 grails.plugins.airbrake.apiKey=8a01082544f249c44601e955e96efb8e
 ````
 
-To disable Airbrake, simply remove the Grails Airbrake plugin.
+To disable Airbrake, simply uninstall the [Grails Airbrake plugin](https://github.com/domurtag/festivals/blob/master/grails-app/conf/BuildConfig.groovy).
 
 #### Password Salt
 
-Registered users' passwords are salted and hashed before being persistence. Set the password salt to a random string
+When users register, their password is salted and hashed before being persisted. Set the password salt to a random string
 via the setting below
 
 ````
