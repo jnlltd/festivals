@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lfm status="ok">
+    <toptracks artist="Bob Dylan" page="1" perPage="10" totalPages="100" total="1000">
+
+        <track rank="1">
+            <name>Like a Rolling Stone</name>
+            <duration>368</duration>
+            <playcount>289303</playcount>
+            <listeners>110660</listeners>
+
+            <mbid>00cec90a-dae9-4ddd-b3bc-3ba6b02835bd</mbid>
+
+
+            <url>http://www.last.fm/music/Bob+Dylan/_/Like+a+Rolling+Stone</url>
+            <streamable fulltrack="0">0</streamable>
+            <artist>
+                <name>Bob Dylan</name>
+                <mbid>25144665-e9ac-416f-aba3-0c8b4ee547d5</mbid>
+
+                <url>http://www.last.fm/music/Bob+Dylan</url>
+            </artist>
+            <image size="small">http://userserve-ak.last.fm/serve/34s/52893345.jpg</image>
+            <image size="medium">http://userserve-ak.last.fm/serve/64s/52893345.jpg</image>
+            <image size="large">http://userserve-ak.last.fm/serve/126/52893345.jpg</image>
+            <image size="extralarge">http://userserve-ak.last.fm/serve/300x300/52893345.jpg</image>
+        </track>
+        <track rank="2">
+            <name>The Times They Are a-Changin'</name>
+            <duration>193</duration>
+            <playcount>235631</playcount>
+            <listeners>87422</listeners>
+
+            <mbid>017fbaff-fd9d-4ec8-b6b8-b4be8b793ad2</mbid>
+
+
+            <url>http://www.last.fm/music/Bob+Dylan/_/The+Times+They+Are+a-Changin%27</url>
+            <streamable fulltrack="0">0</streamable>
+            <artist>
+                <name>Bob Dylan</name>
+                <mbid>25144665-e9ac-416f-aba3-0c8b4ee547d5</mbid>
+
+                <url>http://www.last.fm/music/Bob+Dylan</url>
+            </artist>
+            <image size="small">http://userserve-ak.last.fm/serve/34s/33199349.jpg</image>
+            <image size="medium">http://userserve-ak.last.fm/serve/64s/33199349.jpg</image>
+            <image size="large">http://userserve-ak.last.fm/serve/126/33199349.jpg</image>
+            <image size="extralarge">http://userserve-ak.last.fm/serve/300x300/33199349.jpg</image>
+        </track>
+        <track rank="3">
+            <name>Blowin' in the Wind</name>
+            <duration>174</duration>
+            <playcount>163053</playcount>
+            <listeners>62833</listeners>
+
+            <mbid>00a0d2d7-ffdf-4eff-92a0-1ca45111ce8e</mbid>
+
+
+            <url>http://www.last.fm/music/Bob+Dylan/_/Blowin%27+in+the+Wind</url>
+            <streamable fulltrack="0">0</streamable>
+            <artist>
+                <name>Bob Dylan</name>
+                <mbid>25144665-e9ac-416f-aba3-0c8b4ee547d5</mbid>
+
+                <url>http://www.last.fm/music/Bob+Dylan</url>
+            </artist>
+            <image size="small">http://userserve-ak.last.fm/serve/34s/46635791.png</image>
+            <image size="medium">http://userserve-ak.last.fm/serve/64s/46635791.png</image>
+            <image size="large">http://userserve-ak.last.fm/serve/126/46635791.png</image>
+            <image size="extralarge">http://userserve-ak.last.fm/serve/300x300/46635791.png</image>
+        </track>
+        <track rank="4">
+            <name>Mr. Tambourine Man</name>
+            <duration>352</duration>
+            <playcount>130507</playcount>
+            <listeners>52174</listeners>
+
+            <mbid>fbe35237-58fd-4d28-bf7f-f0afa5ce2dd2</mbid>
+
+
+            <url>http://www.last.fm/music/Bob+Dylan/_/Mr.+Tambourine+Man</url>
+            <streamable fulltrack="0">0</streamable>
+            <artist>
+                <name>Bob Dylan</name>
+                <mbid>25144665-e9ac-416f-aba3-0c8b4ee547d5</mbid>
+
+                <url>http://www.last.fm/music/Bob+Dylan</url>
+            </artist>
+            <image size="small">http://userserve-ak.last.fm/serve/34s/58034189.png</image>
+            <image size="medium">http://userserve-ak.last.fm/serve/64s/58034189.png</image>
+            <image size="large">http://userserve-ak.last.fm/serve/126/58034189.png</image>
+            <image size="extralarge">http://userserve-ak.last.fm/serve/300x300/58034189.png</image>
+        </track>
+        <track rank="5">
+            <name>Tangled Up in Blue</name>
+            <duration>341</duration>
+            <playcount>117488</playcount>
+            <listeners>48843</listeners>
+
+            <mbid>19a00b37-4a59-4996-a2c0-1f6840f3db14</mbid>
+
+
+            <url>http://www.last.fm/music/Bob+Dylan/_/Tangled+Up+in+Blue</url>
+            <streamable fulltrack="0">0</streamable>
+            <artist>
+                <name>Bob Dylan</name>
+                <mbid>25144665-e9ac-416f-aba3-0c8b4ee547d5</mbid>
+
+                <url>http://www.last.fm/music/Bob+Dylan</url>
+            </artist>
+            <image size="small">http://userserve-ak.last.fm/serve/34s/52893345.jpg</image>
+            <image size="medium">http://userserve-ak.last.fm/serve/64s/52893345.jpg</image>
+            <image size="large">http://userserve-ak.last.fm/serve/126/52893345.jpg</image>
+            <image size="extralarge">http://userserve-ak.last.fm/serve/300x300/52893345.jpg</image>
+        </track>
+        <track rank="6">
+            <name>Hurricane</name>
+            <duration>513</duration>
+            <playcount>120782</playcount>
+            <listeners>48662</listeners>
+
+            <mbid>0ce8f850-32d8-4ac7-b128-ae5582953637</mbid>
+
+
+            <url>http://www.last.fm/music/Bob+Dylan/_/Hurricane</url>
+            <streamable fulltrack="0">0</streamable>
+            <artist>
+                <name>Bob Dylan</name>
+                <mbid>25144665-e9ac-416f-aba3-0c8b4ee547d5</mbid>
+
+                <url>http://www.last.fm/music/Bob+Dylan</url>
+            </artist>
+            <image size="small">http://userserve-ak.last.fm/serve/34s/84104097.jpg</image>
+            <image size="medium">http://userserve-ak.last.fm/serve/64s/84104097.jpg</image>
+            <image size="large">http://userserve-ak.last.fm/serve/126/84104097.jpg</image>
+            <image size="extralarge">http://userserve-ak.last.fm/serve/300x300/84104097.jpg</image>
+        </track>
+        <track rank="7">
+            <name>Subterranean Homesick Blues</name>
+            <duration>137</duration>
+            <playcount>117444</playcount>
+            <listeners>47929</listeners>
+
+            <mbid>02774919-34ca-413a-a8a4-b19c5e54035f</mbid>
+
+
+            <url>http://www.last.fm/music/Bob+Dylan/_/Subterranean+Homesick+Blues</url>
+            <streamable fulltrack="0">0</streamable>
+            <artist>
+                <name>Bob Dylan</name>
+                <mbid>25144665-e9ac-416f-aba3-0c8b4ee547d5</mbid>
+
+                <url>http://www.last.fm/music/Bob+Dylan</url>
+            </artist>
+            <image size="small">http://userserve-ak.last.fm/serve/34s/52893345.jpg</image>
+            <image size="medium">http://userserve-ak.last.fm/serve/64s/52893345.jpg</image>
+            <image size="large">http://userserve-ak.last.fm/serve/126/52893345.jpg</image>
+            <image size="extralarge">http://userserve-ak.last.fm/serve/300x300/52893345.jpg</image>
+        </track>
+        <track rank="8">
+            <name>Just Like A Woman</name>
+            <duration>290</duration>
+            <playcount>104303</playcount>
+            <listeners>45449</listeners>
+
+            <mbid>01192c50-1d9a-4764-a470-6eba58626992</mbid>
+
+
+            <url>http://www.last.fm/music/Bob+Dylan/_/Just+Like+A+Woman</url>
+            <streamable fulltrack="0">0</streamable>
+            <artist>
+                <name>Bob Dylan</name>
+                <mbid>25144665-e9ac-416f-aba3-0c8b4ee547d5</mbid>
+
+                <url>http://www.last.fm/music/Bob+Dylan</url>
+            </artist>
+            <image size="small">http://userserve-ak.last.fm/serve/34s/69585676.png</image>
+            <image size="medium">http://userserve-ak.last.fm/serve/64s/69585676.png</image>
+            <image size="large">http://userserve-ak.last.fm/serve/126/69585676.png</image>
+            <image size="extralarge">http://userserve-ak.last.fm/serve/300x300/69585676.png</image>
+        </track>
+        <track rank="9">
+            <name>Knockin' on Heaven's Door</name>
+            <duration>150</duration>
+            <playcount>113840</playcount>
+            <listeners>42330</listeners>
+
+            <mbid>002c00af-1642-4df3-a7b8-a74d9f426f5f</mbid>
+
+
+            <url>http://www.last.fm/music/Bob+Dylan/_/Knockin%27+on+Heaven%27s+Door</url>
+            <streamable fulltrack="0">0</streamable>
+            <artist>
+                <name>Bob Dylan</name>
+                <mbid>25144665-e9ac-416f-aba3-0c8b4ee547d5</mbid>
+
+                <url>http://www.last.fm/music/Bob+Dylan</url>
+            </artist>
+            <image size="small">http://userserve-ak.last.fm/serve/34s/52893345.jpg</image>
+            <image size="medium">http://userserve-ak.last.fm/serve/64s/52893345.jpg</image>
+            <image size="large">http://userserve-ak.last.fm/serve/126/52893345.jpg</image>
+            <image size="extralarge">http://userserve-ak.last.fm/serve/300x300/52893345.jpg</image>
+        </track>
+        <track rank="10">
+            <name>I Want You</name>
+            <duration>184</duration>
+            <playcount>108595</playcount>
+            <listeners>41159</listeners>
+
+            <mbid>005ad2af-a47a-42aa-a1ef-bf78a9136ca0</mbid>
+
+
+            <url>http://www.last.fm/music/Bob+Dylan/_/I+Want+You</url>
+            <streamable fulltrack="0">0</streamable>
+            <artist>
+                <name>Bob Dylan</name>
+                <mbid>25144665-e9ac-416f-aba3-0c8b4ee547d5</mbid>
+
+                <url>http://www.last.fm/music/Bob+Dylan</url>
+            </artist>
+            <image size="small">http://userserve-ak.last.fm/serve/34s/69585676.png</image>
+            <image size="medium">http://userserve-ak.last.fm/serve/64s/69585676.png</image>
+            <image size="large">http://userserve-ak.last.fm/serve/126/69585676.png</image>
+            <image size="extralarge">http://userserve-ak.last.fm/serve/300x300/69585676.png</image>
+        </track>
+    </toptracks>
+</lfm>

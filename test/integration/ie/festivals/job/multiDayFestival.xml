@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affiliatefeed copyright="The information in this feed is copyright (c) Skiddle Ltd and cannot be used without prior agreement. The data in this feed must be used to promote ticket sales under your affiliate agreement. All event date must include a link back to the event page on Skiddle, as shown by the 'link' attribute of each event" lastupdate="2012-10-29 09:01:02">
+    <events>
+
+        <!--
+        The festival contains two events, each of which is a different day of the same festival. The dates of these events
+        are far into the future because the logic for merging festival events doesn't work if the festival is in the past.
+
+        This shouldn't be a problem in production because (hopefully) the Skiddle XML feed will never include past events.
+        -->
+
+        <event id="11745688" link="http://www.skiddle.com/whats-on/Twickenham/Richmond-Athletic-Ground/RugbyRocks-London-2013/11745688/?sktag=XXX">
+            <name><![CDATA[RugbyRocks London 2013]]></name>
+            <date>2113-06-01</date>
+            <eventcode>FEST</eventcode>
+            <shortdesc><![CDATA[Fourth annual sport & music festival, hundreds of teams, thousands of spectators, one big weekend party!!]]></shortdesc>
+            <doorsopen>10:00</doorsopen>
+            <doorsclose>00:00</doorsclose>
+            <image>http://skiddlecdn.co.uk/images/cities/default.jpg</image>
+            <venue id="36038">
+                <name><![CDATA[Richmond Athletic Ground]]></name>
+                <address>Kew Foot Road</address>
+                <city>Twickenham</city>
+                <town>Richmond</town>
+                <citycode>TW9</citycode>
+                <postcode/>
+            </venue>
+            <tickets>
+                <ticket id="58354">
+                    <name><![CDATA[Early Bird Weekender]]></name>
+                    <faceValue>15.00</faceValue>
+                    <bookingFee>1.75</bookingFee>
+                    <quantity>More than 10 available</quantity>
+                    <status statuscode="1">Available</status>
+                </ticket>
+                <ticket id="58358">
+                    <name><![CDATA[Weekender]]></name>
+                    <faceValue>20.00</faceValue>
+                    <bookingFee>2.25</bookingFee>
+                    <quantity>More than 10 available</quantity>
+                    <status statuscode="1">Available</status>
+                </ticket>
+                <ticket id="58364">
+                    <name><![CDATA[Saturday Ticket]]></name>
+                    <faceValue>17.50</faceValue>
+                    <bookingFee>2.00</bookingFee>
+                    <quantity>More than 10 available</quantity>
+                    <status statuscode="1">Available</status>
+                </ticket>
+            </tickets>
+            <genres/>
+            <artists/>
+        </event>
+
+        <event id="11745690" link="http://www.skiddle.com/whats-on/Twickenham/Richmond-Athletic-Ground/RugbyRocks-London-2013/11745690/?sktag=XXX">
+            <name><![CDATA[RugbyRocks London 2013]]></name>
+            <date>2113-06-02</date>
+            <eventcode>FEST</eventcode>
+            <shortdesc><![CDATA[Fourth annual sport & music festival, hundreds of teams, thousands of spectators, one big weekend party!!]]></shortdesc>
+            <doorsopen>10:00</doorsopen>
+            <doorsclose>00:00</doorsclose>
+            <image>http://skiddlecdn.co.uk/images/cities/default.jpg</image>
+            <venue id="36038">
+                <name><![CDATA[Richmond Athletic Ground]]></name>
+                <address>Kew Foot Road</address>
+                <city>Twickenham</city>
+                <town>Richmond</town>
+                <citycode>TW9</citycode>
+                <postcode/>
+            </venue>
+            <tickets>
+                <ticket id="58362">
+                    <name><![CDATA[Sunday Ticket]]></name>
+                    <faceValue>7.00</faceValue>
+                    <bookingFee>1.00</bookingFee>
+                    <quantity>More than 10 available</quantity>
+                    <status statuscode="1">Available</status>
+                </ticket>
+            </tickets>
+            <genres/>
+            <artists/>
+        </event>
+
+    </events>
+</affiliatefeed>

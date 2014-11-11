@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lfm status="ok">
+    <results for="u2" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">
+        <opensearch:Query role="request" searchTerms="u2" startPage="1"/>
+        <opensearch:totalResults>2282</opensearch:totalResults>
+        <opensearch:startIndex>0</opensearch:startIndex>
+        <opensearch:itemsPerPage>5</opensearch:itemsPerPage>
+        <artistmatches>
+            <artist>
+                <name>U2</name>
+                <listeners>2866329</listeners>
+                <mbid>704acdbb-1415-4782-b0b6-0596b8c55e46</mbid>
+                <url>http://www.last.fm/music/U2</url>
+                <streamable>1</streamable>
+                <image size="small">http://userserve-ak.last.fm/serve/34/12369741.jpg</image>
+                <image size="medium">http://userserve-ak.last.fm/serve/64/12369741.jpg</image>
+                <image size="large">http://userserve-ak.last.fm/serve/126/12369741.jpg</image>
+                <image size="extralarge">http://userserve-ak.last.fm/serve/252/12369741.jpg</image>
+                <image size="mega">http://userserve-ak.last.fm/serve/_/12369741/U2.jpg</image>
+            </artist>
+            <artist>
+                <name>U2 and Green Day</name>
+                <listeners>139940</listeners>
+                <mbid></mbid>
+                <url>http://www.last.fm/music/U2+and+Green+Day</url>
+                <streamable>0</streamable>
+                <image size="small">http://userserve-ak.last.fm/serve/34/27687133.jpg</image>
+                <image size="medium">http://userserve-ak.last.fm/serve/64/27687133.jpg</image>
+                <image size="large">http://userserve-ak.last.fm/serve/126/27687133.jpg</image>
+                <image size="extralarge">http://userserve-ak.last.fm/serve/252/27687133.jpg</image>
+                <image size="mega">http://userserve-ak.last.fm/serve/500/27687133/U2+and+Green+Day+u2greesaints.jpg
+                </image>
+            </artist>
+            <artist>
+                <name>LMC vs. U2</name>
+                <listeners>47862</listeners>
+                <mbid></mbid>
+                <url>http://www.last.fm/music/LMC+vs.+U2</url>
+                <streamable>0</streamable>
+                <image size="small">http://userserve-ak.last.fm/serve/34/2206369.jpg</image>
+                <image size="medium">http://userserve-ak.last.fm/serve/64/2206369.jpg</image>
+                <image size="large">http://userserve-ak.last.fm/serve/126/2206369.jpg</image>
+                <image size="extralarge">http://userserve-ak.last.fm/serve/252/2206369.jpg</image>
+                <image size="mega">http://userserve-ak.last.fm/serve/_/2206369/LMC+vs+U2.jpg</image>
+            </artist>
+            <artist>
+                <name>U2 &amp; Coco Freeman</name>
+                <listeners>27520</listeners>
+                <mbid></mbid>
+                <url>http://www.last.fm/music/U2+&amp;+Coco+Freeman</url>
+                <streamable>0</streamable>
+                <image size="small">http://userserve-ak.last.fm/serve/34/481389.jpg</image>
+                <image size="medium">http://userserve-ak.last.fm/serve/64/481389.jpg</image>
+                <image size="large">http://userserve-ak.last.fm/serve/126/481389.jpg</image>
+                <image size="extralarge">http://userserve-ak.last.fm/serve/252/481389.jpg</image>
+                <image size="mega">http://userserve-ak.last.fm/serve/_/481389/U2++Coco+Freeman.jpg</image>
+            </artist>
+            <artist>
+                <name>Mary J. Blige &amp; U2</name>
+                <listeners>13092</listeners>
+                <mbid></mbid>
+                <url>http://www.last.fm/music/Mary+J.+Blige+&amp;+U2</url>
+                <streamable>0</streamable>
+                <image size="small">http://userserve-ak.last.fm/serve/34/128345.jpg</image>
+                <image size="medium">http://userserve-ak.last.fm/serve/64/128345.jpg</image>
+                <image size="large">http://userserve-ak.last.fm/serve/126/128345.jpg</image>
+                <image size="extralarge">http://userserve-ak.last.fm/serve/252/128345.jpg</image>
+                <image size="mega">http://userserve-ak.last.fm/serve/500/128345/Mary+J+Blige++U2.jpg</image>
+            </artist>
+        </artistmatches>
+    </results>
+</lfm>

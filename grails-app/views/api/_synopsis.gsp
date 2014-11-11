@@ -1,0 +1,1 @@
+<div class='synopsis'>${synopsis}</div>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<videos>
+    <video duration="173" v240p="false" ss="false" timesViewed="8678" releasedate="28-Oct-2010" hdVersion="1" videotype="1" artistid="527" sourceid="2065" v1080p="false" uploaded="28-Oct-2010" hls="false" id="807765" v360p="true" advisory="false" allowedterritories="GB FI NL FR SE IE BE IT DK NO ES LU" ownerid="2060" genre="acoustic" v480p="true" v720p="false" adultContent="false" sdVersion="1">
+        <title>
+            <![CDATA[Guess I'm Doing Fine]]>
+        </title>
+        <description>
+            <![CDATA[Official music video for the track Guess I'm Doing Fine by Bob Dylan.]]>
+        </description>
+        <artistname>
+            <![CDATA[Bob Dylan]]>
+        </artistname>
+        <channel vanityname="bobdylan">
+            <name>
+                <![CDATA[BOB DYLAN]]>
+            </name>
+            <url>
+                <![CDATA[http://www.muzu.tv/bobdylan/]]>
+            </url>
+            <vanity>
+                <![CDATA[bobdylan]]>
+            </vanity>
+        </channel>
+        <tags>
+            <![CDATA[acoustic,bob dylan,guess im doing fine]]>
+        </tags>
+        <url>
+            <![CDATA[http://www.muzu.tv/bobdylan/guess-im-doing-fine-music-video/807765/]]>
+        </url>
+        <embed>
+            <![CDATA[<iframe frameborder="0" width="570" height="340" src="http://player.muzu.tv/player/getPlayer/i/2065/vidId=807765&la=n" allowfullscreen></iframe><br /><a href="http://www.muzu.tv/bobdylan/bob-dylan-guess-im-doing-fine-music-video/807765/">Bob Dylan - Guess I'm Doing Fine</a> on <a href="http://www.muzu.tv/">MUZU.TV</a>]]>
+        </embed>
+        <thumbnails>
+            <image type="1" height="63" width="112">
+                <url>
+                    <![CDATA[http://static.muzu.tv/media/images/000/807/765/001/807765-thb1.jpg]]>
+                </url>
+            </image>
+            <image type="3" height="120" width="160">
+                <url>
+                    <![CDATA[http://static.muzu.tv/media/images/000/807/765/001/807765-thb3.jpg]]>
+                </url>
+            </image>
+            <image type="5" height="90" width="160">
+                <url>
+                    <![CDATA[http://static.muzu.tv/media/images/000/807/765/001/807765-thb5.jpg]]>
+                </url>
+            </image>
+            <image type="6" height="162" width="288">
+                <url>
+                    <![CDATA[http://static.muzu.tv/media/images/000/807/765/001/807765-thb6.jpg]]>
+                </url>
+            </image>
+            <image type="8" height="96" width="128">
+                <url>
+                    <![CDATA[http://static.muzu.tv/media/images/000/807/765/001/807765-thb4.jpg]]>
+                </url>
+            </image>
+            <image type="4" height="316" width="426">
+                <url>
+                    <![CDATA[http://static.muzu.tv/media/images/000/807/765/001/807765-thb8.jpg]]>
+                </url>
+            </image>
+            <image type="2" height="360" width="640">
+                <url>
+                    <![CDATA[http://static.muzu.tv/media/images/000/807/765/001/807765-thb2.jpg]]>
+                </url>
+            </image>
+        </thumbnails>
+    </video>
+</videos>

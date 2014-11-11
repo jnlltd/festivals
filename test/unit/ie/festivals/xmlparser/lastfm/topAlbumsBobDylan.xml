@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lfm status="ok">
+    <topalbums artist="Bob Dylan" page="1" perPage="6" totalPages="99" total="594">
+
+        <album rank="1">
+            <name>Highway 61 Revisited</name>
+            <playcount>444087</playcount>
+            <mbid>0981a26e-ca63-3385-934d-c65a8b0d9179</mbid>
+            <url>http://www.last.fm/music/Bob+Dylan/Highway+61+Revisited</url>
+            <artist>
+                <name>Bob Dylan</name>
+                <mbid>25144665-e9ac-416f-aba3-0c8b4ee547d5</mbid>
+                <url>http://www.last.fm/music/Bob+Dylan</url>
+            </artist>
+            <image size="small">http://userserve-ak.last.fm/serve/34s/41151567.png</image>
+            <image size="medium">http://userserve-ak.last.fm/serve/64s/41151567.png</image>
+            <image size="large">http://userserve-ak.last.fm/serve/126/41151567.png</image>
+            <image size="extralarge">http://userserve-ak.last.fm/serve/300x300/41151567.png</image>
+        </album>
+        <album rank="2">
+            <name>Blonde On Blonde</name>
+            <playcount>493645</playcount>
+            <mbid>4d894f37-ca03-38ff-bad2-ef1aaa5ea9c0</mbid>
+            <url>http://www.last.fm/music/Bob+Dylan/Blonde+On+Blonde</url>
+            <artist>
+                <name>Bob Dylan</name>
+                <mbid>25144665-e9ac-416f-aba3-0c8b4ee547d5</mbid>
+                <url>http://www.last.fm/music/Bob+Dylan</url>
+            </artist>
+            <image size="small">http://userserve-ak.last.fm/serve/34s/69585676.png</image>
+            <image size="medium">http://userserve-ak.last.fm/serve/64s/69585676.png</image>
+            <image size="large">http://userserve-ak.last.fm/serve/126/69585676.png</image>
+            <image size="extralarge">http://userserve-ak.last.fm/serve/300x300/69585676.png</image>
+        </album>
+        <album rank="3">
+            <name>Bringing It All Back Home</name>
+            <playcount>318875</playcount>
+            <mbid>0f10781d-88b7-38f9-bea5-ec19512922dd</mbid>
+            <url>http://www.last.fm/music/Bob+Dylan/Bringing+It+All+Back+Home</url>
+            <artist>
+                <name>Bob Dylan</name>
+                <mbid>25144665-e9ac-416f-aba3-0c8b4ee547d5</mbid>
+                <url>http://www.last.fm/music/Bob+Dylan</url>
+            </artist>
+            <image size="small">http://userserve-ak.last.fm/serve/34s/58034189.png</image>
+            <image size="medium">http://userserve-ak.last.fm/serve/64s/58034189.png</image>
+            <image size="large">http://userserve-ak.last.fm/serve/126/58034189.png</image>
+            <image size="extralarge">http://userserve-ak.last.fm/serve/300x300/58034189.png</image>
+        </album>
+        <album rank="4">
+            <name>Blood on the Tracks</name>
+            <playcount>353147</playcount>
+            <mbid>0b8d9090-36ab-32d5-9b0b-07ab03243a39</mbid>
+            <url>http://www.last.fm/music/Bob+Dylan/Blood+on+the+Tracks</url>
+            <artist>
+                <name>Bob Dylan</name>
+                <mbid>25144665-e9ac-416f-aba3-0c8b4ee547d5</mbid>
+                <url>http://www.last.fm/music/Bob+Dylan</url>
+            </artist>
+            <image size="small">http://userserve-ak.last.fm/serve/34s/67546976.png</image>
+            <image size="medium">http://userserve-ak.last.fm/serve/64s/67546976.png</image>
+            <image size="large">http://userserve-ak.last.fm/serve/126/67546976.png</image>
+            <image size="extralarge">http://userserve-ak.last.fm/serve/300x300/67546976.png</image>
+        </album>
+        <album rank="5">
+            <name>Desire</name>
+            <playcount>202573</playcount>
+            <mbid>0586779a-1e0c-465a-ad7d-5dd1c0946028</mbid>
+            <url>http://www.last.fm/music/Bob+Dylan/Desire</url>
+            <artist>
+                <name>Bob Dylan</name>
+                <mbid>25144665-e9ac-416f-aba3-0c8b4ee547d5</mbid>
+                <url>http://www.last.fm/music/Bob+Dylan</url>
+            </artist>
+            <image size="small">http://userserve-ak.last.fm/serve/34s/84104097.jpg</image>
+            <image size="medium">http://userserve-ak.last.fm/serve/64s/84104097.jpg</image>
+            <image size="large">http://userserve-ak.last.fm/serve/126/84104097.jpg</image>
+            <image size="extralarge">http://userserve-ak.last.fm/serve/300x300/84104097.jpg</image>
+        </album>
+        <album rank="6">
+            <name>Bob Dylan: The Collection</name>
+            <playcount>133568</playcount>
+            <mbid></mbid>
+            <url>http://www.last.fm/music/Bob+Dylan/Bob+Dylan:+The+Collection</url>
+            <artist>
+                <name>Bob Dylan</name>
+                <mbid>25144665-e9ac-416f-aba3-0c8b4ee547d5</mbid>
+                <url>http://www.last.fm/music/Bob+Dylan</url>
+            </artist>
+            <image size="small">http://userserve-ak.last.fm/serve/34s/52893345.jpg</image>
+            <image size="medium">http://userserve-ak.last.fm/serve/64s/52893345.jpg</image>
+            <image size="large">http://userserve-ak.last.fm/serve/126/52893345.jpg</image>
+            <image size="extralarge">http://userserve-ak.last.fm/serve/300x300/52893345.jpg</image>
+        </album>
+    </topalbums>
+</lfm>

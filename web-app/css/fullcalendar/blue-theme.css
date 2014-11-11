@@ -1,0 +1,83 @@
+/**
+ * This stylesheet was created by copy-pasting the relevant rules from the theme.css stylesheet used in this example:
+ * http://arshaw.com/js/fullcalendar-1.5.2/demos/theme.html
+ *
+ * It's quite possible I've missed something. If so, either cross-check with the example, or take the easy way out and
+ * replace the contents of this stylesheet with those of theme.css (remember to update the image paths afterwards
+ */
+
+.ui-widget-header {
+    border: 1px solid #AED0EA;
+    color: #222222;
+    font-weight: bold;
+}
+
+.ui-widget-content {
+    background: url("../../images/fullcalendar/ui-bg_highlight-hard_100_f2f5f7_1x100.png") repeat-x scroll 50% top #F2F5F7;
+    border: 1px solid #DDDDDD;
+    color: #362B36;
+}
+
+.ui-corner-left {
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
+}
+.ui-corner-right {
+    border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    background: url("../../images/fullcalendar/ui-bg_glass_80_d7ebf9_1x400.png") repeat-x scroll 50% 50% #D7EBF9;
+    border: 1px solid #AED0EA;
+    color: #2779AA;
+    font-weight: bold;
+}
+
+.ui-state-default .ui-icon {
+    background-image: url("../../images/fullcalendar/ui-icons_3d80b3_256x240.png");
+}
+.ui-icon-circle-triangle-e {
+    background-position: -48px -192px;
+}
+
+.ui-state-default .ui-icon {
+    background-image: url("../../images/fullcalendar/ui-icons_3d80b3_256x240.png");
+}
+
+.ui-icon-circle-triangle-w {
+    background-position: -80px -192px;
+}
+
+.ui-icon {
+    background-image: url("../../images/fullcalendar/ui-icons_72a7cf_256x240.png");
+    height: 16px;
+    width: 16px;
+}
+
+.ui-icon {
+    background-repeat: no-repeat;
+    display: block;
+    overflow: hidden;
+    text-indent: -99999px;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    color: #2779AA;
+    font-weight: bold;
+}
+
+.ui-state-disabled {
+    cursor: default !important;
+}
+
+.ui-state-disabled, .ui-widget-content .ui-state-disabled, .ui-widget-header .ui-state-disabled {
+    background-image: none;
+    opacity: 0.35;
+    filter: alpha(opacity=35);
+}
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+    background: url("../../images/fullcalendar/ui-bg_highlight-soft_25_ffef8f_1x100.png") repeat-x scroll 50% top #FFEF8F;
+    border: 1px solid #F9DD34;
+    color: #363636;
+}

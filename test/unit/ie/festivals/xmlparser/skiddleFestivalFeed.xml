@@ -1,0 +1,1020 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affiliatefeed copyright="The information in this feed is copyright (c) Skiddle Ltd and cannot be used without prior agreement. The data in this feed must be used to promote ticket sales under your affiliate agreement. All event date must include a link back to the event page on Skiddle, as shown by the 'link' attribute of each event" lastupdate="2012-10-28 09:01:02">
+  <events>
+    <event id="11728742" link="http://www.skiddle.com/whats-on/Edinburgh/Edinburgh-Picturehouse/Haddow-Fest/11728742/?sktag=XXX">
+      <name><![CDATA[Haddow Fest]]></name>
+      <date>2012-10-28</date>
+      <eventcode>FEST</eventcode>
+      <shortdesc><![CDATA[Haddow Fest will be held across various venues in Edinburgh on Sunday 28th October 2012. Bands playing include The Cribs, Kassidy , Hadouken and many many more ]]></shortdesc>
+      <doorsopen>13:00</doorsopen>
+      <doorsclose>02:00</doorsclose>
+      <image>http://skiddlecdn.co.uk/images/cities/default.jpg</image>
+      <venue id="34560">
+        <name><![CDATA[Edinburgh Picturehouse]]></name>
+        <address>31 Lothian rd</address>
+        <city>Edinburgh</city>
+        <town>Edinburgh</town>
+        <citycode>EH1</citycode>
+        <postcode/>
+      </venue>
+      <tickets>
+        <ticket id="55898">
+          <name><![CDATA[Haddow Fest + The Cribs]]></name>
+          <faceValue>1,222.50</faceValue>
+          <bookingFee>2.50</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+      </tickets>
+      <genres>
+        <genre>
+          <name>Dancehall</name>
+        </genre>
+        <genre>
+          <name>Indie</name>
+        </genre>
+        <genre>
+          <name>Rock</name>
+        </genre>
+      </genres>
+      <artists>
+        <artist id="123468495">
+          <name>Kassidy</name>
+        </artist>
+        <artist id="955149">
+          <name>Hadouken!</name>
+        </artist>
+        <artist id="123461920">
+          <name>The Cribs</name>
+        </artist>
+      </artists>
+    </event>
+    <event id="11730492" link="http://www.skiddle.com/whats-on/Darlington/Tan-Hill-Inn/Ravenstonedale-INDOOR-After-Party/11730492/?sktag=XXX">
+      <name><![CDATA[Ravenstonedale INDOOR After Party]]></name>
+      <date>2012-11-02</date>
+      <eventcode>FEST</eventcode>
+      <shortdesc><![CDATA[Big shout out to all you awesome party people!!! 
+Here at ravenstonedale HQ we are buzzing to announce that the fun and games will commence on the 2nd-4th Nove]]></shortdesc>
+      <doorsopen>19:00</doorsopen>
+      <doorsclose>10:00</doorsclose>
+      <image>http://skiddlecdn.co.uk/images/cities/default.jpg</image>
+      <venue id="20412">
+        <name><![CDATA[Tan Hill Inn]]></name>
+        <address>Tan hill   Reeth</address>
+        <city>Darlington</city>
+        <town>Richmond</town>
+        <citycode>DL11</citycode>
+        <postcode/>
+      </venue>
+      <tickets>
+        <ticket id="58168">
+          <name><![CDATA[Any day Ticket]]></name>
+          <faceValue>12.00</faceValue>
+          <bookingFee>1.45</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+        <ticket id="56160">
+          <name><![CDATA[After Party Weekend Ticket]]></name>
+          <faceValue>25.00</faceValue>
+          <bookingFee>2.75</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+      </tickets>
+      <genres/>
+      <artists/>
+    </event>
+    <event id="11705626" link="http://www.skiddle.com/whats-on/Sheffield/PENELOPES/LaDIYfest-Sheffield-Weekender/11705626/?sktag=XXX">
+      <name><![CDATA[LaDIYfest Sheffield Weekender!!]]></name>
+      <date>2012-11-03</date>
+      <eventcode>FEST</eventcode>
+      <shortdesc><![CDATA[LaDIYfest Sheffield is an exciting urban showcase of Creative Women.
+We're Hosting THE Party on Saturday Night. 
+Free Event, Donations OTD]]></shortdesc>
+      <doorsopen>18:00</doorsopen>
+      <doorsclose>02:00</doorsclose>
+      <image>http://skiddlecdn.co.uk/images/cities/default.jpg</image>
+      <venue id="7106">
+        <name><![CDATA[PENELOPES]]></name>
+        <address>53-55 Arundel Gate</address>
+        <city>Sheffield</city>
+        <town>Sheffield</town>
+        <citycode>S1</citycode>
+        <postcode/>
+      </venue>
+      <tickets>
+        <ticket id="52836">
+          <name><![CDATA[Advance Discount Ticket]]></name>
+          <faceValue>0.00</faceValue>
+          <bookingFee>0.00</bookingFee>
+          <quantity>1 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+      </tickets>
+      <genres/>
+      <artists/>
+    </event>
+    <event id="11722732" link="http://www.skiddle.com/whats-on/Salford/Islington-Mill/ORBIT--A-show-in-Seven-Parts/11722732/?sktag=XXX">
+      <name><![CDATA[ORBIT : A show in Seven Parts]]></name>
+      <date>2012-11-04</date>
+      <eventcode>FEST</eventcode>
+      <shortdesc><![CDATA[Sounds from the Other City and Volkov Commanders present 
+
+ORBIT : A show in Seven Parts ]]></shortdesc>
+      <doorsopen>16:00</doorsopen>
+      <doorsclose>00:00</doorsclose>
+      <image>http://skiddlecdn.co.uk/images/cities/default.jpg</image>
+      <venue id="3269">
+        <name><![CDATA[Islington Mill]]></name>
+        <address>James Street, Salford</address>
+        <city>Salford</city>
+        <town>Manchester</town>
+        <citycode>M3</citycode>
+        <postcode/>
+      </venue>
+      <tickets>
+        <ticket id="55404">
+          <name><![CDATA[Earlybird Ticket]]></name>
+          <faceValue>10.00</faceValue>
+          <bookingFee>1.25</bookingFee>
+          <quantity>0 available</quantity>
+          <status statuscode="300">End date passed</status>
+        </ticket>
+        <ticket id="55406">
+          <name><![CDATA[Advance Ticket]]></name>
+          <faceValue>12.50</faceValue>
+          <bookingFee>1.50</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+      </tickets>
+      <genres/>
+      <artists/>
+    </event>
+    <event id="11741622" link="http://www.skiddle.com/whats-on/Manchester/Longfield-Suite/The-Sophie-Festival-2012/11741622/?sktag=XXX">
+      <name><![CDATA[The Sophie Festival 2012]]></name>
+      <date>2012-11-10</date>
+      <eventcode>FEST</eventcode>
+      <shortdesc><![CDATA[The Sophie Festival 2012, All day Metal Festival in Aid of The Sophie Lancaster Foundation]]></shortdesc>
+      <doorsopen>12:00</doorsopen>
+      <doorsclose>00:00</doorsclose>
+      <image>http://skiddlecdn.co.uk/images/cities/default.jpg</image>
+      <venue id="4662">
+        <name><![CDATA[Longfield Suite]]></name>
+        <address>Longfield Centre, Rectory Lane, Prestwich</address>
+        <city>Manchester</city>
+        <town>Manchester</town>
+        <citycode>M25</citycode>
+        <postcode/>
+      </venue>
+      <tickets>
+        <ticket id="57696">
+          <name><![CDATA[The Sophie Festival 2012 Standard all day Ticket]]></name>
+          <faceValue>10.00</faceValue>
+          <bookingFee>1.50</bookingFee>
+          <quantity>0 available</quantity>
+          <status statuscode="300">End date passed</status>
+        </ticket>
+      </tickets>
+      <genres/>
+      <artists>
+        <artist id="123508408">
+          <name>Faithful Darkness</name>
+        </artist>
+      </artists>
+    </event>
+    <event id="11727720" link="http://www.skiddle.com/whats-on/Manchester/Platt-Chapel/KEEP-WARM-AND-PARTY-ON/11727720/?sktag=XXX">
+      <name><![CDATA[KEEP WARM AND PARTY ON]]></name>
+      <date>2012-11-17</date>
+      <eventcode>FEST</eventcode>
+      <shortdesc><![CDATA[
+A mini music festival located in the heart of the Manchester's party circuit, featuring Manchesters finest Folk, Reggae, Dub, Drum and Bass and Jungle talent ]]></shortdesc>
+      <doorsopen>15:00</doorsopen>
+      <doorsclose>04:00</doorsclose>
+      <image>http://skiddlecdn.co.uk/images/cities/default.jpg</image>
+      <venue id="26692">
+        <name><![CDATA[Platt Chapel]]></name>
+        <address>186 Wilmslow Road, Fallowfield</address>
+        <city>Manchester</city>
+        <town>Manchester</town>
+        <citycode>M14</citycode>
+        <postcode/>
+      </venue>
+      <tickets>
+        <ticket id="55780">
+          <name><![CDATA[Advance Discount Ticket]]></name>
+          <faceValue>10.00</faceValue>
+          <bookingFee>1.25</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+      </tickets>
+      <genres>
+        <genre>
+          <name>Hip Hop</name>
+        </genre>
+        <genre>
+          <name>Reggae</name>
+        </genre>
+        <genre>
+          <name>Ska</name>
+        </genre>
+      </genres>
+      <artists>
+        <artist id="123502438">
+          <name>Mr B The Gentleman Rhymer</name>
+        </artist>
+        <artist id="123507588">
+          <name>Sue Denim</name>
+        </artist>
+        <artist id="123460595">
+          <name>Gideon Conn</name>
+        </artist>
+        <artist id="123473510">
+          <name>Douga</name>
+        </artist>
+      </artists>
+    </event>
+    <event id="11743572" link="http://www.skiddle.com/whats-on/Liverpool/Camp-And-Furnace/The-Village/11743572/?sktag=XXX">
+      <name><![CDATA[The Village]]></name>
+      <date>2012-11-17</date>
+      <eventcode>FEST</eventcode>
+      <shortdesc><![CDATA[A DIY indoor festival celebrating independent Music, Art, Fashion & Food, with live music, DJ's and local trade stalls. ]]></shortdesc>
+      <doorsopen>18:00</doorsopen>
+      <doorsclose>04:00</doorsclose>
+      <image>http://skiddlecdn.co.uk/images/cities/default.jpg</image>
+      <venue id="30720">
+        <name><![CDATA[Camp And Furnace]]></name>
+        <address>67 Greenland Street </address>
+        <city>Liverpool</city>
+        <town>Liverpool L1 0BY</town>
+        <citycode>L1</citycode>
+        <postcode/>
+      </venue>
+      <tickets>
+        <ticket id="57986">
+          <name><![CDATA[Advance Discount Ticket (NUS)]]></name>
+          <faceValue>2.00</faceValue>
+          <bookingFee>1.00</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+        <ticket id="57988">
+          <name><![CDATA[Advance Ticket]]></name>
+          <faceValue>4.00</faceValue>
+          <bookingFee>1.00</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+      </tickets>
+      <genres/>
+      <artists>
+        <artist id="123508576">
+          <name>Natalie McCool</name>
+        </artist>
+      </artists>
+    </event>
+    <event id="11701228" link="http://www.skiddle.com/whats-on/Lincoln/Haven-Golden-Sands-Holiday-Park/StarLite-Music-Festival--The-Ultimate-Fun-Weekender-/11701228/?sktag=XXX">
+      <name><![CDATA[StarLite Music Festival ' The Ultimate Fun Weekender ']]></name>
+      <date>2012-11-23</date>
+      <eventcode>FEST</eventcode>
+      <shortdesc><![CDATA[**StarLite Music Festival** The ' Ultimate Fun Weekender '
+OVER 35 DJ's // LIVE P.A's // A Real Deal Comedy Show // Loads of Activities // Accommodation.]]></shortdesc>
+      <doorsopen>12:00</doorsopen>
+      <doorsclose>13:00</doorsclose>
+      <image>http://skiddlecdn.co.uk/images/cities/default.jpg</image>
+      <venue id="34264">
+        <name><![CDATA[Haven Golden Sands Holiday Park]]></name>
+        <address>Quebec Road, Mablethorpe, Lincolnshire</address>
+        <city>Lincoln</city>
+        <town>Lincolnshire</town>
+        <citycode>LN12</citycode>
+        <postcode/>
+      </venue>
+      <tickets>
+        <ticket id="56170">
+          <name><![CDATA[Full Weekend Ticket]]></name>
+          <faceValue>145.23</faceValue>
+          <bookingFee>14.77</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+        <ticket id="56178">
+          <name><![CDATA[2 Day Pass]]></name>
+          <faceValue>72.50</faceValue>
+          <bookingFee>7.50</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+        <ticket id="56190">
+          <name><![CDATA[1 Day Pass]]></name>
+          <faceValue>45.23</faceValue>
+          <bookingFee>4.77</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+      </tickets>
+      <genres/>
+      <artists/>
+    </event>
+    <event id="11678784" link="http://www.skiddle.com/whats-on/Blackpool/Winter-Gardens/One-of-These-Days/11678784/?sktag=XXX">
+      <name><![CDATA[One of These Days]]></name>
+      <date>2012-12-08</date>
+      <eventcode>FEST</eventcode>
+      <shortdesc><![CDATA[One Of These Days will be two days like no other in the international festival calendar.  Never have so many of the world's best events come together to create ]]></shortdesc>
+      <doorsopen>22:00</doorsopen>
+      <doorsclose>04:00</doorsclose>
+      <image>http://skiddlecdn.co.uk/images/cities/default.jpg</image>
+      <venue id="3369">
+        <name><![CDATA[Winter Gardens]]></name>
+        <address>CHURCH STREET</address>
+        <city>Blackpool</city>
+        <town>BLACKPOOL</town>
+        <citycode>FY1</citycode>
+        <postcode/>
+      </venue>
+      <tickets/>
+      <genres/>
+      <artists/>
+    </event>
+    <event id="11740570" link="http://www.skiddle.com/whats-on/Edinburgh/Various-Venues-Across-Edinburgh/Wee-Dub-Festival-2013-(Earlybird-Ticket)/11740570/?sktag=XXX">
+      <name><![CDATA[Wee Dub Festival 2013 (Earlybird Ticket)]]></name>
+      <date>2013-02-01</date>
+      <eventcode>FEST</eventcode>
+      <shortdesc><![CDATA[Scotland's original and only festival of dub and reggae music, taking place across Edinburgh's Old Town over a single weekend in February 2013.]]></shortdesc>
+      <doorsopen>19:00</doorsopen>
+      <doorsclose>03:00</doorsclose>
+      <image>http://skiddlecdn.co.uk/images/cities/default.jpg</image>
+      <venue id="12284">
+        <name><![CDATA[Various Venues Across Edinburgh]]></name>
+        <address>Anystreet</address>
+        <city>Edinburgh</city>
+        <town>Edinburgh</town>
+        <citycode>EH1</citycode>
+        <postcode/>
+      </venue>
+      <tickets>
+        <ticket id="57588">
+          <name><![CDATA[Advance Earlybird Ticket]]></name>
+          <faceValue>30.00</faceValue>
+          <bookingFee>3.25</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+      </tickets>
+      <genres>
+        <genre>
+          <name>Reggae</name>
+        </genre>
+      </genres>
+      <artists/>
+    </event>
+    <event id="11736170" link="http://www.skiddle.com/whats-on/Leeds/Vox-Warehouse-/Raisetheroof/11736170/?sktag=XXX">
+      <name><![CDATA[Raisetheroof]]></name>
+      <date>2013-02-23</date>
+      <eventcode>FEST</eventcode>
+      <shortdesc><![CDATA[The Festival of Imagination returns in February for another instalment of music, magic and madness in equal measure. ]]></shortdesc>
+      <doorsopen>21:00</doorsopen>
+      <doorsclose>05:00</doorsclose>
+      <image>http://skiddlecdn.co.uk/images/cities/default.jpg</image>
+      <venue id="33158">
+        <name><![CDATA[Vox Warehouse ]]></name>
+        <address>Vox, New Craven Gate, Leeds, UK, LS11 5NF  </address>
+        <city>Leeds</city>
+        <town>Leeds </town>
+        <citycode>LS11</citycode>
+        <postcode/>
+      </venue>
+      <tickets>
+        <ticket id="56948">
+          <name><![CDATA[Advance Discount Ticket]]></name>
+          <faceValue>12.00</faceValue>
+          <bookingFee>1.45</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+      </tickets>
+      <genres/>
+      <artists/>
+    </event>
+    <event id="11695618" link="http://www.skiddle.com/whats-on/Newcastle-on-Tyne/The-Cluny/Brofest-1/11695618/?sktag=XXX">
+      <name><![CDATA[Brofest #1]]></name>
+      <date>2013-03-01</date>
+      <eventcode>FEST</eventcode>
+      <shortdesc><![CDATA[2 day NWOBHM Festival in the heart of Heavy Metal!]]></shortdesc>
+      <doorsopen>19:00</doorsopen>
+      <doorsclose>23:00</doorsclose>
+      <image>http://skiddlecdn.co.uk/images/cities/default.jpg</image>
+      <venue id="30682">
+        <name><![CDATA[The Cluny]]></name>
+        <address> 36 Lime Street, Ouseburn Newcastle upon Tyne, NE1 2PQ</address>
+        <city>Newcastle-on-Tyne</city>
+        <town>Newcastle</town>
+        <citycode>NE1</citycode>
+        <postcode/>
+      </venue>
+      <tickets>
+        <ticket id="51618">
+          <name><![CDATA[Adv. Ticket UK CUSTOMERS!]]></name>
+          <faceValue>20.00</faceValue>
+          <bookingFee>2.25</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+        <ticket id="51620">
+          <name><![CDATA[Adv. Ticket OUTSIDE UK.]]></name>
+          <faceValue>23.00</faceValue>
+          <bookingFee>2.55</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+      </tickets>
+      <genres>
+        <genre>
+          <name>Metal</name>
+        </genre>
+        <genre>
+          <name>Punk</name>
+        </genre>
+        <genre>
+          <name>Rock</name>
+        </genre>
+      </genres>
+      <artists>
+        <artist id="123505424">
+          <name>Holocaust</name>
+        </artist>
+        <artist id="123505426">
+          <name>Salem UK</name>
+        </artist>
+        <artist id="123505428">
+          <name>Scarab</name>
+        </artist>
+        <artist id="123505432">
+          <name>Spartan Warrior</name>
+        </artist>
+        <artist id="123505434">
+          <name>Deep Machine</name>
+        </artist>
+        <artist id="123505436">
+          <name>Badge</name>
+        </artist>
+        <artist id="123505440">
+          <name>Holosade</name>
+        </artist>
+        <artist id="123505442">
+          <name>Tysondog</name>
+        </artist>
+        <artist id="123486400">
+          <name>Battleaxe</name>
+        </artist>
+      </artists>
+    </event>
+    <event id="11731004" link="http://www.skiddle.com/whats-on/York/Bridlington-Spa/Elvis-Weekender-Festival/11731004/?sktag=XXX">
+      <name><![CDATA[Elvis Weekender Festival]]></name>
+      <date>2013-05-03</date>
+      <eventcode>FEST</eventcode>
+      <shortdesc><![CDATA[Now in it's third year, the 2013 Elvis Weekender Festival will be bigger and better than ever. Come and celebrate the life and music of Elvis Presley, the great]]></shortdesc>
+      <doorsopen>10:00</doorsopen>
+      <doorsclose>23:00</doorsclose>
+      <image>http://skiddlecdn.co.uk/images/cities/default.jpg</image>
+      <venue id="9534">
+        <name><![CDATA[Bridlington Spa]]></name>
+        <address>South Marine Drive</address>
+        <city>York</city>
+        <town>Bridlington</town>
+        <citycode>YO15</citycode>
+        <postcode/>
+      </venue>
+      <tickets>
+        <ticket id="56278">
+          <name><![CDATA[Advance Discount Ticket]]></name>
+          <faceValue>81.59</faceValue>
+          <bookingFee>8.41</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+        <ticket id="56280">
+          <name><![CDATA[VIP Weekender Ticket]]></name>
+          <faceValue>177.50</faceValue>
+          <bookingFee>18.00</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+      </tickets>
+      <genres/>
+      <artists/>
+    </event>
+    <event id="11746166" link="http://www.skiddle.com/whats-on/Leeds/West-Park-Leeds-Rugby-Club/RugbyRocks-Yorkshire-2013/11746166/?sktag=XXX">
+      <name><![CDATA[RugbyRocks Yorkshire 2013]]></name>
+      <date>2013-05-25</date>
+      <eventcode>FEST</eventcode>
+      <shortdesc><![CDATA[RugbyRocks returns to Yorkshire for its second year, with more sports, more teams and a bigger party!!]]></shortdesc>
+      <doorsopen>09:00</doorsopen>
+      <doorsclose>03:00</doorsclose>
+      <image>http://skiddlecdn.co.uk/images/cities/default.jpg</image>
+      <venue id="36072">
+        <name><![CDATA[West Park Leeds Rugby Club]]></name>
+        <address>The Sycamores, Bramhope,</address>
+        <city>Leeds</city>
+        <town> Leeds</town>
+        <citycode>LS16</citycode>
+        <postcode/>
+      </venue>
+      <tickets/>
+      <genres/>
+      <artists/>
+    </event>
+    <event id="11745688" link="http://www.skiddle.com/whats-on/Twickenham/Richmond-Athletic-Ground/RugbyRocks-London-2013/11745688/?sktag=XXX">
+      <name><![CDATA[RugbyRocks London 2013]]></name>
+      <date>2013-06-01</date>
+      <eventcode>FEST</eventcode>
+      <shortdesc><![CDATA[Fourth annual sport & music festival, hundreds of teams, thousands of spectators, one big weekend party!!]]></shortdesc>
+      <doorsopen>10:00</doorsopen>
+      <doorsclose>00:00</doorsclose>
+      <image>http://skiddlecdn.co.uk/images/cities/default.jpg</image>
+      <venue id="36038">
+        <name><![CDATA[Richmond Athletic Ground]]></name>
+        <address>Kew Foot Road</address>
+        <city>Twickenham</city>
+        <town>Richmond</town>
+        <citycode>TW9</citycode>
+        <postcode/>
+      </venue>
+      <tickets>
+        <ticket id="58354">
+          <name><![CDATA[Early Bird Weekender]]></name>
+          <faceValue>15.00</faceValue>
+          <bookingFee>1.75</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+        <ticket id="58358">
+          <name><![CDATA[Weekender]]></name>
+          <faceValue>20.00</faceValue>
+          <bookingFee>2.25</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+        <ticket id="58364">
+          <name><![CDATA[Saturday Ticket]]></name>
+          <faceValue>17.50</faceValue>
+          <bookingFee>2.00</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+      </tickets>
+      <genres/>
+      <artists/>
+    </event>
+    <event id="11745690" link="http://www.skiddle.com/whats-on/Twickenham/Richmond-Athletic-Ground/RugbyRocks-London-2013/11745690/?sktag=XXX">
+      <name><![CDATA[RugbyRocks London 2013]]></name>
+      <date>2013-06-02</date>
+      <eventcode>FEST</eventcode>
+      <shortdesc><![CDATA[Fourth annual sport & music festival, hundreds of teams, thousands of spectators, one big weekend party!!]]></shortdesc>
+      <doorsopen>10:00</doorsopen>
+      <doorsclose>00:00</doorsclose>
+      <image>http://skiddlecdn.co.uk/images/cities/default.jpg</image>
+      <venue id="36038">
+        <name><![CDATA[Richmond Athletic Ground]]></name>
+        <address>Kew Foot Road</address>
+        <city>Twickenham</city>
+        <town>Richmond</town>
+        <citycode>TW9</citycode>
+        <postcode/>
+      </venue>
+      <tickets>
+        <ticket id="58362">
+          <name><![CDATA[Sunday Ticket]]></name>
+          <faceValue>7.00</faceValue>
+          <bookingFee>1.00</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+      </tickets>
+      <genres/>
+      <artists/>
+    </event>
+    <event id="11746040" link="http://www.skiddle.com/whats-on/Edinburgh/Meggetland-Sports-Complex/RugbyRocks-Edinburgh-2013/11746040/?sktag=XXX">
+      <name><![CDATA[RugbyRocks Edinburgh 2013]]></name>
+      <date>2013-06-22</date>
+      <eventcode>FEST</eventcode>
+      <shortdesc><![CDATA[RugbyRocks Edinburgh returns for its third year! With over 50 teams playing sport throughout the day at Edinburgh's premier sports ground and an after party big]]></shortdesc>
+      <doorsopen>10:00</doorsopen>
+      <doorsclose>03:00</doorsclose>
+      <image>http://skiddlecdn.co.uk/images/cities/default.jpg</image>
+      <venue id="36068">
+        <name><![CDATA[Meggetland Sports Complex]]></name>
+        <address>Colinton Road</address>
+        <city>Edinburgh</city>
+        <town>Edinburgh</town>
+        <citycode>EH14</citycode>
+        <postcode/>
+      </venue>
+      <tickets>
+        <ticket id="58460">
+          <name><![CDATA[Early Bird All Dayer - (Available until Jan 31st 2013)]]></name>
+          <faceValue>15.00</faceValue>
+          <bookingFee>1.75</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+        <ticket id="58462">
+          <name><![CDATA[Festival Only ]]></name>
+          <faceValue>7.00</faceValue>
+          <bookingFee>1.00</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+        <ticket id="58464">
+          <name><![CDATA[All Dayer]]></name>
+          <faceValue>20.00</faceValue>
+          <bookingFee>2.25</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+      </tickets>
+      <genres/>
+      <artists/>
+    </event>
+    <event id="11715304" link="http://www.skiddle.com/festivals/wickerman/?sktag=XXX">
+      <name><![CDATA[The Wickerman Festival]]></name>
+      <date>2013-07-26</date>
+      <eventcode>FEST</eventcode>
+      <shortdesc><![CDATA[Join us for the 12th edition of the Wickerman Festival, ticket details coming soon...]]></shortdesc>
+      <doorsopen>09:00</doorsopen>
+      <doorsclose>05:00</doorsclose>
+      <image>http://skiddlecdn.co.uk/images/cities/default.jpg</image>
+      <venue id="16511">
+        <name><![CDATA[Festival Site]]></name>
+        <address>Easter Kircarswell</address>
+        <city>Dumfries</city>
+        <town>Dundrennan</town>
+        <citycode>DG6</citycode>
+        <postcode/>
+      </venue>
+      <tickets>
+        <ticket id="54478">
+          <name><![CDATA[Earlybird Weekend Adult (ages 16+)]]></name>
+          <faceValue>90.00</faceValue>
+          <bookingFee>0.00</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+        <ticket id="54482">
+          <name><![CDATA[Earlybird Weekend Concession (ages 13-15)]]></name>
+          <faceValue>45.00</faceValue>
+          <bookingFee>0.00</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+        <ticket id="54484">
+          <name><![CDATA[Earlybird Weekend Child (ages 0-12)]]></name>
+          <faceValue>0.00</faceValue>
+          <bookingFee>0.00</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+        <ticket id="54486">
+          <name><![CDATA[Earlybird Saturday Adult (ages 13+)]]></name>
+          <faceValue>60.00</faceValue>
+          <bookingFee>0.00</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+        <ticket id="54488">
+          <name><![CDATA[Earlybird Saturday Child (ages 0-12)]]></name>
+          <faceValue>0.00</faceValue>
+          <bookingFee>0.00</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+        <ticket id="54490">
+          <name><![CDATA[Earlybird Caravan/Campervan/Trailer Tent - Family Area]]></name>
+          <faceValue>30.00</faceValue>
+          <bookingFee>0.00</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+        <ticket id="54496">
+          <name><![CDATA[Earlybird Caravan/Campervan/Trailer Tent with ELECTRIC HOOKUP - Family Area]]></name>
+          <faceValue>80.00</faceValue>
+          <bookingFee>0.00</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+        <ticket id="54494">
+          <name><![CDATA[Earlybird Caravan/Campervan/Trailer Tent - General Area]]></name>
+          <faceValue>30.00</faceValue>
+          <bookingFee>0.00</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+        <ticket id="54498">
+          <name><![CDATA[Earlybird Caravan/Campervan/Trailer Tent with ELECTRIC HOOKUP - General Area]]></name>
+          <faceValue>80.00</faceValue>
+          <bookingFee>0.00</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+        <ticket id="54502">
+          <name><![CDATA[Earlybird Down n Dirty Toilet Pass]]></name>
+          <faceValue>8.00</faceValue>
+          <bookingFee>0.00</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+        <ticket id="54504">
+          <name><![CDATA[Earlybird Down n Dirty Shower Pass]]></name>
+          <faceValue>8.00</faceValue>
+          <bookingFee>0.00</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+      </tickets>
+      <genres>
+        <genre>
+          <name>Electro</name>
+        </genre>
+        <genre>
+          <name>Indie</name>
+        </genre>
+        <genre>
+          <name>Pop/Commercial</name>
+        </genre>
+        <genre>
+          <name>Punk</name>
+        </genre>
+        <genre>
+          <name>Rock</name>
+        </genre>
+      </genres>
+      <artists/>
+    </event>
+    <event id="11726948" link="http://www.skiddle.com/festivals/belladrum/?sktag=XXX">
+      <name><![CDATA[Belladrum Festival 2013]]></name>
+      <date>2013-08-02</date>
+      <eventcode>FEST</eventcode>
+      <shortdesc><![CDATA[Belladrum celebrates it's 10th Birthday in 2013 and we want you to celebrate it with us!]]></shortdesc>
+      <doorsopen>09:00</doorsopen>
+      <doorsclose>04:00</doorsclose>
+      <image>http://skiddlecdn.co.uk/images/cities/default.jpg</image>
+      <venue id="16427">
+        <name><![CDATA[Belladrum Estate]]></name>
+        <address>By Beauly, Inverness-shire</address>
+        <city>Inverness</city>
+        <town>Inverness</town>
+        <citycode>IV4</citycode>
+        <postcode/>
+      </venue>
+      <tickets>
+        <ticket id="55990">
+          <name><![CDATA[Full Weekend Ticket]]></name>
+          <faceValue>95.00</faceValue>
+          <bookingFee>6.00</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+        <ticket id="56002">
+          <name><![CDATA[Weekend Child Ticket]]></name>
+          <faceValue>0.00</faceValue>
+          <bookingFee>0.00</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+        <ticket id="56008">
+          <name><![CDATA[Deposit: Full Weekend Ticket]]></name>
+          <faceValue>50.00</faceValue>
+          <bookingFee>6.25</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+        <ticket id="56004">
+          <name><![CDATA[Campervan / Caravan]]></name>
+          <faceValue>50.00</faceValue>
+          <bookingFee>3.70</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+        <ticket id="56006">
+          <name><![CDATA[Campervan / Caravan + Electric hookup]]></name>
+          <faceValue>130.00</faceValue>
+          <bookingFee>8.00</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+      </tickets>
+      <genres/>
+      <artists/>
+    </event>
+    <event id="11712028" link="http://www.skiddle.com/festivals/beaconsfestival/?sktag=XXX">
+      <name><![CDATA[Beacons Festival 2013]]></name>
+      <date>2013-08-16</date>
+      <eventcode>FEST</eventcode>
+      <shortdesc><![CDATA[After an incredible first event, Beacons returns in 2013!]]></shortdesc>
+      <doorsopen>12:00</doorsopen>
+      <doorsclose>04:00</doorsclose>
+      <image>http://skiddlecdn.co.uk/images/cities/default.jpg</image>
+      <venue id="5452">
+        <name><![CDATA[TBC]]></name>
+        <address>TBC</address>
+        <city>Derby</city>
+        <town>TBC</town>
+        <citycode>DE1</citycode>
+        <postcode/>
+      </venue>
+      <tickets>
+        <ticket id="54006">
+          <name><![CDATA[Super Early Bird Ticket]]></name>
+          <faceValue>50.00</faceValue>
+          <bookingFee>5.25</bookingFee>
+          <quantity>0 available</quantity>
+          <status statuscode="300">End date passed</status>
+        </ticket>
+        <ticket id="54438">
+          <name><![CDATA[Weekend Adult Ticket]]></name>
+          <faceValue>64.50</faceValue>
+          <bookingFee>6.70</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+        <ticket id="54440">
+          <name><![CDATA[Special Offer Group Ticket]]></name>
+          <faceValue>322.50</faceValue>
+          <bookingFee>32.50</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+        <ticket id="55010">
+          <name><![CDATA[Beacons - Deposit Scheme]]></name>
+          <faceValue>30.00</faceValue>
+          <bookingFee>6.70</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+      </tickets>
+      <genres>
+        <genre>
+          <name>Deep/Soulful House</name>
+        </genre>
+        <genre>
+          <name>House</name>
+        </genre>
+        <genre>
+          <name>Indie</name>
+        </genre>
+        <genre>
+          <name>Jazz</name>
+        </genre>
+        <genre>
+          <name>Rock</name>
+        </genre>
+        <genre>
+          <name>Tech House</name>
+        </genre>
+      </genres>
+      <artists/>
+    </event>
+    <event id="11731210" link="http://www.skiddle.com/whats-on/Guildford/Rural-Life-Centre-Tilford-Surrey/Weyfest-2013/11731210/?sktag=XXX">
+      <name><![CDATA[Weyfest 2013]]></name>
+      <date>2013-08-30</date>
+      <eventcode>FEST</eventcode>
+      <shortdesc><![CDATA[Weyfest Music Festival is a small,relaxed family friendly festival set in an open air museum in the Surrey countryside.]]></shortdesc>
+      <doorsopen>18:00</doorsopen>
+      <doorsclose>23:00</doorsclose>
+      <image>http://skiddlecdn.co.uk/images/cities/default.jpg</image>
+      <venue id="16576">
+        <name><![CDATA[Rural Life Centre Tilford Surrey]]></name>
+        <address>Reeds Road, Tilford</address>
+        <city>Guildford</city>
+        <town>Farnham</town>
+        <citycode>GU10</citycode>
+        <postcode/>
+      </venue>
+      <tickets>
+        <ticket id="57916">
+          <name><![CDATA[Earlybird Adult 2-day Weekender]]></name>
+          <faceValue>70.00</faceValue>
+          <bookingFee>5.00</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+        <ticket id="57620">
+          <name><![CDATA[Earlybird Adult 3-day Weekender]]></name>
+          <faceValue>80.00</faceValue>
+          <bookingFee>6.00</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+        <ticket id="57970">
+          <name><![CDATA[Earlybird Youth (10-15) 3-day Weekender]]></name>
+          <faceValue>30.00</faceValue>
+          <bookingFee>3.00</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+        <ticket id="57918">
+          <name><![CDATA[Earlybird Youth (10-15) 2-day Weekender]]></name>
+          <faceValue>25.00</faceValue>
+          <bookingFee>2.50</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+        <ticket id="57564">
+          <name><![CDATA[Under-10 Weekender]]></name>
+          <faceValue>0.00</faceValue>
+          <bookingFee>0.00</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+        <ticket id="57628">
+          <name><![CDATA[Earlybird Adult Weekend Camping]]></name>
+          <faceValue>15.00</faceValue>
+          <bookingFee>1.75</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+        <ticket id="57630">
+          <name><![CDATA[Earlybird Youth (10-15) Weekend Camping]]></name>
+          <faceValue>10.00</faceValue>
+          <bookingFee>1.25</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+        <ticket id="57584">
+          <name><![CDATA[U10 Weekend Camping Ticket]]></name>
+          <faceValue>0.00</faceValue>
+          <bookingFee>0.00</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+        <ticket id="57632">
+          <name><![CDATA[Earlybird Family 3-day Weekender (2 Adult + 2 Youth) with Camping INCLUDED]]></name>
+          <faceValue>250.00</faceValue>
+          <bookingFee>15.00</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+        <ticket id="57604">
+          <name><![CDATA[Earlybird Adult Group 3-day Weekender (10 for 8)]]></name>
+          <faceValue>640.00</faceValue>
+          <bookingFee>20.00</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+        <ticket id="57636">
+          <name><![CDATA[Small Campervan]]></name>
+          <faceValue>25.00</faceValue>
+          <bookingFee>2.75</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+        <ticket id="57638">
+          <name><![CDATA[Large Campervan / Small Caravan]]></name>
+          <faceValue>40.00</faceValue>
+          <bookingFee>4.25</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+        <ticket id="57640">
+          <name><![CDATA[XL Campervan]]></name>
+          <faceValue>50.00</faceValue>
+          <bookingFee>5.25</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+      </tickets>
+      <genres/>
+      <artists/>
+    </event>
+    <event id="11732766" link="http://www.skiddle.com/whats-on/Edinburgh/Garvald-%5BEast-Lothian%5D/Audio-Soup-Festival/11732766/?sktag=XXX">
+      <name><![CDATA[Audio Soup Festival]]></name>
+      <date>2013-09-06</date>
+      <eventcode>FEST</eventcode>
+      <shortdesc><![CDATA[Audio Soup Scotland's only unsigned Festival is back with a whole plethora of music, art and vibe. ]]></shortdesc>
+      <doorsopen>18:00</doorsopen>
+      <doorsclose>03:00</doorsclose>
+      <image>http://skiddlecdn.co.uk/images/cities/default.jpg</image>
+      <venue id="24232">
+        <name><![CDATA[Garvald [East Lothian]]]></name>
+        <address>In a field</address>
+        <city>Edinburgh</city>
+        <town>Garvald</town>
+        <citycode>EH41</citycode>
+        <postcode/>
+      </venue>
+      <tickets>
+        <ticket id="56536">
+          <name><![CDATA[Advance Discount Ticket]]></name>
+          <faceValue>38.00</faceValue>
+          <bookingFee>4.05</bookingFee>
+          <quantity>More than 10 available</quantity>
+          <status statuscode="1">Available</status>
+        </ticket>
+      </tickets>
+      <genres/>
+      <artists/>
+    </event>
+  </events>
+</affiliatefeed>

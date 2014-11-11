@@ -1,0 +1,62 @@
+.header {
+
+  .number-badge {
+    text-align: center;
+    background-color: @darkGreen;
+    line-height: 24px;
+    color: white;
+    .rounded(4px);
+
+    .top {
+      background-color: @green;
+      padding: 5px 10px 5px 10px;
+      -webkit-border-radius: 4px 4px 0 0;
+      -moz-border-radius: 4px 4px 0 0;
+      border-radius: 4px 4px 0 0;
+    }
+
+    .bottom {
+      padding: 5px 10px 5px 10px;
+    }
+
+    h1, h2 {
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
+}
+
+.dot {
+  color: white;
+}
+
+@media (max-width: 270px) {
+  div.logo {
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 979px) {
+
+  .header {
+    padding-bottom: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .header {
+    padding-top: 30px
+  }
+}
+
+@media (max-width: 585px) {
+
+  .header {
+    padding-top: 20px
+  }
+}

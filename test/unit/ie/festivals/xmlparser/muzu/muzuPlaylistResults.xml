@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<artist>
+    <channel token="OVJTm1R5Hg" vanityname="thecure">
+        <name>
+            <![CDATA[The Cure]]>
+        </name>
+        <description>
+            <![CDATA[Watch, Create and Share official The Cure Music Videos for free on MUZU.TV. Create video playlists and find The Cure videos, mp3's, tour dates, photos, latest The Cure news, discography, The Cure biography and much more on the official The Cure music video channel on MUZU.TV. ]]>
+        </description>
+        <tags>
+            <![CDATA[]]>
+        </tags>
+        <url>
+            <![CDATA[http://www.muzu.tv/thecure/]]>
+        </url>
+        <embed>
+            <![CDATA[<iframe frameborder="0" width="570" height="340" src="http://player.muzu.tv/player/getPlayer/i/33302/la=y" allowfullscreen></iframe><br /><a href="http://www.muzu.tv/thecure/">The Cure</a> on <a href="http://www.muzu.tv/">MUZU.TV</a>]]>
+        </embed>
+        <image type="1" height="58" width="108">
+            <url>
+                <![CDATA[http://static.muzu.tv/media/2009/08/13/264765.jpg]]>
+            </url>
+        </image>
+        <thumbnails>
+            <image type="1" height="58" width="108">
+                <url>
+                    <![CDATA[http://static.muzu.tv/media/2009/08/13/264765.jpg]]>
+                </url>
+            </image>
+            <image type="5" height="90" width="160">
+                <url>
+                    <![CDATA[http://static.muzu.tv/media/2009/09/07/update_264765.jpg]]>
+                </url>
+            </image>
+            <image type="6" height="207" width="280">
+                <url>
+                    <![CDATA[http://static.muzu.tv/media/2009/08/30/264765.jpg]]>
+                </url>
+            </image>
+        </thumbnails>
+        <videos>
+            <video duration="275" v240p="false" ss="false" timesViewed="6527" releasedate="11-Aug-2010" hdVersion="1" videotype="1" artistid="9868" sourceid="33302" v1080p="false" uploaded="01-Sep-2010" hls="false" id="735820" v360p="true" advisory="false" allowedterritories="DE GB FI AT NO IE" ownerid="606" genre="alternative" v480p="true" v720p="false" adultContent="false" sdVersion="1">
+                <title>
+                    <![CDATA[Close To Me]]>
+                </title>
+                <description>
+                    <![CDATA[Official music video for the track Close To Me by The Cure. Close to Me" is a 1985 single by The Cure from their album The Head on the Door. The song was used as the theme music for the BBC sitcom The Smoking Room.]]>
+                </description>
+                <artistname>
+                    <![CDATA[The Cure]]>
+                </artistname>
+                <channel vanityname="thecure">
+                    <name>
+                        <![CDATA[The Cure]]>
+                    </name>
+                    <url>
+                        <![CDATA[http://www.muzu.tv/thecure/]]>
+                    </url>
+                    <vanity>
+                        <![CDATA[thecure]]>
+                    </vanity>
+                </channel>
+                <tags>
+                    <![CDATA[alternative,the cure,close to me]]>
+                </tags>
+                <url>
+                    <![CDATA[http://www.muzu.tv/thecure/close-to-me-music-video/735820/]]>
+                </url>
+                <embed>
+                    <![CDATA[<iframe frameborder="0" width="570" height="340" src="http://player.muzu.tv/player/getPlayer/i/33302/vidId=735820&la=n" allowfullscreen></iframe><br /><a href="http://www.muzu.tv/thecure/the-cure-close-to-me-music-video/735820/">The Cure - Close To Me</a> on <a href="http://www.muzu.tv/">MUZU.TV</a>]]>
+                </embed>
+                <thumbnails>
+                    <image type="1" height="63" width="112">
+                        <url>
+                            <![CDATA[http://static.muzu.tv/media/images/000/735/820/001/735820-thb1.png]]>
+                        </url>
+                    </image>
+                    <image type="3" height="120" width="160">
+                        <url>
+                            <![CDATA[http://static.muzu.tv/media/images/000/735/820/001/735820-thb3.png]]>
+                        </url>
+                    </image>
+                    <image type="5" height="90" width="160">
+                        <url>
+                            <![CDATA[http://static.muzu.tv/media/images/000/735/820/001/735820-thb5.png]]>
+                        </url>
+                    </image>
+                    <image type="6" height="162" width="288">
+                        <url>
+                            <![CDATA[http://static.muzu.tv/media/images/000/735/820/001/735820-thb6.png]]>
+                        </url>
+                    </image>
+                    <image type="8" height="96" width="128">
+                        <url>
+                            <![CDATA[http://static.muzu.tv/media/images/000/735/820/001/735820-thb4.png]]>
+                        </url>
+                    </image>
+                    <image type="4" height="316" width="426">
+                        <url>
+                            <![CDATA[http://static.muzu.tv/media/images/000/735/820/001/735820-thb8.png]]>
+                        </url>
+                    </image>
+                    <image type="2" height="360" width="640">
+                        <url>
+                            <![CDATA[http://static.muzu.tv/media/images/000/735/820/001/735820-thb2.png]]>
+                        </url>
+                    </image>
+                </thumbnails>
+            </video>
+        </videos>
+    </channel>
+</artist>
