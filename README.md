@@ -180,7 +180,7 @@ The application requires access to the local filesystem in order to
 * Store the index created by the [Searchable plugin](http://grails.org/plugin/searchable). The location where this is
 stored is controlled by the `compassConnection` setting in [Searchable.groovy](https://github.com/domurtag/festivals/blob/master/grails-app/conf/Searchable.groovy)
 
-* Store images when a new artist is added to a festival lineup with a custom image. The location where these images
+* Store images when a new artist is added with a custom image. The location where these images
 are saved is controller by the `festival.images.artistDir` setting in [Config.groovy](https://github.com/domurtag/festivals/blob/master/grails-app/conf/Config.groovy)
 
 ## Launch Application
