@@ -33,7 +33,7 @@ The contents of the secret configuration file(s) are described in the following 
 
 ### Mandatory Secret Configuration
 
-These settings described must be provided or the application will fail to start
+The application will fail to start unless these settings are added to the secret configuration file (or [DataSource.groovy](https://github.com/domurtag/festivals/blob/master/grails-app/conf/DataSource.groovy)).
 
 ````
 dataSource.username=festival
