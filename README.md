@@ -185,7 +185,7 @@ are saved is controller by the `festival.images.artistDir` setting in [Config.gr
 
 ## Launch Application
 
-Once the steps described above have been followed it should be possible to start the application (in development mode) 
+Once the steps described above have been followed the application can be started (in development mode) 
 by running `grails run-app` from the application's root directory. By default the following users will automatically be
 created 
 
