@@ -27,7 +27,11 @@ class ArtistController extends AbstractController {
     def list() {
 
         def firstInitial = params.name
-        def artists = Artist.withCriteria {
+
+        params.max = 20
+        params.offset = params.offset ?: 0
+
+        def artists = Artist.createCriteria().list (max: params.max, offset: params.offset) {
 
             if (firstInitial) {
                 ilike("name", "$firstInitial%")
@@ -38,8 +42,16 @@ class ArtistController extends AbstractController {
             order("name", "asc")
         }
 
+        def artistTotal = Artist.createCriteria().count {
+            if (firstInitial) {
+                ilike("name", "$firstInitial%")
+            } else {
+                rlike("name", /^[^a-zA-Z].*/)
+            }
+        }
+
         def subscribedArtistIds = artistService.currentSubscriptions()*.id
-        [artistInstanceList: artists, subscribedArtistIds: subscribedArtistIds]
+        [artistInstanceList: artists, subscribedArtistIds: subscribedArtistIds, total: artistTotal]
     }
 
     def show() {

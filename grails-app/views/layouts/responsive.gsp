@@ -351,7 +351,7 @@
                                     </ul>
                                 </li>
                                 <li class="small">
-                                    <g:link controller='artist' action='list'>Artists</g:link>
+                                    <g:link controller='artist' action='list' params="[name: 'A']">Artists</g:link>
                                 </li>
                                 <li class="small">
                                     <g:link controller='festival' action='create' class="no-wrap">Add Festival</g:link>
