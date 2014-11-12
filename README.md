@@ -106,7 +106,7 @@ festivals.bookingDotComAffiliateId=changeme
  
 #### Mail Server Password
  
-Configure the password for the account that the application uses to send email with
+Configure the password for the SMTP account that the application uses to send email
  
 ````
 grails.mail.password=changeme
@@ -148,13 +148,13 @@ systemWidePasswordSalt=choose-any-random-string-but-dont-ever-change-it
 ## Database Configuration
 
 When the application is run in the development environment, it is assumed that the MySQL server is running on localhost,
-the name of the schema is festival. To change these defaults update `dataSource.url` in [DataSource.groovy](https://github.com/domurtag/festivals/blob/master/grails-app/conf/DataSource.groovy).
+and the name of the schema is "festival". To change these defaults update `dataSource.url` in [DataSource.groovy](https://github.com/domurtag/festivals/blob/master/grails-app/conf/DataSource.groovy).
 
 The database tables will be automatically created by the application on startup, but the schema itself
 must already exist beforehand. Run `show databases` from the MySQL console to verify the existence of a schema with
 the correct name.
 
-To fully support the most esoteric Unicode characters, MySQL server should be changed to [use utf8mb4 encoding](https://mathiasbynens.be/notes/mysql-utf8mb4) 
+To fully support the most esoteric Unicode characters, MySQL should be changed to [use utf8mb4 encoding](https://mathiasbynens.be/notes/mysql-utf8mb4) 
 by adding the following to the MySQL configuration file
 
 ````
@@ -170,22 +170,22 @@ character-set-server = utf8mb4
 collation-server = utf8mb4_unicode_ci
 ````
 
-But in most cases, the default configuration should suffice.
+However in most cases, this step can be skipped as the default configuration should suffice.
 
 
 ## Local Filesystem Access
 
-The application requires write access to the local filesystem in order to
+The application requires access to the local filesystem in order to
 
 * Store the index created by the [Searchable plugin](http://grails.org/plugin/searchable). The location where this is
 stored is controlled by the `compassConnection` setting in [Searchable.groovy](https://github.com/domurtag/festivals/blob/master/grails-app/conf/Searchable.groovy)
 
-* Save custom images that are chosen when a new artist is added to a festival lineup. The location where these images
+* Store images when a new artist is added to a festival lineup with a custom image. The location where these images
 are saved is controller by the `festival.images.artistDir` setting in [Config.groovy](https://github.com/domurtag/festivals/blob/master/grails-app/conf/Config.groovy)
 
 ## Launch Application
 
-If the steps described above have been followed it should be possible to start the application (in development mode) simply 
+Once the steps described above have been followed it should be possible to start the application (in development mode) 
 by running `grails run-app` from the application's root directory. By default the following users will automatically be
 created 
 
