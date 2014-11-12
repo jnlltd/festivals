@@ -14,7 +14,7 @@ changes
 * Competitions
 * Web Service - the REST API allows festival data to be retrieved by location, time, festival type, etc 
 * CMS pages allows administrators to add/remove/update artists, festivals, competitions, users, etc. Regular users can also
-add festivals to the application, but they will not appear until approved by an administrator.
+add festivals to the application, but they will not appear until they're approved by an administrator.
 * In addition to artist and festival data entered manually by users, content is also automatically imported from sources
 such as last.fm, Skiddle, Eventbrite, Muzu
 
@@ -23,11 +23,11 @@ If you wish to run the application locally, you must have access to a MySQL serv
 relevant Grails version](https://github.com/domurtag/festivals/blob/master/application.properties) installed.
 
 ## Secret Configuration
-After cloning this repository, a config file containing various sensitive parameters should be added to the 
+After cloning this repository, a config file containing confidential parameters should be added to the 
 [conf](https://github.com/domurtag/festivals/tree/master/grails-app/conf) directory, before the application is built.
 The name of this file must be `secret.properties`. You can provide environment-specific overrides for these settings by
-adding a file named for the environment. For example, to override some/all of the settings in `secret.properties` for
-the production environment add these settings to a file named `secret-PRODUCTION.properties` in the same directory. 
+adding an additional configuration file named after the environment. For example, to override some/all of the settings in `secret.properties` for
+the production environment, add the overrides to a file named `secret-PRODUCTION.properties` in the same directory. 
 
 The contents of the secret configuration file(s) are described in the following subsections
 
@@ -43,7 +43,7 @@ dataSource.password=changeme
 ### Optional Secret Configuration
 
 If these settings are omitted, the application will start, but certain features will not work correctly. The consequences
-of omitting each one and (where applicable) how to remove this feature completely are described below
+of omitting each one and (where applicable) how to remove the feature completely are described below
 
 #### Google Maps API Keys
 
@@ -57,7 +57,7 @@ festival.googleApiClientKey=changeme
 
 #### Skiddle API Key
 
-A daily job automatically imports festivals into the database from the [http://www.skiddle.com/api/](Skiddle events API).
+A daily job automatically imports festival data into the database from the [http://www.skiddle.com/api/](Skiddle events API).
 This job will fail unless the key below is provided.
 
 ````
@@ -68,7 +68,7 @@ To disable this feature, simply remove the relevant [Quartz class](https://githu
 
 #### Eventbrite API Key
 
-A daily job automatically imports festivals into the database from the [http://developer.eventbrite.com/](Eventbrite web service).
+A daily job automatically imports festival data into the database from the [Eventbrite web service](http://developer.eventbrite.com).
 This job will fail unless the key below is provided.
 
 ````
@@ -88,9 +88,9 @@ festival.muzuApiKey=changeme
 To disable this feature, remove the [artist video service](https://github.com/domurtag/festivals/blob/master/grails-app/services/ie/festivals/ArtistVideoService.groovy) 
 and all references to it.
 
-#### lastFM API Key
+#### Last.fm API Key
 
-To retrieve artist data and images from the [last.fm API](http://www.last.fm/api) you will need to add the following:
+To retrieve artist data and images from the [Last.fm API](http://www.last.fm/api) you will need to add the following:
 
 ````
 festival.lastFM.apiKey=changeme
