@@ -37,7 +37,7 @@ modules = {
 
     highcharts {
         dependsOn 'jquery'
-        resource 'js/highcharts.js'
+        resource 'js/highcharts.min.js'
     }
 
     home {
