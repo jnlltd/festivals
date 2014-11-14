@@ -11,14 +11,12 @@ class BootStrap {
 
         def festivalConfig = grailsApplication.config.festival
 
-        // create some roles
-        def userRole = createRole(festivalConfig.userRoleName)
-        def adminRole = createRole(festivalConfig.adminRoleName)
+        def userRole = createRoleIfAbsent(festivalConfig.userRoleName)
+        def adminRole = createRoleIfAbsent(festivalConfig.adminRoleName)
 
         if (Environment.developmentMode) {
-            // create some users
-            createUser('Default Admin', 'festival-admin@mailinator.com', adminRole)
-            createUser('Default User', 'festival-user@mailinator.com', adminRole)
+            createUserIfAbsent('Default Admin', 'festival-admin@mailinator.com', adminRole)
+            createUserIfAbsent('Default User', 'festival-user@mailinator.com', adminRole)
         }
 
         // Override the default maxSize of 191 on the body property of BlogEntry and Comment
@@ -46,9 +44,8 @@ class BootStrap {
      * @param username
      * @param role
      * @param resetRoles indicates whether any roles currently assigned to the user will be removed before <tt>role</tt> is assigned
-     * @return
      */
-    private User createUser(name, username, Role role, boolean resetRoles = false) {
+    private void createUserIfAbsent(String name, String username, Role role, boolean resetRoles = false) {
 
         def defaultPassword = 'password'
 
@@ -65,11 +62,15 @@ class BootStrap {
         if (!user.authorities.contains(role)) {
             UserRole.create user, role
         }
-        user
     }
 
-    private createRole(String roleName) {
-        Role.findByAuthority(roleName) ?: new Role(authority: roleName).save(failOnError: true)
+    /**
+     * Creates a role if it doesn't already exist
+     * @param name the name of the role
+     * @return the role with this name
+     */
+    private createRoleIfAbsent(String name) {
+        Role.findByAuthority(name) ?: new Role(authority: name).save(failOnError: true)
     }
 
     def destroy = {
