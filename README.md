@@ -18,11 +18,11 @@ add festivals to the application, but they will not appear until they're approve
 * In addition to artist and festival data entered manually by users, content is also automatically imported from sources
 such as last.fm, Skiddle, Eventbrite, Muzu
 
-## Prerequisites
+## Run Locally
 If you wish to run the application locally, you must have access to a MySQL server and [the 
 relevant Grails version](https://github.com/domurtag/festivals/blob/master/application.properties) installed.
 
-## Secret Configuration
+### Secret Configuration
 After cloning this repository, a config file containing confidential parameters should be added to the 
 [conf](https://github.com/domurtag/festivals/tree/master/grails-app/conf) directory, before the application is built.
 The name of this file must be `secret.properties`. You can provide environment-specific overrides for these settings by
@@ -31,7 +31,7 @@ the production environment, add the overrides to a file named `secret-PRODUCTION
 
 The contents of the secret configuration file(s) are described in the following subsections
 
-### Mandatory Secret Configuration
+#### Mandatory Secret Configuration
 
 The application will fail to start unless these settings are added to the secret configuration file (or [DataSource.groovy](https://github.com/domurtag/festivals/blob/master/grails-app/conf/DataSource.groovy)).
 
@@ -40,12 +40,12 @@ dataSource.username=festival
 dataSource.password=changeme
 ````
 
-### Optional Secret Configuration
+#### Optional Secret Configuration
 
 If these settings are omitted, the application will start, but certain features will not work correctly. The consequences
 of omitting each one and (where applicable) how to remove the feature completely are described below
 
-#### Google Maps API Keys
+##### Google Maps API Keys
 
 These API keys are used when calling Google Maps APIs on the server and client side.
 The hosts/IP addresses on which these keys can be used are [configured here](https://code.google.com/apis/console). 
@@ -55,7 +55,7 @@ festival.googleApiServerKey=changeme
 festival.googleApiClientKey=changeme
 ````
 
-#### Skiddle API Key
+##### Skiddle API Key
 
 A daily job automatically imports festival data into the database from the [http://www.skiddle.com/api/](Skiddle events API).
 This job will fail unless the key below is provided.
@@ -66,7 +66,7 @@ festival.skiddle.tag=changeme
 
 To disable this feature, simply remove the relevant [Quartz class](https://github.com/domurtag/festivals/blob/master/grails-app/jobs/ie/festivals/job/ImportSkiddleFeedJob.groovy).
 
-#### Eventbrite API Key
+##### Eventbrite API Key
 
 A daily job automatically imports festival data into the database from the [Eventbrite web service](http://developer.eventbrite.com).
 This job will fail unless the key below is provided.
@@ -77,7 +77,7 @@ festival.eventbrite.accessToken=changeme
 
 To disable this feature, simply remove the relevant [Quartz class](https://github.com/domurtag/festivals/blob/master/grails-app/jobs/ie/festivals/job/ImportEventbriteFestivalsJob.groovy).
 
-#### Muzu API Key
+##### Muzu API Key
 
 Artist videos are retrieved from [Muzu's Data API](http://www.muzu.tv/api/). 
 
@@ -88,7 +88,7 @@ festival.muzuApiKey=changeme
 To disable this feature, remove the [artist video service](https://github.com/domurtag/festivals/blob/master/grails-app/services/ie/festivals/ArtistVideoService.groovy) 
 and all references to it.
 
-#### Last.fm API Key
+##### Last.fm API Key
 
 To retrieve artist data and images from the [Last.fm API](http://www.last.fm/api) you will need to add the following:
 
@@ -96,7 +96,7 @@ To retrieve artist data and images from the [Last.fm API](http://www.last.fm/api
 festival.lastFM.apiKey=changeme
 ````
 
-#### Booking.com
+##### Booking.com
 
 To earn commission when users are successfully referred to http://booking.com, add the following:
  
@@ -104,7 +104,7 @@ To earn commission when users are successfully referred to http://booking.com, a
 festivals.bookingDotComAffiliateId=changeme
 ````
  
-#### Mail Server Password
+##### Mail Server Password
  
 Configure the password for the SMTP account that the application uses to send email
  
@@ -114,7 +114,7 @@ grails.mail.password=changeme
 
 To disable email sending, set `festival.sendEmail = false` in [Config.groovy](https://github.com/domurtag/festivals/blob/master/grails-app/conf/Config.groovy)
 
-#### Janrain
+##### Janrain
 
 [Janrain](http://janrain.com/product/social-login/) is used to allow users to register and login to the application 
 using services such as Facebook, Twitter, Google+, etc. It requires
@@ -125,7 +125,7 @@ janrain.apiKey=changeme
 janrain.applicationID=changeme
 ````
 
-#### Airbrake API Key
+##### Airbrake API Key
 
 Errors that occur within the application are recorded by [Airbake](https://airbrake.io/). To use this service, you must
 add the following configuration
@@ -136,7 +136,7 @@ grails.plugins.airbrake.apiKey=changeme
 
 To disable Airbrake, simply uninstall the [Grails Airbrake plugin](https://github.com/domurtag/festivals/blob/master/grails-app/conf/BuildConfig.groovy).
 
-#### Password Salt
+##### Password Salt
 
 When users register, their password is salted and hashed before being persisted. Set the password salt to a random string
 via the setting below
@@ -145,7 +145,7 @@ via the setting below
 systemWidePasswordSalt=choose-any-random-string-but-dont-ever-change-it
 ````
 
-## Database Configuration
+### Database Configuration
 
 When the application is run in the development environment, it is assumed that the MySQL server is running on localhost,
 and the name of the schema is "festival". To change these defaults update `dataSource.url` in [DataSource.groovy](https://github.com/domurtag/festivals/blob/master/grails-app/conf/DataSource.groovy).
@@ -173,7 +173,7 @@ collation-server = utf8mb4_unicode_ci
 However in most cases, this step can be skipped as the default configuration should suffice.
 
 
-## Local Filesystem Access
+### Local Filesystem Access
 
 The application requires access to the local filesystem in order to
 
@@ -183,7 +183,7 @@ stored is controlled by the `compassConnection` setting in [Searchable.groovy](h
 * Store images when a new artist is added with a custom image. The location where these images
 are saved is controller by the `festival.images.artistDir` setting in [Config.groovy](https://github.com/domurtag/festivals/blob/master/grails-app/conf/Config.groovy)
 
-## Launch Application
+### Launch Application
 
 Once the steps described above have been followed the application can be started (in development mode) 
 by running `grails run-app` from the application's root directory. By default the following users will automatically be
