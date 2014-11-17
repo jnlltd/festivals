@@ -12,9 +12,9 @@ changes
 * Reminders - registered users can request to receive a reminder about a festival by email up to 10 days before it starts
 * Blog
 * Competitions
-* Web Service - the REST API allows festival data to be retrieved by location, time, festival type, etc 
+* Web Service - a REST API allows festival data to be retrieved by location, time, festival type, etc 
 * CMS pages allows administrators to add/remove/update artists, festivals, competitions, users, etc. Regular users can also
-add festivals to the application, but they will not appear until they're approved by an administrator.
+add festivals to the application, but they will not appear until approved by an administrator.
 * In addition to artist and festival data entered manually by users, content is also automatically imported from sources
 such as last.fm, Skiddle, Eventbrite, Muzu
 
@@ -186,7 +186,7 @@ are saved is controller by the `festival.images.artistDir` setting in [Config.gr
 ### Launch Application
 
 Once the steps described above have been followed the application can be started (in development mode) 
-by running `grails run-app` from the application's root directory. By default the following users will automatically be
+by running `grails run-app` on the command-line from the application's root directory. By default the following users will automatically be
 created 
 
 | Username                       | Password | Role          |
@@ -195,6 +195,15 @@ created
 | festival-user@mailinator.com   | password | User          |
 
 These defaults can be changed in [BootStrap.groovy](https://github.com/domurtag/festivals/blob/master/grails-app/conf/BootStrap.groovy)
+
+## Automated Tests
+
+Before running the integration tests for the first time an empty MySQL schema named "festival_test" must be created 
+on localhost. By default, the tests access this schema with username "root" and a blank password. The default test database
+settings can be changed in [DataSource.groovy](https://github.com/domurtag/festivals/blob/master/grails-app/conf/DataSource.groovy).
+
+Once the schema has been created, the unit and integration tests can be executed by running `grails test-app` on the 
+command-line from the application's root directory.
 
 ## License
 
