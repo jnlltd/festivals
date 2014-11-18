@@ -1,1 +1,0 @@
-alter table artist drop column bio_approved;

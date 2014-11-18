@@ -1,1 +1,0 @@
-alter table festival change highlights synopsis longtext null;

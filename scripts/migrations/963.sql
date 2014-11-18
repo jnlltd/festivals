@@ -1,1 +1,0 @@
-ALTER TABLE festival MODIFY city VARCHAR(191) NULL;
