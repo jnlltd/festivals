@@ -56,7 +56,7 @@ class CompetitionController extends AbstractController {
         boolean answerSelected = answerIndex != null && competition.answers?.size() > answerIndex
 
         if (answerSelected) {
-            competition.answers.eachWithIndex {Answer answer, index ->
+            competition.answers.eachWithIndex { Answer answer, index ->
                 answer.correct = index == answerIndex
             }
         }
@@ -109,7 +109,7 @@ class CompetitionController extends AbstractController {
         } else {
             flashHelper.warn 'competition.winner.not.found'
         }
-        redirect  action: 'show', params: [code: competition.code]
+        redirect action: 'show', params: [code: competition.code]
     }
 
 
