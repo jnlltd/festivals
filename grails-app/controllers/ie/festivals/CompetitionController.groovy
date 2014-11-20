@@ -12,6 +12,8 @@ class CompetitionController extends AbstractController {
     SpringSecurityService springSecurityService
     ExportService exportService
 
+    private static final EXPORT_FORMAT = 'excel'
+
     @Secured(['ROLE_ADMIN'])
     def create() {
         [competition: new Competition()]
@@ -118,9 +120,7 @@ class CompetitionController extends AbstractController {
         List<Entry> correctEntries = Entry.findAllByCompetitionAndAnswer(competition, correctAnswer)
 
         // the first param should match a key in ExportConfig.exporters with 'Exporter' removed
-        def format = 'excel'
-
-        response.contentType = grailsApplication.config.grails.mime.types[format]
+        response.contentType = grailsApplication.config.grails.mime.types[EXPORT_FORMAT]
         response.setHeader("Content-disposition", "attachment; filename=${competition.code}-correct-entrants.xls")
 
         List fields = ["user.name", "phoneNumber", "user.username"]
@@ -129,7 +129,7 @@ class CompetitionController extends AbstractController {
         // Formatter closure
         Map parameters = [title: competition.code, "column.widths": [0.2, 0.2, 0.3]]
 
-        exportService.export(format, response.outputStream, correctEntries, fields, labels, [:], parameters)
+        exportService.export(EXPORT_FORMAT, response.outputStream, correctEntries, fields, labels, [:], parameters)
     }
 
     @Secured(['ROLE_ADMIN', 'ROLE_USER'])
