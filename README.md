@@ -170,7 +170,7 @@ character-set-server = utf8mb4
 collation-server = utf8mb4_unicode_ci
 ````
 
-However in most cases, this step can be skipped as the default configuration should suffice.
+However in most cases, this step can be skipped as the default utf8 encoding should suffice.
 
 
 ### Local Filesystem Access
