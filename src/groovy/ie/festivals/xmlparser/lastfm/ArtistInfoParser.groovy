@@ -1,6 +1,5 @@
 package ie.festivals.xmlparser.lastfm
 
-import groovy.util.logging.Slf4j
 import groovy.util.slurpersupport.GPathResult
 import ie.festivals.Artist
 import ie.festivals.ImageDimensions
@@ -9,7 +8,6 @@ import ie.festivals.util.HtmlUtils
 
 import java.awt.image.BufferedImage
 
-@Slf4j
 class ArtistInfoParser extends AbstractLastFmParser<Artist> {
 
     private final Artist artist

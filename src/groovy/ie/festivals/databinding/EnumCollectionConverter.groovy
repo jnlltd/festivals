@@ -1,13 +1,11 @@
 package ie.festivals.databinding
 
-import groovy.util.logging.Slf4j
 import ie.festivals.enums.FestivalType
 import org.grails.databinding.converters.FormattedValueConverter
 
 /**
  * Converts a String such as <code>HEADLINE,MUSIC,SPORT</code> to the corresponding collection of enum constants
  */
-@Slf4j
 class EnumCollectionConverter implements FormattedValueConverter {
 
     /**

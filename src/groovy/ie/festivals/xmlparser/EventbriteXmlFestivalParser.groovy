@@ -5,7 +5,6 @@ import grails.gsp.PageRenderer
 import grails.plugin.geocode.AddressComponent
 import grails.plugin.geocode.GeocodingService
 import grails.plugin.geocode.Point
-import groovy.util.logging.Slf4j
 import groovy.util.slurpersupport.GPathResult
 import ie.festivals.Festival
 import ie.festivals.enums.FestivalSource
@@ -14,7 +13,6 @@ import ie.festivals.util.HtmlUtils
 
 import java.text.NumberFormat
 
-@Slf4j
 class EventbriteXmlFestivalParser implements XmlParser<Map<Long, Festival>> {
 
     private static final DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss'

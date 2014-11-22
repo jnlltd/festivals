@@ -1,10 +1,8 @@
 package ie.festivals.notify
 
 import groovy.sql.GroovyRowResult
-import groovy.util.logging.Slf4j
 import ie.festivals.i18n.GroovyMessageSourceResolvable
 
-@Slf4j
 class ArtistNotifier extends AbstractNotifier {
 
     private ArtistNotification artistNotification = new ArtistNotification()

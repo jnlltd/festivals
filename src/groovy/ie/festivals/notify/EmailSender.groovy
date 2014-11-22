@@ -4,14 +4,12 @@ import grails.gsp.PageRenderer
 import grails.plugin.mail.MailService
 import grails.util.ClosureToMapPopulator
 import grails.util.Environment
-import groovy.util.logging.Slf4j
 import ie.festivals.MailLog
 import org.codehaus.groovy.grails.commons.GrailsApplication
 import org.codehaus.groovy.grails.web.mapping.LinkGenerator
 import org.springframework.context.MessageSource
 import org.springframework.context.MessageSourceResolvable
 
-@Slf4j
 class EmailSender {
 
     MessageSource messageSource
