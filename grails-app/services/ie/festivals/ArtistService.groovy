@@ -220,6 +220,33 @@ class ArtistService {
         }
     }
 
+
+    @Transactional(readOnly = true)
+    List<Artist> listByName(Integer max, Integer offset, String firstInitial) {
+
+        Artist.createCriteria().list (max: max, offset: offset) {
+            if (firstInitial) {
+                ilike("name", "$firstInitial%")
+            } else {
+                rlike("name", /^[^a-zA-Z].*/)
+            }
+
+            order("name", "asc")
+        }
+    }
+
+    @Transactional(readOnly = true)
+    List<Artist> countByName(String firstInitial) {
+
+        Artist.createCriteria().count {
+            if (firstInitial) {
+                ilike("name", "$firstInitial%")
+            } else {
+                rlike("name", /^[^a-zA-Z].*/)
+            }
+        }
+    }
+
     private boolean isUnique(Collection<Named> currentEntities, String newEntityName) {
 
         if (!currentEntities) {
