@@ -236,7 +236,7 @@ class ArtistService {
     }
 
     @Transactional(readOnly = true)
-    List<Artist> countByName(String firstInitial) {
+    Integer countByName(String firstInitial) {
 
         Artist.createCriteria().count {
             if (firstInitial) {

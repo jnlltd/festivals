@@ -29,7 +29,7 @@ class ArtistController extends AbstractController {
         def firstInitial = params.name
 
         params.max = 20
-        params.offset = params.offset ?: 0
+        params.offset = (params.offset ?: 0) as Integer
 
         def artists = artistService.listByName(params.max, params.offset, firstInitial)
         def artistTotal = artistService.countByName(firstInitial)
