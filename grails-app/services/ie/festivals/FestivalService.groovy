@@ -389,7 +389,7 @@ class FestivalService extends AbstractJdbcService {
             }
 
             if (params.sort) {
-                def sortSpec = params.sort.iterator().next()
+                Map sortSpec = params.sort.iterator().next()
                 order(sortSpec.key, sortSpec.value)
             }
             cache true
