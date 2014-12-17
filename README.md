@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/domurtag/festivals.svg?branch=master)](https://travis-ci.org/domurtag/festivals)
+
 ## festivals.ie
 A responsive [Grails website](http://festivals.ie) that provides information about festivals in Ireland and beyond. Features of
 the application include:
