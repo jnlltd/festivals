@@ -92,6 +92,10 @@ environments {
         festival.eventbrite.maxResultsPerCountry = 5
 
         grails.serverURL = "http://festivals-test.com"
+
+        janrain.apiKey = 'dummyValueToPreventExceptionsWhenRunningTests'
+        janrain.applicationID = 'dummyValueToPreventExceptionsWhenRunningTests'
+        systemWidePasswordSalt = 'dummyValueToPreventExceptionsWhenRunningTests'
     }
 
     production {
