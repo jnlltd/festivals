@@ -57,6 +57,8 @@ environments {
     test {
         dataSource {
             dbCreate = "create"
+            username = "root"
+            password = ""
             url = "jdbc:mysql://localhost/festival_test?useUnicode=yes&characterEncoding=UTF-8"
         }
     }
