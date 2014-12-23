@@ -2,6 +2,10 @@ import grails.util.Holders
 
 modules = {
 
+    jquery {
+        resource url: 'js/jquery-1.11.1.min.js', disposition: 'head'
+    }
+
     layout {
         dependsOn 'jquery'
 
