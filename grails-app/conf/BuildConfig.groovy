@@ -71,7 +71,7 @@ grails.project.dependency.resolution = {
                 ":cache-headers:1.1.7",
                 ":cached-resources:1.0",
                 ":closure-compiler:0.9.2",
-                ":console:1.5.1",
+                ":console:1.5.2",
                 ":feeds:1.6",
                 ":flash-helper:0.9.9",
                 ":jdbc-pool:7.0.47",
