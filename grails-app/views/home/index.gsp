@@ -50,7 +50,9 @@
    "url": "${grailsApplication.config.grails.serverURL}",
    "potentialAction": {
      "@type": "SearchAction",
-     "target": "${g.createLink(controller: 'search', action: 'search', params: [q: '{search_term_string}'], absolute: true)}",
+
+     %{--don't use the params attribute of createLink to add the 'q' param because these causes unwanted encoding of the curly brackets--}%
+     "target": "${g.createLink(controller: 'search', action: 'search', absolute: true) + '?q={search_term_string}'}",
      "query-input": "required name=search_term_string"
    }
 }
