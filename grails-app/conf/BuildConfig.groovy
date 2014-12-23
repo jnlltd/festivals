@@ -75,10 +75,11 @@ grails.project.dependency.resolution = {
                 ":feeds:1.6",
                 ":flash-helper:0.9.9",
                 ":jdbc-pool:7.0.47",
+                ":jquery:1.11.1",
                 ":lesscss-resources:1.3.3",
                 ":mail:1.0.7",
                 ":quartz:1.0.2",
-                ":resources:1.2.13",
+                ":resources:1.2.8",
                 ":simple-blog:0.3.5"
 
         test    ":build-test-data:2.2.2"

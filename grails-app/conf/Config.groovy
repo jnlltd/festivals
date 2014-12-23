@@ -56,7 +56,7 @@ grails.exceptionresolver.logRequestParameters = true
 // configure auto-caching of queries by default (if false you can cache individual queries with 'cache: true')
 grails.hibernate.cache.queries = false
 
-boolean optimizeResources = Environment.current == Environment.PRODUCTION
+boolean optimizeResources = true // Environment.current == Environment.PRODUCTION
 
 grails.resources.mappers.lesscss.compress = optimizeResources
 grails.resources.mappers.bundle.enabled = optimizeResources
@@ -64,7 +64,11 @@ grails.resources.mappers.hashandcache.enabled = optimizeResources
 grails.resources.mappers.googleclosurecompiler.disable = !optimizeResources
 
 // http://grails.1312388.n4.nabble.com/IMPORTANT-CVE-2014-0053-Information-Disclosure-in-Grails-applications-td4654254.html
-grails.resources.adhoc.includes = ['/images/**', '/css/**', '/js/**', '/plugins/**', '/fonts/**', '/less/**']
+grails.resources.adhoc.includes = ['/images/**', '/css/**', '/js/**', '/plugins/**', '/fonts/**']
+
+// exclude banner image and favicon from processing because we need to link to them
+// directly, rather than via a resources plugin redirect #978
+grails.resources.adhoc.excludes = ['**/WEB-INF/**', '**/META-INF/**', '/images/banners/**', '/images/favicon.ico']
 
 // since Grails 2.4.0, this is required for the Janrain JSP taglib
 // http://stackoverflow.com/questions/23796109/using-jsp-taglibs-in-grails-2-4-0
