@@ -52,6 +52,9 @@ class FestivalController extends AbstractController {
                 countryCode: command.location.countryCode,
                 types: command.types)
 
+        // If command.types is bound to null by a URL such as /festival/list, the query will include all festival types.
+        // Set command.types to all types to ensure that the selected types in the filter match the query's defaults
+        command.types = command.types ?: FestivalType.values()
         [festivalInstanceList: festivals, command: command]
     }
 
