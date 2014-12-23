@@ -37,21 +37,21 @@ class HomeController {
         def currentCompetitions = Competition.findAllByEndGreaterThanEquals(new Date().clearTime(), [cache: true])
 
         def recentChanges = [
-                reviews: festivalService.latestReviews(1),
-                competitions: currentCompetitions,
+                reviews      : festivalService.latestReviews(1),
+                competitions : currentCompetitions,
                 lineupChanges: lineupChanges,
-                newFestivals: recentlyAddedFestivals,
-                artists: recentlyAddedArtists]
+                newFestivals : recentlyAddedFestivals,
+                artists      : recentlyAddedArtists]
 
         def favoriteFestivals = festivalService.favoriteFestivals()
 
         render view: 'index', model: [
                 upcomingFestivals: upcomingFestivals,
-                freeFestivals: freeFestivals,
-                musicFestivals: musicFestivals,
-                video: videoFestival,
-                recentChanges: recentChanges,
-                favorites: favoriteFestivals]
+                freeFestivals    : freeFestivals,
+                musicFestivals   : musicFestivals,
+                video            : videoFestival,
+                recentChanges    : recentChanges,
+                favorites        : favoriteFestivals]
     }
 
     def contact(String subject) {
@@ -140,7 +140,7 @@ class HomeController {
      */
     private String getBlogPostUrl(BlogEntry blogEntry, boolean absoluteUrl, fragment = null) {
         def linkParams = [controller: "blog", action: "showEntry", absolute: absoluteUrl,
-                params: [title: blogEntry.title, author: blogEntry.author]]
+                          params    : [title: blogEntry.title, author: blogEntry.author]]
 
         if (fragment) {
             linkParams.fragment = fragment
@@ -158,7 +158,7 @@ class HomeController {
     }
 
     /**
-     * Generates the content of the sitemap file
+     * Generates the content of the sitemap
      */
     @Cacheable('festival-default')
     def sitemap() {
@@ -175,8 +175,17 @@ class HomeController {
                     priority(1.0)
                 }
 
+                // festival map, calendar, list
+                [map: 0.9, calendar: 0.9, list: 0.7].each { action, importance ->
+                    url {
+                        loc(g.createLink(absolute: true, controller: 'festival', action: action))
+                        changefreq('daily')
+                        priority(importance)
+                    }
+                }
+
                 // Check this is in synch with the corresponding entry in UrlMappings.groovy
-                ['/about': 0.4, '/apiDocs': 0.7, '/writeForUs': 0.7].each {uri, importance ->
+                ['/about': 0.4, '/apiDocs': 0.7, '/writeForUs': 0.6].each { uri, importance ->
                     url {
                         loc(g.createLink(absolute: true, uri: uri))
                         changefreq('yearly')
@@ -185,7 +194,7 @@ class HomeController {
                 }
 
                 // Include all artist pages
-                Artist.executeQuery("select a.id, a.lastUpdated, a.name from Artist a").each {artist ->
+                Artist.executeQuery("select a.id, a.lastUpdated, a.name from Artist a").each { artist ->
                     def artistId = artist[0]
                     def lastUpdated = formatW3CDate(artist[1])
                     def name = artist[2].encodeAsSeoName()
@@ -200,23 +209,19 @@ class HomeController {
                     }
                 }
 
-                // Include all approved festivals
-                Festival.findAllByApproved(true).each {Festival fvl ->
+                // Include all approved festivals that have not finished
+                festivalService.findAll(futureOnly: true).each { Festival fvl ->
                     def showFestivalUrl = festival.showFestivalUrl(festival: fvl, absolute: true)
-
-                    boolean isOver = fvl.isFinished()
-                    def festivalPriority = isOver ? 0.4 : 0.8
-                    def changeFreq = isOver ? 'yearly' : 'weekly'
 
                     url {
                         loc(showFestivalUrl)
                         lastmod(formatW3CDate(fvl.lastUpdated))
-                        changefreq(changeFreq)
-                        priority(festivalPriority)
+                        changefreq('weekly')
+                        priority(0.8)
                     }
                 }
 
-                BlogEntry.list().each {BlogEntry post ->
+                BlogEntry.list().each { BlogEntry post ->
                     url {
                         loc(getBlogPostUrl(post, true))
                         lastmod(formatW3CDate(post.lastUpdated))
@@ -225,7 +230,7 @@ class HomeController {
                     }
                 }
 
-                Competition.findAllByEndGreaterThanEquals(new Date().clearTime()).each {Competition competition ->
+                Competition.findAllByEndGreaterThanEquals(new Date().clearTime()).each { Competition competition ->
                     url {
                         loc(g.createLink(absolute: true, controller: 'competition', action: 'show', params: [code: competition.code]))
                         changefreq('monthly')
