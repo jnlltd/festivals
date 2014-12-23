@@ -70,9 +70,6 @@ grails.resources.adhoc.includes = ['/images/**', '/css/**', '/js/**', '/plugins/
 // http://stackoverflow.com/questions/23796109/using-jsp-taglibs-in-grails-2-4-0
 grails.gsp.tldScanPattern='classpath*:/META-INF/*.tld,/WEB-INF/tld/*.tld'
 
-// use jQuery for AJAX
-grails.views.javascript.library = "jquery"
-
 environments {
 
     development {

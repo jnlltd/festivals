@@ -37,6 +37,8 @@
         </noscript>
     </g:if>
 
+    <link rel="canonical" href="${grailsApplication.config.grails.serverURL}"/>
+
     <r:require modules="home"/>
 </head>
 
