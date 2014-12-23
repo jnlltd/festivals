@@ -6,7 +6,6 @@
 # logs
 /stacktrace.log
 /test/reports
-/logs
 
 # project release file
 /*.war
@@ -23,3 +22,6 @@
 /target
 
 /grails-app/conf/secret*.properties
+
+*.iml
+*.log
