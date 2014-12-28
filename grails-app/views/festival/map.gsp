@@ -1,23 +1,20 @@
 <%@ page import="ie.festivals.enums.FestivalType; ie.festivals.map.MapFocalPoint" %>
 
 <head>
-    <r:require module="map"/>
-
-    <r:script>
+    <asset:script>
         $(function() {
             var mapData = ${mapData};
 
             var map = new SF.Map('map', mapData.zoom, mapData.center, mapData.baseImageDir);
             map.addMarkers(mapData.festivals);
         });
-    </r:script>
+    </asset:script>
 
     <style type="text/css">
     #map {
         height: 650px;
     }
 
-    /* http://stackoverflow.com/questions/8879544 */
     #map img {
         max-width: none;
     }
@@ -35,6 +32,10 @@
     }
     </style>
 
+    %{-- Using an API key is recommended (but not mandatory): https://developers.google.com/maps/faq#keysystem --}%
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&key=${grailsApplication.config.festival.googleApiClientKey}"></script>
+    <script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/markerclusterer/src/markerclusterer_compiled.js"></script>
+    <script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobubble/src/infobubble-compiled.js"></script>
 </head>
 
 <body>
@@ -67,4 +68,7 @@
         </div>
     </div>
 </div>
+
+<asset:javascript src="map/Map.js"/>
+
 </body>

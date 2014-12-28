@@ -1,3 +1,13 @@
+//= encoding UTF-8
+
+/**
+ * Add a map to the page
+ * @param elementId ID of the element where the map should be displayed
+ * @param zoomLevel
+ * @param center
+ * @param baseImageDir
+ * @constructor
+ */
 SF.Map = function(elementId, zoomLevel, center, baseImageDir) {
 
     var markerImageCache = {};

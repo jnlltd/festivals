@@ -3,8 +3,6 @@
 //= require         modernizer.min.js
 //= require         jquery.placeholder.min.js
 
-var SF = {};
-
 SF.subscribe = function(artistInSearchResults, newArtist) {
     SF._moveArtist(artistInSearchResults, $(newArtist), SF.container);
 };

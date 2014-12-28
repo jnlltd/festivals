@@ -2,7 +2,7 @@ $(function () {
 
     // main carousel
     $('#mainCarousel').carousel({
-        interval: 7000
+        interval: 6000
     });
 
     // pause carousel on click

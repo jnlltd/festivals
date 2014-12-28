@@ -40,7 +40,6 @@
     <link rel="canonical" href="${grailsApplication.config.grails.serverURL}"/>
 
     <asset:stylesheet src="home.css"/>
-    <asset:javascript src="home.js"/>
 </head>
 
 <body>
@@ -375,6 +374,8 @@
         </browser:isNotMobile>
     </div>
 </div>
+
+<asset:javascript src="home.js"/>
 
 </body>
 </html>
