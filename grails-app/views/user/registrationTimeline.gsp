@@ -1,17 +1,12 @@
 <%@ page import="ie.festivals.UserRole" %>
 
-<head>
-    <r:require module="highcharts"/>
-
-</head>
-
 <body>
 
 <div class="container main">
     <div id="chart"></div>
 </div>
 
-<r:script>
+<asset:script>
     $(function () {
         $('#chart').highcharts({
             chart: {
@@ -48,5 +43,7 @@
             }]
         });
     });
-</r:script>
+</asset:script>
+
+<asset:javascript src="highcharts.min.js"/>
 </body>

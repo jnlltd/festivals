@@ -9,11 +9,6 @@ modules = {
         resource 'css/tablesorter/style.css'
     }
 
-    highcharts {
-        dependsOn 'jquery'
-        resource 'js/highcharts.min.js'
-    }
-
     wysihtml5 {
         dependsOn 'layout'
 
