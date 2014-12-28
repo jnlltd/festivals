@@ -1,5 +1,3 @@
-import grails.util.Holders
-
 modules = {
 
     tablesorter {
@@ -25,16 +23,6 @@ modules = {
         resource 'js/wysihtml5/wysihtml5.js'
         resource 'js/wysihtml5/bootstrap-wysihtml5.js'
         resource 'js/wysihtml5/init.js'
-    }
-
-    fullcalendar {
-        dependsOn 'jquery'
-
-        resource 'css/fullcalendar/fullcalendar.css'
-        resource 'css/fullcalendar/blue-theme.css'
-        resource 'css/fullcalendar/custom.css'
-
-        resource 'js/fullcalendar/fullcalendar.min.js'
     }
 
     festival {

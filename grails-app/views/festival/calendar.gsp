@@ -1,10 +1,7 @@
 <%@ page import="ie.festivals.map.MapFocalPoint; ie.festivals.enums.FestivalType" %>
 
 <head>
-
-    <r:require module="fullcalendar"/>
-
-    <r:script>
+    <asset:script>
         $(document).ready(function () {
 
             var getSelectedFestivalTypes = function () {
@@ -68,18 +65,9 @@
             $('.fc-button-next').attr('title', 'Next month');
             $('.fc-button-today').attr('title', 'Current month');
         });
-    </r:script>
+    </asset:script>
 
-    <style type="text/css">
-        /* transitions mess up the spacing between events in Chrome, so disable them #677 */
-        a.fc-event {
-            -webkit-transition: none !important;
-            -moz-transition: none !important;
-            -o-transition: none !important;
-            transition: none !important;
-        }
-    </style>
-
+    <asset:stylesheet href="fullcalendar/custom.css"/>
 </head>
 
 <body>
@@ -128,4 +116,7 @@
         </div>
     </div>
 </div>
+
+<asset:javascript src="fullcalendar/fullcalendar.min.js"/>
+
 </body>

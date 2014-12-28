@@ -1,6 +1,10 @@
 /*
- * Customisations to fullcalendar style made by festivals.ie. Keep these in a separate file so we can easily upgrade
- */
+*= encoding UTF-8
+*= require fullcalendar.css
+*= require blue-theme.css
+*/
+
+/* Customisations to fullcalendar style made by festivals.ie. Keep these in a separate file so we can easily upgrade */
 
 .fc-event-title {
     color: #333333;
@@ -59,4 +63,12 @@ input[type=checkbox] {
 
 table.fc-header {
     border: none;
+}
+
+/* transitions mess up the spacing between events in Chrome, so disable them #677 */
+a.fc-event {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
 }
