@@ -53,6 +53,7 @@ grails.project.dependency.resolution = {
         runtime ':hibernate:3.6.10.18'
 
         compile ":airbrake:0.9.4",
+                ":asset-pipeline:2.0.19",
                 ":audit-logging:1.0.3",
                 ":browser-detection:2.1.0",
                 ":cache:1.1.8",
@@ -61,6 +62,7 @@ grails.project.dependency.resolution = {
                 ":fields:1.4",
                 ":geocode:0.3",
                 ":janrain:1.1.0",
+                ":less-asset-pipeline:2.0.8",
                 ":searchable:0.6.9",
                 ":simple-captcha:1.0.0",
                 ":spring-security-core:1.2.7.4",
