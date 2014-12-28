@@ -1,0 +1,62 @@
+.table th {
+  padding-right: 18px;
+}
+
+@media (max-width: 480px) {
+
+  // only show the first and third table columns
+  .show1-3 th:nth-child(n+2), .show1-3 td:nth-child(n+2) {
+    display: none;
+  }
+
+  .show1-3 th:nth-child(3), .show1-3 td:nth-child(3) {
+    display: table-cell;
+  }
+}
+
+.full-width {
+
+  table-layout:fixed;
+
+  .startCol, .endCol {
+    white-space: nowrap;
+  }
+
+  .freeCol {
+    width: 30px;
+  }
+
+  @media (max-width: 1200px) {
+    .addressCol {
+      display: none;
+    }
+  }
+
+  @media (max-width: 979px) {
+    .freeCol {
+      display: none;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .countryCol, .endCol {
+      display: none;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .typeCol {
+      display: none;
+    }
+
+    .startCol, .endCol {
+      white-space: normal;
+    }
+  }
+
+  @media (max-width: 270px) {
+    .startCol {
+      display: none;
+    }
+  }
+}

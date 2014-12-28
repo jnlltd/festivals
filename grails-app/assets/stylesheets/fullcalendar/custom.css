@@ -1,0 +1,62 @@
+/*
+ * Customisations to fullcalendar style made by festivals.ie. Keep these in a separate file so we can easily upgrade
+ */
+
+.fc-event-title {
+    color: #333333;
+    font-size: 115%;
+}
+
+.fc-border-separate td {
+    border-style: dotted;
+    border-color: #CCC;
+}
+
+.fc-button {
+    height: 27px;
+    border: 1px solid #4E87E1;
+}
+
+.fc-event {
+    border-style: none;
+}
+
+.fc-event-inner {
+    padding-left: 1px;
+}
+
+.fc-event-title:hover {
+    color: #335994;
+}
+
+.fc-button:hover {
+    background: #335994;
+}
+
+.fc th {
+    background: none repeat scroll 0 0 #4E87E1;
+    color: white;
+    border: 0 none;
+    font-weight: normal;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+@media (max-width: 480px) {
+    .fc-header-title h2 {
+        font-size: 16px;
+    }
+
+    .fc-header-right .fc-button-content {
+        padding: 5px 2px;
+    }
+}
+
+input[type=checkbox] {
+    margin-top: 4px;
+    margin-bottom: 0;
+}
+
+table.fc-header {
+    border: none;
+}

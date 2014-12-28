@@ -1,0 +1,17 @@
+.wysihtml5-toolbar a.btn {
+    height: 22px;
+}
+
+.wysihtml5-toolbar .dropdown-menu a {
+    color: white;
+}
+
+.wysihtml5-toolbar .dropdown-menu li > a:hover,
+.wysihtml5-toolbar .dropdown-menu li > a:focus {
+    color: white;
+    background-color: #335994;
+}
+
+.wysihtml5-toolbar .caret {
+    border-top-color: white;
+}

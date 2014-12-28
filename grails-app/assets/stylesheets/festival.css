@@ -1,0 +1,205 @@
+#ratings img {
+    padding-right: 3px;
+}
+
+#addPerformerForm h3 {
+    margin-top: 15px;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+#addPerformerForm input[type=radio] {
+    margin: 0;
+    margin-bottom: 2px;
+}
+
+div#headline .artistEntry {
+    width: 220px;
+}
+
+div#midline .artistEntry {
+    width: 145px;
+}
+
+div#midline .artistEntry h3 {
+    font-size: 1.3em;
+}
+
+.date-option {
+    float: left;
+    margin-right: 20px;
+    white-space: nowrap;
+}
+
+#lineup-filter {
+    background-color: #F4F4F4;
+    overflow: auto;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.youtube iframe {
+    height: 348px;
+}
+
+#similarCarousel .text-only {
+    padding: 0 40px 10px 40px;
+    height: 250px;
+}
+
+#similarCarousel .top {
+    border-radius: 4px 4px 0 0;
+}
+
+#similarCarousel .text-only h3 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 2em;
+    line-height: 30px;
+}
+
+#similarCarousel .carousel-caption {
+    text-align: center;
+    padding: 10px 0;
+    position: static;
+    background-color: #7F7F7F;
+}
+
+@media (max-width: 480px) {
+    #similarCarousel .carousel-caption {
+        padding: 10px;
+    }
+
+    #similarCarousel .carousel-caption h3 {
+        line-height: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    #similarCarousel .text-only {
+        height: 120px;
+    }
+}
+
+#addPerformerForm div {
+    margin-bottom: 10px;
+}
+
+#title-btn-group {
+    margin-bottom: 10px;
+}
+
+form.no-control-group input {
+    margin-bottom: 10px;
+}
+
+/* below this screen width the video messes up the layout, so don't show it */
+@media (max-width: 767px) {
+    div.youtube {
+        display: none !important;
+    }
+}
+
+#delete-festival {
+    display: inline;
+}
+
+#delete-festival input {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    margin-left: 1px;
+}
+
+div.ss_calendar_month_navigator, div.ss_calendar_content {
+    margin-left: 0 !important;
+}
+
+.ticket-heading {
+    margin-top: 20px;
+}
+
+.ticket-heading:first-child {
+    margin-top: 0;
+}
+
+.lineup-toggle {
+    display: inline;
+    margin-right: 10px;
+}
+
+.lineup-toggle input {
+    margin: 0 2px 5px 0;
+}
+
+#overview > table {
+    table-layout: fixed;
+}
+
+#overview > table a {
+    word-wrap: break-word;
+}
+
+#overview > table td:first-child {
+    width: 20%;
+}
+
+@media (max-width: 480px) {
+    #overview > table td:first-child {
+        width: 70px;
+    }
+
+    .lineup-toggle {
+        display: block;
+        margin-right: 0;
+    }
+}
+
+#headline, #midline {
+    margin: 0 auto;
+}
+
+.span8.youtube {
+    height: 0;
+}
+
+a.festivalSubscribe, a.festivalUnsubscribe {
+    height: 22px;
+}
+
+.btn-group .btn.why-subscribe-festival {
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    margin-right: 10px;
+}
+
+.btn-group .btn.favorite-festival {
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+.nav-tabs > li {
+    font-weight: bold;
+}
+
+#midline button.subscribe-artist,
+#headline button.why-subscribe-artist {
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px
+}
+
+#add-performer-panel {
+    padding-bottom: 0;
+    margin-bottom: 10px;
+}
+
+#tickets table {
+    width: 100%;
+}
+
+#tickets th {
+    text-align: left;
+}
+
+.artist-name {
+    margin-top: 0;
+}
