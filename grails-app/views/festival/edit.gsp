@@ -1,6 +1,5 @@
 <head>
-    <r:require module="wysihtml5"/>
-
+    <asset:stylesheet href="wysihtml5/custom.css"/>
 </head>
 
 <body>
@@ -18,4 +17,7 @@
         <button type="submit" class="btn"><i class="icon-ok"></i> Update</button>
     </g:form>
 </div>
+
+<asset:javascript src="wysihtml5/init.js"/>
+
 </body>

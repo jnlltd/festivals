@@ -1,7 +1,7 @@
 <%@ page import="ie.festivals.competition.Competition" %>
 <head>
 
-    <r:require module="wysihtml5"/>
+    <asset:stylesheet href="wysihtml5/custom.css"/>
 
     <style type="text/css">
         input[type=radio] {
@@ -36,4 +36,7 @@
             <button type="submit" class="btn">Update</button>
     </g:uploadForm>
 </div>
+
+<asset:javascript src="wysihtml5/init.js"/>
+
 </body>

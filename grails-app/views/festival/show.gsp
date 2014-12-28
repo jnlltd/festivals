@@ -10,7 +10,7 @@
     <g:set var="showMap" value="${festival.latitude && festival.longitude}"/>
 
     <sec:ifLoggedIn>
-        <r:require module="wysihtml5"/>
+        <asset:stylesheet href="wysihtml5/custom.css"/>
     </sec:ifLoggedIn>
 
     <link rel="canonical" href="${canonicalUrl}"/>
@@ -617,7 +617,7 @@
     </div>
 </div>
 
-<r:script>
+<asset:script>
     $(document).ready(function () {
 
         // handler for the driving directions form
@@ -730,6 +730,10 @@
             SF.container[priorityName] = SF.layoutImageContent(containerId, containerId + ' .artistEntry', 'perfDate');
         }
     });
-</r:script>
+</asset:script>
+
+<sec:ifLoggedIn>
+    <asset:javascript src="wysihtml5/init.js"/>
+</sec:ifLoggedIn>
 
 </body>
