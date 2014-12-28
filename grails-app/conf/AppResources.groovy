@@ -50,11 +50,4 @@ modules = {
         resource 'js/jquery.fitvids.js'
         resource 'css/artist.css'
     }
-
-    api {
-        dependsOn 'jquery'
-
-        resource 'js/toc/jquery.tableofcontents.min.js'
-        resource 'css/api.css'
-    }
 }
