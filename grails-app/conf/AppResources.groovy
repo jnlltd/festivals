@@ -40,10 +40,4 @@ modules = {
         resource 'js/isotope/isotope.centered.js'
         resource 'css/isotope/isotope.css'
     }
-
-    artist {
-        dependsOn 'jquery'
-        resource 'js/jquery.fitvids.js'
-        resource 'css/artist.css'
-    }
 }
