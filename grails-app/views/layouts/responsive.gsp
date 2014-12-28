@@ -26,14 +26,14 @@
     %{--More OpenGraph properties that Facebook uses. See these links for details:--}%
     %{--http://developers.facebook.com/docs/reference/plugins/like/ http://developers.facebook.com/tools/debug--}%
     %{--This image will be used when a page is shared via the AddThis plugin--}%
-    <meta property="og:image" content="${resource(dir: 'images/banners', file: 'love-festivals-299-250.gif', absolute: true)}"/>
+    <meta property="og:image" content="${assetPath(src: 'banners/love-festivals-299-250.gif', absolute: true)}"/>
 
     <meta property="og:type" content="website"/>
 
     %{--This is the ID for Donal's personal Facebook account. I can't find an equivalent for Festivals.ie--}%
     <meta property="fb:admins" content="565111843"/>
 
-    <link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
+    <asset:link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,300' rel='stylesheet'
           type='text/css'>
@@ -43,9 +43,8 @@
     <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <g:setProvider library="jquery"/>
-    <r:require module="layout"/>
-    <r:layoutResources/>
+    <asset:stylesheet src="default.css"/>
+    <asset:javascript src="head.js"/>
     <g:layoutHead/>
 </head>
 
@@ -114,7 +113,7 @@
                 <g:each in="${FestivalType.values()}" var="type">
                     <li title="Show ${type.toString().toLowerCase()} festivals on map">
                         <festival:mapLink types="${type}">
-                            <r:img uri="/images/map/${type.id}.png"/>
+                            <asset:image src="map/${type.id}.png"/>
                         </festival:mapLink>
                     </li>
                 </g:each>
@@ -245,8 +244,8 @@
     <div class="container header">
         <div class="logo">
             <g:link uri='/'>
-                <r:img uri="/images/logo/festivals.svg" alt="Logo" class="pull-left"
-                       data-png-fallback="${r.resource(uri: '/images/logo/festivals.png')}"/>
+                <asset:image src="logo/festivals.svg" alt="Logo" class="pull-left"
+                       data-png-fallback="${assetPath(src: 'logo/festivals.png')}"/>
             </g:link>
     
             <div class="pull-right hidden-phone number-badge dark-bg" id="festivals-listed">
@@ -368,7 +367,7 @@
         </div>
     </div>
 
-    <!-- Main Content-->
+    %{--include page-specific content--}%
     <g:layoutBody/>
 
     <!-- Footer -->
@@ -394,44 +393,46 @@
         </div>
     </div>
 
-    %{--Do not replace this with r:script--}%
-    <script>
-        $(function () {
-            // initialise the autocompleter http://www.devbridge.com/projects/autocomplete/jquery/
-            var autocompleteOptions = {
-                serviceUrl: '${g.createLink(controller: "search", action: "suggest")}',
-
-                // This function causes the browser to navigate directly to an artist/festival page when a search suggestion
-                // is shown. Remove this function if we just want to show the search results for the suggestion instead.
-                onSelect: function(suggestion) {
-
-                    document.location.href = suggestion.data.url;
-                },
-
-                // Strikethrough the name of festivals that are over
-                formatResult: function (suggestion, currentValue) {
-                    var resultText = suggestion.value;
-                    return suggestion.data.finished ? '<span class="finished">' + resultText + '</span>' : resultText;
-                }
-            };
-
-            $('input.search-all').autocomplete(autocompleteOptions);
-        });
-    </script>
-
     %{--Show flash messages in the top message bar--}%
     <g:render template="/common/notificationBar"/>
 
     %{--dialog that is shown when AJAX request is in progress--}%
     <div id="spinner" style="display:none;" class="shadow">
-        <g:img uri="/images/spinner.gif" alt="Loading..."/>
+        <asset:image src="spinner.gif" alt="Loading..."/>
     </div>
 
     <janrain:signInOverlay/>
-    <r:layoutResources/>
     <div class="push"></div>
 </div>
 
 <div class="footer-image"></div>
+
+<asset:script>
+    $(document).ready(function () {
+            // initialise the autocompleter http://www.devbridge.com/projects/autocomplete/jquery/
+            var autocompleteOptions = {
+                serviceUrl: '${g.createLink(controller: "search", action: "suggest")}',
+
+            // This function causes the browser to navigate directly to an artist/festival page when a search suggestion
+            // is shown. Remove this function if we just want to show the search results for the suggestion instead.
+            onSelect: function(suggestion) {
+
+                document.location.href = suggestion.data.url;
+            },
+
+            // Strikethrough the name of festivals that are over
+            formatResult: function (suggestion, currentValue) {
+                var resultText = suggestion.value;
+                return suggestion.data.finished ? '<span class="finished">' + resultText + '</span>' : resultText;
+            }
+        };
+
+        $('input.search-all').autocomplete(autocompleteOptions);
+    });
+</asset:script>
+
+<asset:javascript src="main.js"/>
+<asset:deferredScripts/>
+
 </body>
 </html>

@@ -69,26 +69,16 @@ grails.project.dependency.resolution = {
 
         runtime ":cache-ehcache:1.0.0",
                 ":cache-headers:1.1.7",
-                ":cached-resources:1.0",
-                ":closure-compiler:0.9.2",
                 ":console:1.5.2",
                 ":feeds:1.6",
                 ":flash-helper:0.9.9",
                 ":jdbc-pool:7.0.47",
                 ":jquery:1.11.1",
-                ":lesscss-resources:1.3.3",
                 ":mail:1.0.7",
                 ":quartz:1.0.2",
-                ":resources:1.2.8",
                 ":simple-blog:0.3.5"
 
         test    ":build-test-data:2.2.2"
-
-        if (Environment.current == Environment.PRODUCTION) {
-            // don't include in dev, because it prevents static resources from reloading
-            // don't include in test, because it will be installed every time tests are run
-            runtime ":zipped-resources:1.0"
-        }
     }
 }
 

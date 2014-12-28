@@ -1,3 +1,8 @@
+//= encoding        UTF-8
+//= require_tree    bootstrap
+//= require         modernizer.min.js
+//= require         jquery.placeholder.min.js
+
 var SF = {};
 
 SF.subscribe = function(artistInSearchResults, newArtist) {
@@ -179,7 +184,7 @@ SF.fadeOut = function(selector) {
     $(selector).fadeOut(SF.effectsSpeed);
 };
 
-$(document).ready(function () {
+$(function () {
 
     // clear the comment form after it's been submitted http://stackoverflow.com/questions/9588683/
     $('#commentBody').ajaxSuccess(function() {
