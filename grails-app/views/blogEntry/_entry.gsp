@@ -1,4 +1,4 @@
-<r:script>
+<asset:script>
     $(function() {
         // Use JavaScript to customise UI of commentable, because the GSPs thereof cannot be overriden
         // http://stackoverflow.com/questions/8926448/override-grails-plugin-template
@@ -21,7 +21,7 @@
             $('#commentBody').val('')
         });
     });
-</r:script>
+</asset:script>
 
 <div id="entry${entry.id}" class="blogEntry">
 	<g:render template="/blogEntry/entryTitle" model="[entry: entry, showShareButtons: true]"/>
