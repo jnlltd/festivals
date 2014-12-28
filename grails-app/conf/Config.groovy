@@ -70,7 +70,7 @@ grails.resources.adhoc.includes = ['/images/**', '/css/**', '/js/**', '/plugins/
 // directly, rather than via a resources plugin redirect #978
 grails.resources.adhoc.excludes = ['**/WEB-INF/**', '**/META-INF/**', '/images/banners/**', '/images/favicon.ico']
 
-// the imports themeselves don't need to be compiled, only when they are included in style.less
+// the imports themselves don't need to be compiled, only when they are included in style.less
 grails.assets.excludes = ["imports/*.less"]
 
 // since Grails 2.4.0, this is required for the Janrain JSP taglib
