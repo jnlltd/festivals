@@ -5,27 +5,25 @@
  * @param elementId ID of the element where the map should be displayed
  * @param zoomLevel
  * @param center
- * @param baseImageDir
  * @constructor
  */
-SF.Map = function(elementId, zoomLevel, center, baseImageDir) {
+SF.Map = function(elementId, zoomLevel, center) {
 
     var markerImageCache = {};
 
     var focalPoint = new google.maps.LatLng(center.latitude, center.longitude);
 
-    var getMarkerImage = function(imageFile) {
+    var getMarkerImage = function(markerImagePath) {
 
-        var markerImagePath = baseImageDir + '/map/' + imageFile;
         var cachedMarkerImage = markerImageCache[markerImagePath];
 
-        if (!cachedMarkerImage) {
-            var newMarkerImage = new google.maps.MarkerImage(markerImagePath);
-            markerImageCache[markerImagePath] = newMarkerImage;
-            return newMarkerImage;
-        } else {
+        if (cachedMarkerImage) {
             return cachedMarkerImage;
         }
+
+        var newMarkerImage = new google.maps.MarkerImage(markerImagePath);
+        markerImageCache[markerImagePath] = newMarkerImage;
+        return newMarkerImage;
     };
 
     var map = new google.maps.Map(document.getElementById(elementId), {
@@ -36,8 +34,6 @@ SF.Map = function(elementId, zoomLevel, center, baseImageDir) {
         mapTypeControl: false,
         scrollwheel: false
     });
-
-    var shadow = getMarkerImage('shadow.png');
 
     var addField = function(value) {
         return "<span class='mapField'>" + value + "</span>";
@@ -90,7 +86,6 @@ SF.Map = function(elementId, zoomLevel, center, baseImageDir) {
             var marker = new google.maps.Marker({
                 position: new google.maps.LatLng(festivalData.latitude, festivalData.longitude),
                 title: festivalData.name,
-                shadow: shadow,
                 animation: google.maps.Animation.DROP,
                 icon: getMarkerImage(markerFile)
             });

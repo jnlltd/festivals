@@ -5,7 +5,7 @@
         $(function() {
             var mapData = ${mapData};
 
-            var map = new SF.Map('map', mapData.zoom, mapData.center, mapData.baseImageDir);
+            var map = new SF.Map('map', mapData.zoom, mapData.center);
             map.addMarkers(mapData.festivals);
         });
     </asset:script>

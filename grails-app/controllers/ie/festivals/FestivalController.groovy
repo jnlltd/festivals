@@ -421,20 +421,25 @@ class FestivalController extends AbstractController {
         def jsonMapData = new JSONBuilder().build {
             center = location
             zoom = zoomLevel
-            baseImageDir = g.resource(dir: 'images')
 
             festivals = array {
-                for (fvl in allFestivals) {
+                allFestivals.each { fvl ->
 
                     def url = getFestivalUrl(fvl)
 
                     // if the festival type hasn't been set (Skiddle) show the warning image
-                    def markerImage = fvl.type ? fvl.type.id + '.png' : 'warning.png'
+                    def markerImagePath = fvl.type ? "map/${fvl.type.id}.png" : "map/warning.png"
+                    def resolvedMarkerImagePath = asset.assetPath(src: markerImagePath)
                     def start = g.formatDate(date: fvl.start)
                     def end = g.formatDate(date: fvl.end)
 
-                    festival name: fvl.name, url: url, latitude: fvl.latitude, longitude: fvl.longitude,
-                            markerImage: markerImage, start: start, end: end
+                    festival name: fvl.name,
+                            url: url,
+                            latitude: fvl.latitude,
+                            longitude: fvl.longitude,
+                            markerImage: resolvedMarkerImagePath,
+                            start: start,
+                            end: end
                 }
             }
         }
