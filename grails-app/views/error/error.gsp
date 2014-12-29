@@ -24,7 +24,7 @@
         </div>
 
         <div class="span6 spacer center">
-            <g:img uri='/images/error/cat.jpg' class="img-polaroid"/>
+            <asset:image src='error/cat.jpg' class="img-polaroid"/>
         </div>
     </div>
 </div>
