@@ -188,8 +188,13 @@ are saved is controller by the `festival.images.artistDir` setting in [Config.gr
 ### Launch Application
 
 Once the steps described above have been followed the application can be started (in development mode) 
-by running `grails run-app` on the command-line from the application's root directory. By default the following users will automatically be
-created 
+by running `grails run-app` on the command-line from the application's root directory. 
+
+The application requires a heap size of about 1 gigabyte to *run*, but it requires more than this to *build* because the 
+compilation of the LESS files to CSS consumes a lot of memory. Therefore when running a Grails command that invokes
+the build (e.g. `grails war` or `grails run-app`) it is recommended that you set `GRAILS_OPTS="-Xms1g -Xmx2g"`
+
+By default the following users will automatically be created on startup
 
 | Username                       | Password | Role          |
 | ------------------------------ | ---------| ------------- |
