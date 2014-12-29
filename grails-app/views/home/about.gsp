@@ -25,7 +25,7 @@
             </div>
 
             <div class="span4 spacer center">
-                <r:img file="about-us.gif" class="img-polaroid"/>
+                <asset:image src="about-us.gif" class="img-polaroid"/>
             </div>
         </div>
     </div>

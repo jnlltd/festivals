@@ -48,7 +48,7 @@
                         title="Click to permanently delete this tag"
                         action="deleteTag"
                         onSuccess="SF.remove('#tag-${tag.id}')"
-                        id="${tag.id}"><r:img uri="/images/icons/delete.png"/></g:remoteLink>
+                        id="${tag.id}"><asset:image src="icons/delete.png"/></g:remoteLink>
 
                 <span class="label">${tag.name.encodeAsHTML()}</span>
             </li>
