@@ -1,3 +1,7 @@
+//= encoding UTF-8
+//= require raty/jquery.raty.min.js
+//= require_tree isotope
+
 $(document).ready(function () {
 
     // similar festivals carousel

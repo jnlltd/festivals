@@ -4,7 +4,7 @@
     <title><content:title>${festival.name}</content:title></title>
     <meta name="description" content="${description}"/>
 
-    <r:require modules="festival, isotope"/>
+    <asset:stylesheet href="festival.css"/>
 
     <g:set var="ratingImgDir" value="${g.resource(dir: 'images/raty')}"/>
     <g:set var="showMap" value="${festival.latitude && festival.longitude}"/>
@@ -736,4 +736,5 @@
     <asset:javascript src="wysihtml5/init.js"/>
 </sec:ifLoggedIn>
 
+<asset:javascript src="festival.js"/>
 </body>
