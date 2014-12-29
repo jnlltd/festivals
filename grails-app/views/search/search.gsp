@@ -51,7 +51,7 @@
         }
     </style>
 
-    <r:require module="tablesorter"/>
+    <asset:stylesheet href="tablesorter/style.css"/>
 </head>
 
 <body>
@@ -147,4 +147,7 @@
         </g:if>
     </g:if>
 </div>
+
+<asset:javascript src="tablesorter/init.js"/>
+
 </body>

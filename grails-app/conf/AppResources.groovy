@@ -1,14 +1,5 @@
 modules = {
 
-    tablesorter {
-        dependsOn 'jquery'
-
-        resource 'js/tablesorter/jquery.metadata.js'
-        resource 'js/tablesorter/jquery.tablesorter.min.js'
-        resource 'js/tablesorter/init.js'
-        resource 'css/tablesorter/style.css'
-    }
-
     festival {
         dependsOn 'jquery'
 
