@@ -9,12 +9,11 @@
     </button>
 </g:else>
 
-%{--Don't replace the <script> blocks with <r:script> or an exception occurs when performers are added--}%
 
 <g:if test="${!hideHelpButton}">
     <button class="btn last why-subscribe-artist"><i class="icon-question-sign"></i></button>
 
-    <script type="text/javascript">
+    <asset:script>
     $(function () {
         // Why subscribe to artist popover
         $(".why-subscribe-artist").popover({
@@ -25,11 +24,11 @@
             content: "When you subscribe to an artist, you will receive an email alert when the artist is added to any festival's lineup. Only registered users may subscribe to an artist."
         });
     });
-    </script>
+    </asset:script>
 </g:if>
 
 <sec:ifLoggedIn>
-    <script type="text/javascript">
+    <asset:script>
     $(function () {
 
         function subscribe(artistDomId) {
@@ -82,5 +81,5 @@
         var artistDomId = "${artistDomId}";
         $(getButtonSelector(artistDomId)).one('click', ${subscribed} ? unsubscribe(artistDomId) : subscribe(artistDomId));
     });
-    </script>
+    </asset:script>
 </sec:ifLoggedIn>

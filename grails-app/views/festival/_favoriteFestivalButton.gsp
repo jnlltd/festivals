@@ -11,7 +11,7 @@
 
 <button class="btn last why-favorite-festival"><i class="icon-question-sign"></i></button>
 
-<r:script>
+<asset:script>
     $(function () {
         // Why favourite festival popover
         $(".why-favorite-festival").popover({
@@ -66,4 +66,4 @@
             );
         </sec:ifLoggedIn>
     });
-</r:script>
+</asset:script>
