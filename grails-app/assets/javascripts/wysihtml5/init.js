@@ -1,3 +1,7 @@
+//= encoding UTF-8
+//= require wysihtml5.js
+//= require bootstrap-wysihtml5.js
+
 $(function () {
 
     $('textarea.rich').wysihtml5({

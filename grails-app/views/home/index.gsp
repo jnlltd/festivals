@@ -39,7 +39,7 @@
 
     <link rel="canonical" href="${grailsApplication.config.grails.serverURL}"/>
 
-    <r:require modules="home"/>
+    <asset:stylesheet src="home.css"/>
 </head>
 
 <body>
@@ -60,8 +60,7 @@
 }
 </script>
 
-%{--Do not replace this with r:script--}%
-<script type="text/javascript">
+<asset:script type="text/javascript">
     $(function () {
         // initialise the artist autocompleter http://www.devbridge.com/projects/autocomplete/jquery/
         var autocompleteOptions = {
@@ -99,7 +98,8 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </browser:isNotMobile>
-</script>
+</asset:script>
+
 <div class="container main">
 
 <cache:block>
@@ -111,7 +111,7 @@
 
                     <div class="active item">
                         <festival:mapLink location="${MapFocalPoint.EUROPE}" types="${FestivalType.HEADLINE}">
-                            <r:img file="responsive/headline.jpg" alt="headline"/>
+                            <asset:image src="responsive/headline.jpg" alt="headline"/>
 
                             <div class="carousel-caption">
                                 <h2>Headline Festivals in Europe</h2>
@@ -123,7 +123,7 @@
 
                     <div class="item">
                         <festival:mapLink location="${MapFocalPoint.IRELAND}" types="${FestivalType.MUSIC}">
-                            <r:img file="responsive/music.jpg" alt="music"/>
+                            <asset:image src="responsive/music.jpg" alt="music"/>
 
                             <div class="carousel-caption">
                                 <h2>Music Festivals in Ireland</h2>
@@ -135,7 +135,7 @@
 
                     <div class="item">
                         <festival:mapLink location="${MapFocalPoint.IRELAND}" types="${FestivalType.COMEDY}">
-                            <r:img file="responsive/comedy.jpg" alt="comedy"/>
+                            <asset:image src="responsive/comedy.jpg" alt="comedy"/>
 
                             <div class="carousel-caption">
                                 <h2>Comedy Festivals in Ireland</h2>
@@ -148,7 +148,7 @@
                     <div class="item">
                         <festival:mapLink location="${MapFocalPoint.IRELAND}" types="${FestivalType.FOOD_AND_DRINK}">
 
-                            <r:img file="responsive/food-and-drink.jpg" alt="food and drink"/>
+                            <asset:image src="responsive/food-and-drink.jpg" alt="food and drink"/>
 
                             <div class="carousel-caption">
                                 <h2>Food and Drink Festivals in Ireland</h2>
@@ -176,8 +176,7 @@
             <p>
                 Use the
                 <g:link controller="festival" action="calendar" params="[location: MapFocalPoint.EUROPE]">calendar</g:link>
-                or
-                <festival:mapLink location="${MapFocalPoint.EUROPE}">map</festival:mapLink>
+                or <festival:mapLink location="${MapFocalPoint.EUROPE}">map</festival:mapLink>
                 to browse festivals by date and location.
             </p>
         </div>
@@ -204,7 +203,6 @@
                 <g:render template="/common/categoryLinks"/>
             </div>
         </div>
-
 
         <div class="double-top-spacer panel">
             <div class="title clearfix">
@@ -256,7 +254,7 @@
             </div>
 
             <div class="tab-pane fade in active" id="news">
-                    <ul class="unstyled last">
+                <ul class="unstyled last">
 
                     <g:each in="${recentChanges.competitions}">
                         <li class="spacer">
@@ -305,7 +303,6 @@
                     </blog:recentEntryLinks>
                 </ul>
             </div>
-
         </div>
     </div>
 </div>
@@ -347,7 +344,7 @@
                               tableCssClass: 'show1-3',
                               noRowIds: true,
                               festivalInstanceList: freeFestivals]"/>
-    </div>
+        </div>
     </div>
 </div>
 
@@ -377,6 +374,8 @@
         </browser:isNotMobile>
     </div>
 </div>
+
+<asset:javascript src="home.js"/>
 
 </body>
 </html>

@@ -3,7 +3,7 @@
     <meta name="description" content="${g.message(code: 'blog.meta.description')}"/>
 
     <title><content:title>Write Blog Post</content:title></title>
-    <r:require module="wysihtml5"/>
+    <asset:stylesheet href="wysihtml5/custom.css"/>
 
     <style type="text/css">
     a.cancel {
@@ -62,4 +62,7 @@
         </g:else>
     </g:form>
 </div>
+
+<asset:javascript src="wysihtml5/init.js"/>
+
 </body>

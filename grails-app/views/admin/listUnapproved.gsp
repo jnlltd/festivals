@@ -9,7 +9,7 @@
         }
     </style>
 
-    <r:require module="tablesorter"/>
+    <asset:stylesheet href="tablesorter/style.css"/>
 </head>
 
 <body>
@@ -20,4 +20,7 @@
     <g:render template="/festival/festivalTable"
               model="[showDelete: true, festivalInstanceList: festivalInstanceList]"/>
 </div>
+
+<asset:javascript src="tablesorter/init.js"/>
+
 </body>

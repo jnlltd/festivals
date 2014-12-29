@@ -51,7 +51,7 @@ class ArtistTagLib {
 
         } else if (showThumb) {
             // If the artist was added without an image and a thumbnail is requested, show a silhouette - #128
-            attrs.src = g.resource(dir: 'images', file: 'silhouette.png')
+            attrs.src = asset.assetPath(src: 'images/silhouette.png')
         }
 
         if (attrs.src) {

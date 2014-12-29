@@ -13,7 +13,7 @@
 
     <button class="btn last why-subscribe-festival"><i class="icon-question-sign"></i></button>
 
-    <r:script>
+    <asset:script>
         $(function () {
             // Why subscribe to festival popover
             $(".why-subscribe-festival").popover({
@@ -68,5 +68,5 @@
                 );
             </sec:ifLoggedIn>
         });
-    </r:script>
+    </asset:script>
 </g:if>

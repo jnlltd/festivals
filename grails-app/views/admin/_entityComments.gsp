@@ -8,7 +8,7 @@
                     controller="commentable"
                     action="delete"
                     onSuccess="SF.remove('#comment-${comment.id}')"
-                    id="${comment.id}"><r:img uri="/images/icons/delete.png"/></g:remoteLink>
+                    id="${comment.id}"><asset:image src="icons/delete.png"/></g:remoteLink>
 
             ${comment.body.encodeAsHTML()}
         </li>

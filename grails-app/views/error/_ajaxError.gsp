@@ -3,7 +3,7 @@
         <h1>Hold it right there!!</h1>
 
         <div style="float: right">
-            <g:img uri='/images/error/copper.png'/>
+            <asset:image src='error/copper.png'/>
         </div>
 
         <h2 style="font-size: 20px; line-height: 25px; text-align: left;">

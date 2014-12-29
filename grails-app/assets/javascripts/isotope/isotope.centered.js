@@ -1,3 +1,6 @@
+//= encoding UTF-8
+//= require jquery.isotope.min.js
+
 // http://stackoverflow.com/a/12132588/2648
 $.Isotope.prototype._getCenteredMasonryColumns = function() {
     this.width = this.element.width();

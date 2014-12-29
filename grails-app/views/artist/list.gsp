@@ -42,14 +42,13 @@
         }
     </style>
 
-    <r:require module="isotope"/>
+    <asset:stylesheet href="isotope/isotope.css"/>
 
-    <r:script>
+    <asset:script>
         $(function() {
             SF.layoutImageContent('#artistsList', 'div.artistEntry');
         });
-    </r:script>
-
+    </asset:script>
 </head>
 
 <body>
@@ -73,7 +72,6 @@
         </g:link>
     </div>
 
-
     <div id="bottomArtistList">
         <h1 class="hi-fi double-top-spacer">
             <g:if test="${params.name}">
@@ -92,7 +90,7 @@
             <p>
                 Click on an artist below to see their bio page.
                 <g:if test="${total > params.max}">
-                Use the pagination controls above to see another page of artists in this category.
+                    Use the pagination controls above to see another page of artists in this category.
                 </g:if>
             </p>
         </g:if>
@@ -101,11 +99,16 @@
         </g:else>
 
         <div id="artistsList">
-            <g:each in="${artistInstanceList}" status="i" var="artist">
-                <g:render template="/artist/artistListEntry" model="${[artist: artist,
-                        subscribedArtistIds: subscribedArtistIds, artistAction: ArtistAction.DELETE]}"/>
+            <g:each in="${artistInstanceList}">
+                <g:render template="/artist/artistListEntry" model="${[
+                        artist: it,
+                        subscribedArtistIds: subscribedArtistIds,
+                        artistAction: ArtistAction.DELETE]}"/>
             </g:each>
         </div>
     </div>
 </div>
+
+<asset:javascript src="isotope/isotope.centered.js"/>
+
 </body>

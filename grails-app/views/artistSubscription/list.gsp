@@ -4,9 +4,9 @@
     <title><content:title>Artist Alert Subscription</content:title></title>
 
     <sec:ifLoggedIn>
-        <r:require module="isotope"/>
+        <asset:stylesheet href="isotope/isotope.css"/>
 
-        <r:script>
+        <asset:script>
             $(function () {
 
                 SF.container = $('div.artistsList');
@@ -16,7 +16,7 @@
                     layoutMode: 'fitRows'
                 });
             });
-        </r:script>
+        </asset:script>
     </sec:ifLoggedIn>
 
     <style type="text/css">
@@ -86,4 +86,9 @@
         </div>
     </sec:ifLoggedIn>
 </div>
+
+<sec:ifLoggedIn>
+    <asset:javascript src="isotope/isotope.centered.js"/>
+</sec:ifLoggedIn>
+
 </body>

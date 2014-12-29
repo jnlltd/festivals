@@ -5,7 +5,8 @@
    width="100%"
    data-widget-id="275025608696795138">Tweets by @${username}</a>
 
-<r:script>!function (d, s, id) {
+<asset:script>
+!function (d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (!d.getElementById(id)) {
         js = d.createElement(s);
@@ -13,4 +14,5 @@
         js.src = "//platform.twitter.com/widgets.js";
         fjs.parentNode.insertBefore(js, fjs);
     }
-}(document, "script", "twitter-wjs");</r:script>
+}(document, "script", "twitter-wjs");
+</asset:script>

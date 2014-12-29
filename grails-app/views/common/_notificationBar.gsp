@@ -1,6 +1,6 @@
 %{--I put this JQuery code in a GSP, so I can use flash.msgBody to display the message--}%
 
-<r:script>
+<asset:script>
     (function($) {
 
         var _options = null;
@@ -47,4 +47,4 @@
         </g:if>
 
     })(jQuery);
-</r:script>
+</asset:script>

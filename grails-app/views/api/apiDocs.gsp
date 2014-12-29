@@ -1,8 +1,7 @@
 <%@ page import="ie.festivals.map.MapFocalPoint; ie.festivals.enums.FestivalType" %>
 <head>
-    <r:require module="api"/>
 
-    <script type="text/javascript">
+    <asset:script>
     $(document).ready(function(){
         $("#toc").tableOfContents(
                 $(".container.main"),   // parent element of headings
@@ -13,7 +12,9 @@
                 }
         );
     });
-    </script>
+    </asset:script>
+
+    <asset:stylesheet href="api.css"/>
 </head>
 <body>
 
@@ -564,4 +565,7 @@
 
 </div>
 </cache:block>
+
+<asset:javascript src="toc/jquery.tableofcontents.min.js"/>
+
 </body>

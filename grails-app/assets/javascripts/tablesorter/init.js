@@ -1,3 +1,7 @@
+//= encoding UTF-8
+//= require jquery.metadata.js
+//= require jquery.tablesorter.min.js
+
 $(function() {
 
     // Define a parser that allows date columns to be sorted by converting them to ms since 1/1/1970

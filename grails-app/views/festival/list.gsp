@@ -11,7 +11,7 @@
     }
     </style>
 
-    <r:require module="tablesorter"/>
+    <asset:stylesheet href="tablesorter/style.css"/>
 </head>
 
 <body>
@@ -33,4 +33,7 @@
         </div>
     </div>
 </div>
+
+<asset:javascript src="tablesorter/init.js"/>
+
 </body>

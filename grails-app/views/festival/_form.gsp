@@ -1,6 +1,6 @@
 <%@ page import="ie.festivals.enums.FestivalSource; ie.festivals.Festival; ie.festivals.enums.FestivalType" %>
 
-<r:script>
+<asset:script>
     // show/hide the early bird field depending on whether or not this festival is free
     $(function() {
         if (!${festivalInstance.freeEntry}) {
@@ -11,7 +11,7 @@
              $(this).is(':checked') ? $('#earlyBird').hide() : $('#earlyBird').show();
         });
     });
-</r:script>
+</asset:script>
 
 <g:set var="dateFormat" value="${grailsApplication.config.festival.dateFormat}"/>
 <g:hiddenField name="previousOccurrence.id" value="${festivalInstance.previousOccurrence?.id}"/>

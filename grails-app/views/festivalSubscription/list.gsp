@@ -34,7 +34,7 @@
     }
     </style>
 
-    <r:require module="tablesorter"/>
+    <asset:stylesheet href="tablesorter/style.css"/>
 </head>
 
 <body>
@@ -63,4 +63,7 @@
         <g:render template="/festival/festivalTable" model="[tableCssClass: 'full-width', colSort: '[[7, 1], [2, 0]]']"/>
     </sec:ifLoggedIn>
 </div>
+
+<asset:javascript src="tablesorter/init.js"/>
+
 </body>

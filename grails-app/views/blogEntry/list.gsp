@@ -7,8 +7,7 @@
     <title><content:title>Blog Home</content:title></title>
     <meta name="description" content="${g.message(code: 'blog.meta.description')}"/>
 
-    <r:require module="blog"/>
-
+    <asset:stylesheet href="blog.css"/>
 </head>
 
 <body>

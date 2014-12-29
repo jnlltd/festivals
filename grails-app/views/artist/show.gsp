@@ -1,7 +1,6 @@
 <head>
-    <r:require module="artist"/>
-
     <title><content:title>${artistInstance.name}</content:title></title>
+    <asset:stylesheet href="artist.css"/>
 </head>
 
 <body>
@@ -80,18 +79,11 @@
 
                     </div>
 
-                    <r:script>
+                    <asset:script>
                         $('.performances-toggle').click(function () {
                             $('.hideable, .performances-toggle').toggleClass('hide');
-
-                            // inform tablesorter rows have been added/removed and sort using the default column
-                            var defaultSort = [
-                                [1, 1]
-                            ];
-                            $("table.tablesorter").trigger("update").trigger("sorton", [defaultSort]);
-                            return false;
                         });
-                    </r:script>
+                    </asset:script>
                 </g:if>
             </g:if>
             <g:else>
@@ -201,11 +193,11 @@
     <g:if test="${artistInstance.videoEmbedCode}">
 
     %{--make the muzu player video responsive: https://github.com/davatron5000/FitVids.js--}%
-        <r:script>
+        <asset:script>
             $(function () {
                 $("#video-container").fitVids({customSelector: "iframe[src^='//player.muzu.tv']"});
             });
-        </r:script>
+        </asset:script>
 
         <div class="row-fluid" id="video-container">
             <div class="span12 spacer">
@@ -221,11 +213,13 @@
         <div class="row-fluid">
             <div class="span12" id="credit"><small>Artist data provided by</small>
                 <a target="_blank" href="http://www.last.fm">
-                    <r:img uri="/images/lastfm.png" alt="Last.fm" title="Last.fm"/>
+                    <asset:image src="lastfm.png" alt="Last.fm" title="Last.fm"/>
                 </a>
             </div>
         </div>
     </g:if>
 </div>
+
+<asset:javascript src="jquery.fitvids.js"/>
 
 </body>

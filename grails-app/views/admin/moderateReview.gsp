@@ -1,6 +1,5 @@
 <head>
-    <r:require module="wysihtml5"/>
-
+    <asset:stylesheet href="wysihtml5/custom.css"/>
 </head>
 
 <body>
@@ -29,4 +28,6 @@
     </g:form>
 
 </div>
+
+<asset:javascript src="wysihtml5/init.js"/>
 </body>

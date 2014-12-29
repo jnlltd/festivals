@@ -4,13 +4,13 @@
     <title><content:title>${festival.name}</content:title></title>
     <meta name="description" content="${description}"/>
 
-    <r:require modules="festival, isotope"/>
+    <asset:stylesheet href="festival.css"/>
 
-    <g:set var="ratingImgDir" value="${g.resource(dir: 'images/raty')}"/>
+    <g:set var="ratingImgDir" value="${assetPath(src: 'raty')}"/>
     <g:set var="showMap" value="${festival.latitude && festival.longitude}"/>
 
     <sec:ifLoggedIn>
-        <r:require module="wysihtml5"/>
+        <asset:stylesheet href="wysihtml5/custom.css"/>
     </sec:ifLoggedIn>
 
     <link rel="canonical" href="${canonicalUrl}"/>
@@ -229,7 +229,7 @@
                     <div class="tab-pane clearfix" id="accomodation">
                         <h4 class="pull-left spacer">Search hotels on
                             <a href="http://www.booking.com/index.html?aid=348662" target="_blank">
-                                <g:img uri="/images/booking.com.gif" alt="booking.com"/>
+                                <asset:image src="booking.com.gif" alt="booking.com"/>
                             </a>
                         </h4>
 
@@ -617,7 +617,7 @@
     </div>
 </div>
 
-<r:script>
+<asset:script>
     $(document).ready(function () {
 
         // handler for the driving directions form
@@ -730,6 +730,11 @@
             SF.container[priorityName] = SF.layoutImageContent(containerId, containerId + ' .artistEntry', 'perfDate');
         }
     });
-</r:script>
+</asset:script>
 
+<sec:ifLoggedIn>
+    <asset:javascript src="wysihtml5/init.js"/>
+</sec:ifLoggedIn>
+
+<asset:javascript src="festival.js"/>
 </body>

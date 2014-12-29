@@ -1,5 +1,3 @@
-import grails.util.Environment
-
 grails.servlet.version = "3.0" // Change depending on target container compliance (2.5 or 3.0)
 grails.project.class.dir = "target/classes"
 grails.project.test.class.dir = "target/test-classes"
@@ -53,6 +51,7 @@ grails.project.dependency.resolution = {
         runtime ':hibernate:3.6.10.18'
 
         compile ":airbrake:0.9.4",
+                ":asset-pipeline:2.0.20",
                 ":audit-logging:1.0.3",
                 ":browser-detection:2.1.0",
                 ":cache:1.1.8",
@@ -61,6 +60,7 @@ grails.project.dependency.resolution = {
                 ":fields:1.4",
                 ":geocode:0.3",
                 ":janrain:1.1.0",
+                ":less-asset-pipeline:2.0.8",
                 ":searchable:0.6.9",
                 ":simple-captcha:1.0.0",
                 ":spring-security-core:1.2.7.4",
@@ -69,26 +69,16 @@ grails.project.dependency.resolution = {
 
         runtime ":cache-ehcache:1.0.0",
                 ":cache-headers:1.1.7",
-                ":cached-resources:1.0",
-                ":closure-compiler:0.9.2",
                 ":console:1.5.2",
                 ":feeds:1.6",
                 ":flash-helper:0.9.9",
                 ":jdbc-pool:7.0.47",
                 ":jquery:1.11.1",
-                ":lesscss-resources:1.3.3",
                 ":mail:1.0.7",
                 ":quartz:1.0.2",
-                ":resources:1.2.8",
                 ":simple-blog:0.3.5"
 
         test    ":build-test-data:2.2.2"
-
-        if (Environment.current == Environment.PRODUCTION) {
-            // don't include in dev, because it prevents static resources from reloading
-            // don't include in test, because it will be installed every time tests are run
-            runtime ":zipped-resources:1.0"
-        }
     }
 }
 

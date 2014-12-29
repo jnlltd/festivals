@@ -2,7 +2,8 @@
     <meta name="description" content="${g.message(code: 'blog.meta.description')}"/>
 
     <title><content:title>${entry.title}</content:title></title>
-    <r:require module="blog"/>
+
+    <asset:stylesheet href="blog.css"/>
 
     <style type="text/css">
         .title h2 {
@@ -10,7 +11,6 @@
             padding: 5px 0;
         }
     </style>
-
 </head>
 
 <body>

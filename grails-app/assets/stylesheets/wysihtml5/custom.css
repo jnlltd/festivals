@@ -1,3 +1,8 @@
+/*
+*= encoding UTF-8
+*= require bootstrap-wysihtml5.css
+*/
+
 .wysihtml5-toolbar a.btn {
     height: 22px;
 }

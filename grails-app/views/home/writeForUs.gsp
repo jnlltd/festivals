@@ -31,7 +31,7 @@
             </ul>
         </div>
         <div class="span4 hidden-phone">
-            <r:img uri="/images/banners/love-festivals-299-250.gif"/>
+            <asset:image src="banners/love-festivals-299-250.gif"/>
         </div>
     </div>
 
