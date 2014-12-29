@@ -6,7 +6,7 @@
 
     <asset:stylesheet href="festival.css"/>
 
-    <g:set var="ratingImgDir" value="${g.resource(dir: 'images/raty')}"/>
+    <g:set var="ratingImgDir" value="${assetPath(src: 'raty')}"/>
     <g:set var="showMap" value="${festival.latitude && festival.longitude}"/>
 
     <sec:ifLoggedIn>
@@ -229,7 +229,7 @@
                     <div class="tab-pane clearfix" id="accomodation">
                         <h4 class="pull-left spacer">Search hotels on
                             <a href="http://www.booking.com/index.html?aid=348662" target="_blank">
-                                <g:img uri="/images/booking.com.gif" alt="booking.com"/>
+                                <asset:image src="booking.com.gif" alt="booking.com"/>
                             </a>
                         </h4>
 
