@@ -3,7 +3,7 @@
 <div style="margin: 20px 0;">Hi ${name},</div>
 
 <div style="margin-bottom: 20px;">
-    Thanks for adding ${festivalName} to our site. <festival:show base="${baseUrl}" id="${festivalId}" name="${festivalName}">Click here</festival:show>
+    Thanks for adding ${festivalName} to our site. <festival:show absolute="true" id="${festivalId}" name="${festivalName}">Click here</festival:show>
     to view this festival on festivals.ie.
 </div>
 

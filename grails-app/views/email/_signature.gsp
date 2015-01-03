@@ -1,5 +1,5 @@
 <p>
     Kind Regards,<br/>
-    <a href="${createLink(base: baseUrl, uri: '/')}">Festivals.ie</a>
+    <g:link absolute="true" uri="/">Festivals.ie</g:link>
 </p>
 

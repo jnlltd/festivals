@@ -18,14 +18,6 @@ class EmailSender {
     MailService mailService
     GrailsApplication grailsApplication
 
-    private String getBaseUrl() {
-        String baseUrl = linkGenerator.link(absolute: true, uri: '/')
-
-        // if the last char is '/' remove it or things will go horribly wrong when we use it with <g:link base="${baseUrl}".../>
-        baseUrl[-1] == '/' ? baseUrl[0..-2] : baseUrl
-    }
-
-
     /**
      * Sends an email
      *
@@ -38,7 +30,6 @@ class EmailSender {
     void send(String recipient, MessageSourceResolvable messageSubject, String mailTemplate, Map mailModel, boolean asynchronous = false) {
 
         String mailSubject = messageSource.getMessage(messageSubject, null)
-        mailModel.baseUrl = getBaseUrl()
         def mailBody = pageRenderer.render(template: mailTemplate, model: mailModel)
 
         Closure mailServiceArgs = {

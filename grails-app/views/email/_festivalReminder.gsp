@@ -16,7 +16,7 @@
     </g:else>
 
     For more information about this festival, please visit our
-    <festival:show base="${baseUrl}" id="${festivalId}" name="${festivalName}">${festivalName} festival page</festival:show>.
+    <festival:show absolute="true" id="${festivalId}" name="${festivalName}">${festivalName} festival page</festival:show>.
 </div>
 
 <g:render template="/email/signature"/>
