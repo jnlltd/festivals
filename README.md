@@ -42,7 +42,7 @@ dataSource.username=festival
 dataSource.password=changeme
 ````
 
-#### Optional Secret Configuration
+#### Recommended Secret Configuration
 
 If these settings are omitted, the application will start, but certain features will not work correctly. The consequences
 of omitting each one and (where applicable) how to remove the feature completely are described below
