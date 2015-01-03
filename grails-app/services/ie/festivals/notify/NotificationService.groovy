@@ -31,7 +31,7 @@ class NotificationService extends AbstractJdbcService {
                 INNER JOIN ${joinType}_subscription sub ON sub.${joinType}_id = p.${joinType}_id
                 INNER JOIN user u ON sub.user_id = u.id
                 INNER JOIN festival f ON p.festival_id = f.id
-                WHERE au.class_name = '$Performance.name'
+                WHERE au.class_name = '$Performance.simpleName'
                 AND (au.event_name = 'INSERT' OR (au.event_name = 'UPDATE' AND au.property_name = 'deleted'))
                 ${lastAuditLogId != null ? 'AND au.id <= ?' : ''}
                 ORDER BY username"""
