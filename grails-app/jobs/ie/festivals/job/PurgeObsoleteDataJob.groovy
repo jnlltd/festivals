@@ -1,11 +1,12 @@
 package ie.festivals.job
 
+import ie.festivals.Festival
 import ie.festivals.User
 import ie.festivals.UserRegistrationService
 import ie.festivals.enums.ConfirmationCodeType
 import org.springframework.transaction.TransactionStatus
 
-class DeleteUnconfirmedUsersJob {
+class PurgeObsoleteDataJob {
 
     static triggers = {
         // execute at 2AM every monday
@@ -18,7 +19,34 @@ class DeleteUnconfirmedUsersJob {
     UserRegistrationService userRegistrationService
 
     def execute() {
-        log.info "$DeleteUnconfirmedUsersJob.simpleName started at ${new Date()}"
+        log.info "$PurgeObsoleteDataJob.simpleName started at ${new Date()}"
+
+        def deletedUserCount = deleteUnconfirmedUsers()
+        log.info "$deletedUserCount unconfirmed user(s) were removed"
+
+        def deletedFestivalCount = deleteUnapprovedExpiredFestivals()
+        log.info "$deletedFestivalCount festival(s) were removed"
+
+        log.info "$PurgeObsoleteDataJob.simpleName finished at ${new Date()}"
+    }
+
+    /**
+     * Delete unapproved festivals that are over
+     * @return the number of deleted festivals
+     */
+    private Integer deleteUnapprovedExpiredFestivals() {
+        Date today = new Date().clearTime()
+
+        List<Festival> obsoleteFestivals = Festival.findAllByEndLessThanAndApproved(today, false)
+        obsoleteFestivals.each { it.delete() }
+        obsoleteFestivals.size()
+    }
+
+    /**
+     * Delete users that have failed to confirm their account within a certain period after registration
+     * @return the number of deleted users
+     */
+    private Integer deleteUnconfirmedUsers() {
         def deletedUserCount = 0
 
         List<ConfirmationCodeType> allCodeTypes = ConfirmationCodeType.values().toList()
@@ -41,6 +69,6 @@ class DeleteUnconfirmedUsersJob {
             }
         }
 
-        log.info "$DeleteUnconfirmedUsersJob.simpleName finished at ${new Date()}. A total of $deletedUserCount user(s) were removed"
+        deletedUserCount
     }
 }
