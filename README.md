@@ -216,6 +216,6 @@ command-line from the application's root directory.
 ## License
 
 This application is made available under the Apache 2 license. It includes a copy of the [Highcharts](http://www.highcharts.com/) 
-library, which is *not* free for commercial purposes, so if you wish to use this application for commercial purposes you must either remove
-Highcharts, or purchase a license for it. All other third-party software included in this application may be used
-free-of-charge for both commercial and non-commercial purposes.
+and [Isotope](https://github.com/metafizzy/isotope) libraries, which are *not* free for commercial purposes, so if you wish to 
+use this application for commercial purposes you must either remove these libraries, or purchase a commercial license for them. 
+All other third-party software included in this application may be used free-of-charge for both commercial and non-commercial purposes.
