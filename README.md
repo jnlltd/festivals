@@ -4,20 +4,20 @@
 A responsive [Grails website](http://festivals.ie) that provides information about festivals in Ireland and beyond. Features of
 the application include:
 
-* Calendars that shows festivals by time
-* Maps that show festivals by location
-* Artist alerts - registered users can subscribe to an artist and will receive an email when that artist is added to
+* **Calendars** that shows festivals by time
+* **Maps** that show festivals by location
+* **Artist Alerts** - registered users can subscribe to an artist and will receive an email when that artist is added to
 a festival's lineup
-* Festival alerts - registered users can subscribe to a festival and will receive an email when that festival's lineup
+* **Festival Alerts** - registered users can subscribe to a festival and will receive an email when that festival's lineup
 changes
-* Registered users can rate and review festivals
-* Reminders - registered users can request to receive a reminder about a festival by email up to 10 days before it starts
-* Blog
-* Competitions
-* Web Service - a REST API allows festival data to be retrieved by location, time, festival type, etc 
-* CMS pages allows administrators to add/remove/update artists, festivals, competitions, users, etc. Regular users can also
+* Registered users can **rate and review festivals**
+* **Reminders** - registered users can request to receive a reminder about a festival by email up to 10 days before it starts
+* **Blog**
+* **Competitions**
+* **Web Service** - a REST API allows festival data to be retrieved by location, time, festival type, etc 
+* **CMS pages** allows administrators to add/remove/update artists, festivals, competitions, users, etc. Regular users can also
 add festivals to the application, but they will not appear until approved by an administrator.
-* In addition to artist and festival data entered manually by users, content is also automatically imported from sources
+* In addition to artist and festival data entered manually by users, **content is automatically imported from online sources**
 such as last.fm, Skiddle, Eventbrite, Muzu
 
 ## Run Locally
