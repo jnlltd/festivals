@@ -106,7 +106,10 @@ class NotificationService extends AbstractJdbcService {
         }
     }
 
-    void sendNotifications() {
+    /**
+     * Send an email about changes to artists/festivals to users that have subscribed to these alerts
+     */
+    void sendAlerts() {
 
         doJdbcWork { Sql sql ->
             GroovyRowResult maxIds = sql.firstRow(

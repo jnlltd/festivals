@@ -16,7 +16,12 @@ class NotificationJob {
 
     def execute() {
         log.info "$NotificationJob.simpleName started at ${new Date()}"
-        notificationService.sendNotifications()
+
+        // send artist/festival alert notifications
+        notificationService.sendAlerts()
+
+        // send festival reminder notifications
+        notificationService.sendReminders()
         log.info "$NotificationJob.simpleName completed at ${new Date()}"
     }
 }
