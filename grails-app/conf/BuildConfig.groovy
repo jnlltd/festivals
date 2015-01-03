@@ -51,7 +51,7 @@ grails.project.dependency.resolution = {
         runtime ':hibernate:3.6.10.18'
 
         compile ":airbrake:0.9.4",
-                ":asset-pipeline:2.0.20",
+                ":asset-pipeline:2.0.21",
                 ":audit-logging:1.0.3",
                 ":browser-detection:2.1.0",
                 ":cache:1.1.8",
