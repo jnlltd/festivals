@@ -15,9 +15,6 @@ class UrlMappings {
 
         "/"(controller: 'home')
 
-        // We need specific URLs for registrations #348
-        "/register/success"(controller: 'home')
-
         "500"(controller: 'error')
 
         // 405 => HTTP method not allowed

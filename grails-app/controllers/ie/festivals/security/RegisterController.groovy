@@ -60,13 +60,13 @@ class RegisterController {
         try {
             userRegistrationService.saveUnconfirmedUser(user)
             flashHelper.info 'register.confirm': [user.name, user.username]
-            redirect uri: '/register/success'
 
         } catch (ex) {
             log.error "failed to register user: $user", ex
             flashHelper.warn 'register.saveAndSendError'
-            redirect uri: '/'
         }
+
+        redirect uri: '/'
     }
 
     def verifyRegistration(String token) {
