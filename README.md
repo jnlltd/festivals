@@ -59,7 +59,7 @@ festival.googleApiClientKey=changeme
 
 ##### Skiddle API Key
 
-A daily job automatically imports festival data into the database from the [http://www.skiddle.com/api/](Skiddle events API).
+A daily job automatically imports festival data into the database from the [Skiddle events API](http://www.skiddle.com/api/).
 This job will fail unless the key below is provided.
 
 ````
