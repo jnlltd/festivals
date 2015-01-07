@@ -7,35 +7,6 @@
     <meta name="description"
           content="Ireland's dedicated festivals website. Find all the key information on headline Irish festivals such as Electric Picnic and arts, comedy, sports festivals and more. We also cover festivals in the UK and Europe."/>
 
-    <g:if test="${flash.newRegistration && Environment.current == Environment.PRODUCTION}">
-
-        %{--facebook registration tracking--}%
-        <script type="text/javascript">
-            var fb_param = {};
-            fb_param.pixel_id = '6006219305675';
-            fb_param.value = '0.00';
-            (function(){
-                var fpw = document.createElement('script');
-                fpw.async = true;
-                fpw.src = '//connect.facebook.net/en_US/fp.js';
-                var ref = document.getElementsByTagName('script')[0];
-                ref.parentNode.insertBefore(fpw, ref);
-            })();
-        </script>
-        <noscript>
-            <img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/offsite_event.php?id=6006219305675&amp;value=0" />
-        </noscript>
-
-        %{--twitter registration tracking--}%
-        <script src="http://platform.twitter.com/oct.js" type="text/javascript"></script>
-        <script type="text/javascript">
-            twttr.conversion.trackPid('l4b0r');
-        </script>
-        <noscript>
-            <img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=l4b0r&p_id=Twitter" />
-        </noscript>
-    </g:if>
-
     <link rel="canonical" href="${grailsApplication.config.grails.serverURL}"/>
 
     <asset:stylesheet src="home.css"/>

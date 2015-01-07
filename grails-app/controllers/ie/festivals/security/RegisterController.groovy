@@ -60,7 +60,6 @@ class RegisterController {
         try {
             userRegistrationService.saveUnconfirmedUser(user)
             flashHelper.info 'register.confirm': [user.name, user.username]
-            flash.newRegistration = true
             redirect uri: '/register/success'
 
         } catch (ex) {
