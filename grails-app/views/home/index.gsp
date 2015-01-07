@@ -3,7 +3,6 @@
 <html>
 <head>
     <meta name="google-site-verification" content="IsdfFt1WeABuaHU7eppfGRcWVPOqP-ZooRH2krz9oGo"/>
-    <meta name="msvalidate.01" content="301B8BF927D5AB0D77E7CD6BC7641522"/>
 
     <meta name="description"
           content="Ireland's dedicated festivals website. Find all the key information on headline Irish festivals such as Electric Picnic and arts, comedy, sports festivals and more. We also cover festivals in the UK and Europe."/>
