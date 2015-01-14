@@ -125,7 +125,8 @@ class Festival implements Cloneable, Named {
             favorites    : FavoriteFestival,
             ratings      : Rating,
             reminders    : Reminder,
-            reviews      : Review]
+            reviews      : Review
+    ]
 
     static searchable = {
         mapping {
@@ -134,7 +135,7 @@ class Festival implements Cloneable, Named {
         only = ['name', 'addressLine1', 'addressLine2', 'city', 'region', 'postCode', 'countryName', 'approved', 'type',
                 'start', 'end']
 
-        // hits on the name are more importance than other fields
+        // hits on the name are more important than other fields
         name boost: 2.0
 
         // We want these fields included in the index because they're shown on the results page, but we don't want
