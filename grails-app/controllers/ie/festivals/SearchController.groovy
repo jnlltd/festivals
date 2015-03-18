@@ -8,6 +8,8 @@ class SearchController {
     SearchService searchService
 
     /**
+     * A list of artists and/or festivals matching a query string
+     * @param query
      * @return search suggestions for the <a href="http://www.devbridge.com/projects/autocomplete/jquery/">autocomplete</a>
      * in the main search box
      */
