@@ -14,7 +14,6 @@ class EmailSender {
 
     MessageSource messageSource
     PageRenderer pageRenderer
-    LinkGenerator linkGenerator
     MailService mailService
     GrailsApplication grailsApplication
 

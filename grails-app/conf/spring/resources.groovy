@@ -14,7 +14,6 @@ beans = {
         grailsApplication = ref('grailsApplication')
         messageSource = ref('messageSource')
         pageRenderer = ref('groovyPageRenderer')
-        linkGenerator = ref('grailsLinkGenerator')
     }
 
     // databinding beans: http://grails.org/doc/latest/guide/theWebLayer.html#dataBinding
