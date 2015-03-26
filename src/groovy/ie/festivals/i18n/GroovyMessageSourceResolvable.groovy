@@ -30,10 +30,12 @@ class GroovyMessageSourceResolvable implements MessageSourceResolvable {
         defaultMessage = defaultMsg
     }
 
+    @Override
     String[] getCodes() {
         codesArray
     }
 
+    @Override
     Object[] getArguments() {
         argsArray
     }
