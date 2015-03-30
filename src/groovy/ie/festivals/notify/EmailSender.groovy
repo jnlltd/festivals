@@ -6,7 +6,6 @@ import grails.util.ClosureToMapPopulator
 import grails.util.Environment
 import ie.festivals.MailLog
 import org.codehaus.groovy.grails.commons.GrailsApplication
-import org.codehaus.groovy.grails.web.mapping.LinkGenerator
 import org.springframework.context.MessageSource
 import org.springframework.context.MessageSourceResolvable
 
