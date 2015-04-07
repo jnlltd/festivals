@@ -197,7 +197,7 @@ at least 600/1200 megabytes.
 Commands that run in the development environment will automatically choose the appropriate memory settings on account of
 the `grails.project.fork` [configuration](https://github.com/domurtag/festivals/blob/master/grails-app/conf/BuildConfig.groovy).
 In other environments, the memory settings can be applied by setting the `GRAILS_OPTS` environment variable, e.g.
-`export GRAILS_OPTS="-Xms600m -Xmx1200m"`.
+`export GRAILS_OPTS="-Xms600m -Xmx1200m"`
 
 By default the following users will automatically be created on startup:
 
