@@ -82,8 +82,8 @@ grails.project.dependency.resolution = {
 
         compile ":airbrake:0.9.4",
                 ":asset-pipeline:2.1.5",
-                ":audit-logging:1.0.3",
-                ":browser-detection:2.1.0",
+                ":audit-logging:1.0.4",
+                ":browser-detection:2.2.0",
                 ":cache:1.1.8",
                 ":commentable:0.8.1",
                 ":export:1.6",
@@ -108,7 +108,7 @@ grails.project.dependency.resolution = {
                 ":quartz:1.0.2",
                 ":simple-blog:0.3.5"
 
-        test    ":build-test-data:2.2.2"
+        test    ":build-test-data:2.4.0"
     }
 }
 
