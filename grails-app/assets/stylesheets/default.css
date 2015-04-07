@@ -390,3 +390,7 @@ i.icon {
 ul.tags .label:hover {
     background-color: #335994;
 }
+
+.commentBody {
+    text-align: justify;    
+}
