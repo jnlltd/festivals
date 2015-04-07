@@ -1,3 +1,5 @@
+import grails.util.Environment
+
 grails.servlet.version = "3.0" // Change depending on target container compliance (2.5 or 3.0)
 grails.project.class.dir = "target/classes"
 grails.project.test.class.dir = "target/test-classes"
@@ -5,6 +7,34 @@ grails.project.test.reports.dir = "target/test-reports"
 grails.project.target.level = 1.7
 grails.project.source.level = 1.7
 //grails.project.war.file = "target/${appName}-${appVersion}.war"
+
+// If forking is disabled in the dev env, a NoSuchMethodError occurs during Spring initialization which prevents the app
+// from starting. This problem only occurs when the app is launched from IntelliJ.
+// Disabling forking in the test env allows us to access the application context from functional tests
+if (Environment.developmentMode) {
+
+    // jvmArgs allows us to connect a remote debugger in forked mode without having to use the `--debug-fork` flag
+    // In other words, when run-app is executed in the dev env the app is always in debug mode
+    // http://naleid.com/blog/2014/11/10/debugging-grails-forked-mode
+    boolean waitForDebugger = false
+
+    // the String contained in jvmArgs must not be a GString
+    def jvmArgs = ["-Xrunjdwp:transport=dt_socket,server=y,suspend=${waitForDebugger ? 'y' : 'n'},address=5005".toString()]
+
+    grails.project.fork = [
+            // configure settings for compilation JVM, note that if you alter the Groovy version forked compilation is required
+            //  compile: [maxMemory: 256, minMemory: 64, debug: false, maxPerm: 256, daemon:true],
+
+            // configure settings for the test-app JVM, uses the daemon by default
+            test   : [maxMemory: 1200, minMemory: 256, debug: false, maxPerm: 256, daemon: true, jvmArgs: jvmArgs],
+            // configure settings for the run-app JVM
+            run    : [maxMemory: 1200, minMemory: 256, debug: false, maxPerm: 256, forkReserve: false, jvmArgs: jvmArgs],
+            // configure settings for the run-war JVM
+            war    : [maxMemory: 1200, minMemory: 256, debug: false, maxPerm: 256, forkReserve: false, jvmArgs: jvmArgs],
+            // configure settings for the Console UI JVM
+            console: [maxMemory: 1200, minMemory: 256, debug: false, maxPerm: 256, jvmArgs: jvmArgs]
+    ]
+}
 
 
 grails.project.dependency.resolver = "maven" // or ivy
@@ -47,11 +77,11 @@ grails.project.dependency.resolution = {
     }
 
     plugins {
-        build   ':tomcat:7.0.55'
-        runtime ':hibernate:3.6.10.18'
+        build   ':tomcat:7.0.55.2'
+        runtime ':hibernate:3.6.10.19'
 
         compile ":airbrake:0.9.4",
-                ":asset-pipeline:2.0.21",
+                ":asset-pipeline:2.1.5",
                 ":audit-logging:1.0.3",
                 ":browser-detection:2.1.0",
                 ":cache:1.1.8",
@@ -60,16 +90,16 @@ grails.project.dependency.resolution = {
                 ":fields:1.4",
                 ":geocode:0.3",
                 ":janrain:1.1.0",
-                ":less-asset-pipeline:2.0.8",
+                ":less-asset-pipeline:2.1.0",
                 ":searchable:0.6.9",
                 ":simple-captcha:1.0.0",
                 ":spring-security-core:1.2.7.4",
                 ":taggable:1.1.0",
                 ":webxml:1.4.1"
 
-        runtime ":cache-ehcache:1.0.0",
+        runtime ":cache-ehcache:1.0.5",
                 ":cache-headers:1.1.7",
-                ":console:1.5.2",
+                ":console:1.5.4",
                 ":feeds:1.6",
                 ":flash-helper:0.9.9",
                 ":jdbc-pool:7.0.47",

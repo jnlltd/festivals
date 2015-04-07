@@ -1,5 +1,4 @@
 import ie.festivals.hibernate.UTF8MySQL5InnoDBDialect
-
 import java.sql.Connection
 
 dataSource {
@@ -9,10 +8,8 @@ dataSource {
     logSql = false
     url = "jdbc:mysql://localhost/festival?useUnicode=yes"
 
-    // http://grails.org/2.3.6%20Release%20Notes
     properties {
-        // See http://grails.org/doc/latest/guide/conf.html#dataSource for documentation
-        jmxEnabled = false
+        jmxEnabled = true
         initialSize = 5
         maxActive = 50
         minIdle = 5
@@ -27,18 +24,18 @@ dataSource {
         testOnBorrow = true
         testWhileIdle = true
         testOnReturn = false
-        jdbcInterceptors = "ConnectionState;StatementCache(max=200)"
+        jdbcInterceptors = "ConnectionState"
         defaultTransactionIsolation = Connection.TRANSACTION_READ_COMMITTED
     }
 }
 
 hibernate {
-    // https://grails.org/2.4.3+Release+Notes
-    flush.mode = 'manual'
-
     cache.use_second_level_cache = true
     cache.use_query_cache = true
-    cache.region.factory_class = 'net.sf.ehcache.hibernate.EhCacheRegionFactory'
+    cache.region.factory_class = 'org.hibernate.cache.SingletonEhCacheRegionFactory' // Hibernate 3
+    singleSession = true // configure OSIV singleSession mode
+    flush.mode = 'manual' // OSIV session flush mode outside of transactional context
+    format_sql = true
 }
 
 environments {
@@ -47,10 +44,6 @@ environments {
         dataSource {
             dbCreate = "update"
             //logSql = true
-        }
-
-        hibernate {
-            //format_sql = true
         }
     }
 

@@ -43,6 +43,7 @@ class UserRegistrationServiceTests extends GroovyTestCase {
         assertEquals 4, ConfirmationCode.count()
 
         userRegistrationService.deleteConfirmationCodes(user1, ConfirmationCodeType.values().toList())
+        sessionFactory.currentSession.flush()
 
         assertEquals 1, ConfirmationCode.count()
         assertEquals user2, ConfirmationCode.first().username
@@ -58,6 +59,7 @@ class UserRegistrationServiceTests extends GroovyTestCase {
 
         assertEquals 4, ConfirmationCode.count()
         userRegistrationService.deleteConfirmationCodes(user, [ConfirmationCodeType.PASSWORD_RESET])
+        sessionFactory.currentSession.flush()
 
         assertEquals 0, ConfirmationCode.countByUsernameAndType(user, ConfirmationCodeType.PASSWORD_RESET)
         assertEquals 1, ConfirmationCode.countByUsernameAndType(user, ConfirmationCodeType.REGISTRATION)
@@ -72,6 +74,7 @@ class UserRegistrationServiceTests extends GroovyTestCase {
 
         def expire = ConfirmationCode.first()
         userRegistrationService.deleteConfirmationCodes(user, ConfirmationCodeType.values().toList(), expire)
+        sessionFactory.currentSession.flush()
 
         assertEquals 1, ConfirmationCode.count()
         ConfirmationCode expiredCode = ConfirmationCode.first()

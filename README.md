@@ -174,7 +174,6 @@ collation-server = utf8mb4_unicode_ci
 
 However in most cases, this step can be skipped as the default utf8 encoding should suffice.
 
-
 ### Local Filesystem Access
 
 The application requires access to the local filesystem in order to
@@ -193,7 +192,12 @@ by running `grails run-app` on the command-line from the application's root dire
 The application requires a heap size of about 1 gigabyte to *run*, but it requires more than this to *build* because the 
 optimizations applied to the front-end resources consume a lot of memory. Therefore, before running a Grails command that 
 invokes the build (e.g. `grails war` or `grails run-app`) it is recommended that you set the initial/max heap size to
- at least 600/1200 megabytes. From the command-line, this can be accomplished with `export GRAILS_OPTS="-Xms600m -Xmx1200m"`.
+at least 600/1200 megabytes.
+
+Commands that run in the development environment will automatically choose the appropriate memory settings on account of
+the `grails.project.fork` [configuration](https://github.com/domurtag/festivals/blob/master/grails-app/conf/BuildConfig.groovy).
+In other environments, the memory settings can be applied by setting the `GRAILS_OPTS` environment variable, e.g.
+`export GRAILS_OPTS="-Xms600m -Xmx1200m"`.
 
 By default the following users will automatically be created on startup:
 
