@@ -27,6 +27,19 @@ class FestivalUnitTests {
         assertTrue festival.validate()
     }
 
+
+    void testValidateTwitterUsername() {
+
+        Festival festival = buildFestival(twitterUsername: '@test')
+        assertTrue festival.validate()
+
+        festival.twitterUsername = null
+        assertTrue festival.validate()
+
+        festival.twitterUsername = 'http://twitter.com/test'
+        assertFalse festival.validate()
+    }
+
     void testClone() {
 
         Festival original = buildFestival()

@@ -369,7 +369,14 @@ class Festival implements Cloneable, Named {
         skiddleUrl nullable: true, url: true
         ticketInfo nullable: true, shared: 'unlimitedSize'
         synopsis nullable: true, shared: 'unlimitedSize'
-        twitterUsername nullable: true
+
+        twitterUsername nullable: true, validator: { username ->
+
+            if (username && isWebUrl(username)) {
+                return 'url.invalid'
+            }
+        }
+
         addressLine1 nullable: true
         addressLine2 nullable: true
         region nullable: true

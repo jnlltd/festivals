@@ -132,7 +132,7 @@
 
     <f:field property="twitterUsername" label="Twitter Username">
         <g:textField name="${property}" value="${value}" class="input-medium" maxlength="191"/>
-        <div class="info-inline">If this festival has an official Twitter account, enter the username thereof</div>
+        <div class="info-inline">If this festival has an official Twitter account, enter the username thereof, e.g. @myfestival</div>
     </f:field>
 
     <f:field property="ticketInfo" label="Ticket Information">
