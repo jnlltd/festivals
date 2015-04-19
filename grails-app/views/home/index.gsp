@@ -62,8 +62,18 @@
         <div class="span12">
             <div id="mainCarousel" class="carousel slide">
                 <div class="carousel-inner">
+                    <div class="item">
+                        <g:link controller="competition" action="show" params="[code: 'townlandscarnival']">
+                            <asset:image src="townlands/carousel-logo.jpg" alt="Townlands Competition"/>
 
-                    <div class="active item">
+                            <div class="carousel-caption">
+                                <h2>Win Tickets to Townlands Carnival Festival</h2>
+                                <p>A pair of weekend camping tickets to the 3-day music and arts extravaganza in Macroom, Co. Cork are up for grabs. Enter now!</p>
+                            </div>
+                        </g:link>
+                    </div>
+
+                    <div class="item">
                         <festival:mapLink location="${MapFocalPoint.EUROPE}" types="${FestivalType.HEADLINE}">
                             <asset:image src="responsive/headline.jpg" alt="headline"/>
 
