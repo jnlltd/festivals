@@ -394,3 +394,13 @@ ul.tags .label:hover {
 .commentBody {
     text-align: justify;    
 }
+
+@media (max-width: 767px) {
+    #townlands {
+        padding-top: 30px;
+    }
+
+    .container.header {
+        margin-top: 0;
+    }
+}
