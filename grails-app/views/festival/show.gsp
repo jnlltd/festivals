@@ -542,7 +542,9 @@
         %{--if we have any columns leftover show a banner--}%
         <g:if test="${socialColumns}">
             <div class="span4 spacer center">
-                <asset:image src="townlands/townlands-square.jpg" class="img-rounded"/>
+                <a href="https://townlandscarnival.com/" rel="nofollow" target="_blank">
+                    <asset:image src="townlands/townlands-square.jpg" class="img-rounded"/>
+                </a>
             </div>
         </g:if>
     </div>
