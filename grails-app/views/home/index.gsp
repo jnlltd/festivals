@@ -63,7 +63,7 @@
             <div id="mainCarousel" class="carousel slide">
                 <div class="carousel-inner">
 
-                    <div class="item">
+                    <div class="active item">
                         <festival:mapLink location="${MapFocalPoint.EUROPE}" types="${FestivalType.HEADLINE}">
                             <asset:image src="responsive/headline.jpg" alt="headline"/>
 
