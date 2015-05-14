@@ -16,7 +16,7 @@ class BootStrap {
 
         if (Environment.developmentMode) {
             createUserIfAbsent('Default Admin', 'festival-admin@mailinator.com', adminRole)
-            createUserIfAbsent('Default User', 'festival-user@mailinator.com', adminRole)
+            createUserIfAbsent('Default User', 'festival-user@mailinator.com', userRole)
         }
 
         // Override the default maxSize of 191 on the body property of BlogEntry and Comment

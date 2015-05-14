@@ -38,11 +38,18 @@ class ReviewController extends AbstractController {
         } else {
             review.properties = params
 
-            if (!review.save()) {
+            if (!review.validate()) {
                 flashHelper.warn 'default.invalid': 'Review'
                 render failModelAndView
                 return
             }
+
+            // use HQL rather than the more obvious review.save() because for some unfathomable reason, when the latter
+            // was used, the approved property was not updated in the DB, even though it was bound from the params
+            assert Review.executeUpdate("update Review set title = ?, body = ?, approved = ? where id = ?",
+                    [review.title, review.body, review.approved, review.id])
+
+            flashHelper.info "review.approved.$review.approved": review.title
             redirect reviewCompleteAction
         }
     }
