@@ -296,7 +296,7 @@ grails.cache.config = {
 
 grails.cache.clearAtStartup	= true
 
-// Setup the login providers here: https://rpxnow.com/relying_parties/festivals-ie/setup_widget
+// Setup the login providers here: https://dashboard.janrain.com/
 // Login as domurtag@yahoo.co.uk
 janrain.applicationDomain = "https://festivals-ie.rpxnow.com/"
 janrain.tokenUrl = "${grails.serverURL}/register/socialLoginHandler"
