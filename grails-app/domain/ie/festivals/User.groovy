@@ -27,7 +27,7 @@ class User {
     /**
      * This field is populated from the data returned by Janrain login. It is only used by twitter-registered users
      */
-    String preferredUsername
+    String socialId
 
     @Override
     String toString() {
@@ -59,7 +59,7 @@ class User {
         socialLoginProvider nullable: true
 
         // Compound unique index because usernames should be unique within a particular provider
-        preferredUsername nullable: true, unique: 'socialLoginProvider'
+        socialId nullable: true, unique: 'socialLoginProvider'
 
         passwordConfirm bindable: true
         apiKey nullable: true

@@ -13,7 +13,7 @@
     <g:form action="socialEmailRegistration">
         <g:hiddenField name="name" value="${user.name}"/>
         <g:hiddenField name="socialLoginProvider" value="${user.socialLoginProvider}"/>
-        <g:hiddenField name="preferredUsername" value="${user.preferredUsername}"/>
+        <g:hiddenField name="socialId" value="${user.socialId}"/>
 
         <f:field bean="user" property="username" label="Email Address">
             <g:textField name="${property}" value="${value}" class="input-xlarge" maxlength="191"/>

@@ -63,7 +63,7 @@ class OauthController {
             User socialUserDetails = new User(
                     name: profile.displayName,
                     username: profile.email,
-                    preferredUsername: profile.username,
+                    socialId: profile.username,
                     socialLoginProvider: provider
             )
 

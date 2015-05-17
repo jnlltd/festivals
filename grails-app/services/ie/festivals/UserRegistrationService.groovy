@@ -184,10 +184,10 @@ class UserRegistrationService extends AbstractJdbcService {
         boolean isTwitter = socialUserDetails.isTwitter()
 
         User user = isTwitter ?
-                User.findByPreferredUsernameAndSocialLoginProvider(socialUserDetails.preferredUsername, socialUserDetails.socialLoginProvider) :
+                User.findBySocialIdAndSocialLoginProvider(socialUserDetails.socialId, socialUserDetails.socialLoginProvider) :
                 User.findByUsername(socialUserDetails.username)
 
-        log.debug "User '${socialUserDetails?.name}' loaded by username ${socialUserDetails.username ?: socialUserDetails.preferredUsername}"
+        log.debug "User '${socialUserDetails?.name}' loaded by username ${socialUserDetails.username ?: socialUserDetails.socialId}"
 
         if (user) {
             // Do social login
@@ -202,7 +202,7 @@ class UserRegistrationService extends AbstractJdbcService {
                     name: socialUserDetails.name,
                     username: socialUserDetails.username,
                     socialLoginProvider: socialUserDetails.socialLoginProvider,
-                    preferredUsername: socialUserDetails.preferredUsername)
+                    socialId: socialUserDetails.socialId)
 
             // don't try to save the user if they registered via twitter because their username/email will be null
             if (!isTwitter) {
