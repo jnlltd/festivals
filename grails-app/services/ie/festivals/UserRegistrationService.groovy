@@ -11,6 +11,7 @@ import org.apache.commons.lang.RandomStringUtils
 import org.codehaus.groovy.grails.commons.GrailsApplication
 import org.codehaus.groovy.grails.web.mapping.LinkGenerator
 import grails.transaction.Transactional
+import org.pac4j.core.profile.CommonProfile
 
 import static ie.festivals.enums.ConfirmationCodeType.PASSWORD_RESET
 import static ie.festivals.enums.ConfirmationCodeType.REGISTRATION
@@ -176,36 +177,36 @@ class UserRegistrationService extends AbstractJdbcService {
     /**
      * Register or login a user using a social service (Twitter, Facebook, etc.)
      * @param socialUserDetails information about the user provided to us by the social network
+     * @param provider name of the OAuth2 provider
      * @return a confirmed user
      */
-    User socialSignIn(User socialUserDetails) {
-        // Twitter doesn't include an email in the results, so try to load a Twitter-registered user by
-        // their username
-        boolean isTwitter = socialUserDetails.isTwitter()
+    User socialSignIn(CommonProfile socialUserDetails, String provider) {
 
-        User user = isTwitter ?
-                User.findBySocialIdAndSocialLoginProvider(socialUserDetails.socialId, socialUserDetails.socialLoginProvider) :
-                User.findByUsername(socialUserDetails.username)
-
-        log.debug "User '${socialUserDetails?.name}' loaded by username ${socialUserDetails.username ?: socialUserDetails.socialId}"
+        // We determine if a social user is already registered by querying the DB for
+        // 1. A user from this provider with the same CommonProfile.id
+        // 2. A user from this provider with the same CommonProfile.username. This is a legacy (and unreliable)
+        // way of uniquely identifying users within a particular provider
+        // 3. A user with the same email. This should be our last resort because some OAuth providers (e.g. Twitter & Yahoo)
+        // don't include an email in the response
+        User user = User.findBySocialIdAndSocialLoginProvider(socialUserDetails.id, provider) ?:
+                User.findBySocialIdAndSocialLoginProvider(socialUserDetails.username, provider) ?:
+                User.findByUsername(socialUserDetails.email)
 
         if (user) {
-            // Do social login
-            // Get the most-recent photo in case it has been changed since account was registered.
-            // Don't update the name here, because that would cause a user who registered
-            // (using our form) to have their name changed to social network name if they login socially
+            // update legacy social users to use the new ID (see above)
+            user.socialId = socialUserDetails.id ?: user.socialId
             user.save(failOnError: true)
 
         } else {
-            // Do social registration
+            // save a new user
             user = new User(
-                    name: socialUserDetails.name,
-                    username: socialUserDetails.username,
-                    socialLoginProvider: socialUserDetails.socialLoginProvider,
-                    socialId: socialUserDetails.socialId)
+                    name: socialUserDetails.displayName,
+                    username: socialUserDetails.email,
+                    socialLoginProvider: provider,
+                    socialId: socialUserDetails.id ?: socialUserDetails.username)
 
-            // don't try to save the user if they registered via twitter because their username/email will be null
-            if (!isTwitter) {
+            // don't try to save the user if they registered with Yahoo or Twitter because their username/email will be null
+            if (socialUserDetails.email) {
                 assignRandomPassword(user).save(failOnError: true)
                 String userRoleName = grailsApplication.config.festival.userRoleName
                 Role userRole = Role.findByAuthority(userRoleName)

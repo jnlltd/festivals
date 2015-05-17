@@ -7,7 +7,7 @@ import ie.festivals.notify.FestivalSubscription
 class User {
     def saltSource
     def springSecurityService
-    static transients = ['passwordConfirm', 'twitter', 'enabled', 'accountExpired', 'passwordExpired']
+    static transients = ['passwordConfirm', 'enabled', 'accountExpired', 'passwordExpired']
 
     String name
     String username
@@ -34,15 +34,12 @@ class User {
         name
     }
 
-    boolean isTwitter() {
-        'Twitter' == socialLoginProvider
-    }
-
     static hasMany = [
             artistSubscriptions: ArtistSubscription,
             festivalSubscriptions: FestivalSubscription,
             ratings: Rating,
-            entries: Entry]
+            entries: Entry
+    ]
 
     static constraints = {
 

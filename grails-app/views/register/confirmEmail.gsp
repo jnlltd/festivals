@@ -10,7 +10,7 @@
     <p>To complete the registration process, please enter your email address below. We will send an email
     to this address containing instructions for activating your account.</p>
 
-    <g:form action="socialEmailRegistration">
+    <g:form action="socialEmailRegistration" controller="register">
         <g:hiddenField name="name" value="${user.name}"/>
         <g:hiddenField name="socialLoginProvider" value="${user.socialLoginProvider}"/>
         <g:hiddenField name="socialId" value="${user.socialId}"/>
