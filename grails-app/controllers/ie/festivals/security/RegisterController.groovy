@@ -1,6 +1,5 @@
 package ie.festivals.security
 
-import com.googlecode.janrain4j.api.engage.EngageService
 import grails.plugin.simplecaptcha.SimpleCaptchaService
 import grails.plugins.springsecurity.SpringSecurityService
 import ie.festivals.User
@@ -16,7 +15,6 @@ class RegisterController {
 
     SimpleCaptchaService simpleCaptchaService
     SpringSecurityService springSecurityService
-    EngageService engageService
     GrailsApplication grailsApplication
     UserRegistrationService userRegistrationService
 
@@ -155,52 +153,6 @@ class RegisterController {
     }
 
     /**
-     * The callback method from the Janrain login process
-     */
-    def socialLoginHandler(String token) {
-        log.debug "callback from Janrain login with token: $token"
-
-        if (token) {
-            // Retrieve Janrain authentication info
-            def jsonResponse = engageService.authInfo(token).responseAsJSONObject
-
-            if (jsonResponse?.stat == 'ok') {
-                def profile = jsonResponse.profile
-
-                Closure getPropertySafely = {String propertyName ->
-                    profile.has(propertyName) ? profile.get(propertyName) : null
-                }
-
-                String loginProvider = getPropertySafely('providerName')
-
-                User socialUserDetails = new User(
-                    name: profile.displayName,
-                    // There's also a verifiedEmail field, but it seems to be the same as email
-                    username: getPropertySafely('email'),
-                    preferredUsername: getPropertySafely('preferredUsername'),
-                    socialLoginProvider: loginProvider
-                )
-
-                User registeredUser = userRegistrationService.socialSignIn(socialUserDetails)
-
-                if (registeredUser.isTwitter() && !registeredUser.id) {
-                    // User is trying to register with Twitter, so they need to submit a form to
-                    // supply us with their password
-                    render view: 'confirmEmail', model: [user: registeredUser]
-                    return
-                }
-                springSecurityService.reauthenticate(registeredUser.username)
-                flashHelper.info 'social.login.success': loginProvider
-                redirect uri: '/'
-                return
-            }
-        }
-
-        flashHelper.warn 'social.login.fail'
-        redirect uri: '/'
-    }
-
-    /**
      * Some social networks (e.g. Twitter) don't provide email addresses, so they must complete a form that
      * provides it. This action handles the submission of this form
      * @param user
@@ -217,7 +169,6 @@ class RegisterController {
         }
     }
 }
-
 
 class ResetPasswordCommand {
     String username

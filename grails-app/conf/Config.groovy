@@ -2,6 +2,10 @@ import grails.util.Environment
 import ie.festivals.Role
 import ie.festivals.User
 import ie.festivals.UserRole
+import org.pac4j.oauth.client.FacebookClient
+import org.pac4j.oauth.client.Google2Client
+import org.pac4j.oauth.client.TwitterClient
+import org.pac4j.oauth.client.YahooClient
 import org.springframework.security.core.context.SecurityContextHolder
 
 grails.project.groupId = appName // change this to alter the default package name and Maven publishing destination
@@ -72,7 +76,8 @@ environments {
         grails.logging.jul.usebridge = true
         festival.images.artistDir = System.properties['user.home'] + '/workspace/examples/festivals-backup/artists/'
 
-        grails.serverURL = "http://localhost:8080/festivals"
+        //grails.serverURL = "http://localhost:8080/festivals"
+        grails.serverURL = "http://127.0.0.1/festivals"
     }
 
     test {
@@ -319,3 +324,19 @@ grails.config.locations = [
         "classpath:secret.properties",
         "classpath:secret-${Environment.current}.properties"
 ]
+
+oauth {
+    google {
+        client = Google2Client
+        scope = Google2Client.Google2Scope.EMAIL_AND_PROFILE
+    }
+
+    facebook {
+        client = FacebookClient
+        scope = 'email'
+        fields = 'id,name,first_name,middle_name,last_name,email,picture.width(200).height(200).type(square)'
+    }
+
+    twitter.client = TwitterClient
+    yahoo.client = YahooClient
+}

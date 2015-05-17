@@ -70,7 +70,9 @@ grails.project.dependency.resolution = {
                 'org.imgscalr:imgscalr-lib:4.2',
                 'javax.media.jai:com.springsource.javax.media.jai.core:1.1.3',
                 'org.codehaus.groovy.modules.http-builder:http-builder:0.7.1',
-                'com.neovisionaries:nv-i18n:1.13'
+                'com.neovisionaries:nv-i18n:1.13',
+                'org.pac4j:pac4j-core:1.6.0',
+                'org.pac4j:pac4j-oauth:1.6.0'
 
         test    'org.gmock:gmock:0.8.3',
                 'org.hamcrest:hamcrest-all:1.3'

@@ -58,7 +58,7 @@ class User {
         username blank: false, unique: true, email: true
         socialLoginProvider nullable: true
 
-        // Compound unique index because usernames should be unqiue within a particular provider
+        // Compound unique index because usernames should be unique within a particular provider
         preferredUsername nullable: true, unique: 'socialLoginProvider'
 
         passwordConfirm bindable: true

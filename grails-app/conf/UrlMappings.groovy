@@ -35,5 +35,7 @@ class UrlMappings {
             controller = "festival"
             action = "show"
         }
+
+        name oauth: "/oauth/${action}/${provider}"(controller: 'oauth')
 	}
 }
