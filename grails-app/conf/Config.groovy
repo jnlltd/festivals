@@ -76,8 +76,8 @@ environments {
         grails.logging.jul.usebridge = true
         festival.images.artistDir = System.properties['user.home'] + '/workspace/examples/festivals-backup/artists/'
 
-        //grails.serverURL = "http://localhost:8080/festivals"
-        grails.serverURL = "http://127.0.0.1/festivals"
+        grails.serverURL = "http://localhost:8080/festivals"
+        //grails.serverURL = "http://127.0.0.1/festivals"
     }
 
     test {
@@ -87,11 +87,7 @@ environments {
 
         grails.serverURL = "http://festivals-test.com"
 
-        def dummyValue = 'preventsExceptionsWhenRunningTests'
-
-        janrain.apiKey = dummyValue
-        janrain.applicationID = dummyValue
-        systemWidePasswordSalt = dummyValue
+        systemWidePasswordSalt = "dummy value"
     }
 
     production {

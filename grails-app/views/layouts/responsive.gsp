@@ -162,16 +162,9 @@
                 <h3 class="first">Social Login</h3>
 
                 <p>You can also use any of these services to login to Festivals.ie.</p>
-
-                <ul class="social-links">
-                    <li><i class="icomoon facebook-icon" title="Facebook">&#xe001;</i></li>
-                    <li><i class="icomoon twitter-icon" title="Twitter">&#xe000;</i></li>
-                    <li><i class="icomoon google-icon" title="Google+">&#xe005;</i></li>
-                    <li><i class="icomoon yahoo-icon" title="Yahoo">&#xe004;</i></li>
-                </ul>
+                <g:render template="/login/socialLinks"/>
 
                 <p>If your account was created using a social service, you must use this same service to login.</p>
-                <janrain:signInLink styleClass="btn">Login Socially</janrain:signInLink>
             </div>
         </div>
     </div>
@@ -219,14 +212,8 @@
             <div class="modal-right-col block">
                 <h3 class="first">Social Registration</h3>
 
-                <p>If you already have an account with any of the services below, you can use it to register with Festivals.ie.</p>
-                <ul class="social-links">
-                    <li><i class="icomoon facebook-icon">&#xe001;</i></li>
-                    <li><i class="icomoon twitter-icon">&#xe000;</i></li>
-                    <li><i class="icomoon google-icon">&#xe005;</i></li>
-                    <li><i class="icomoon yahoo-icon">&#xe004;</i></li>
-                </ul>
-                <janrain:signInLink styleClass="btn">Register Socially</janrain:signInLink>
+                <p>If you have an account with any of the services below, you can use it to register with Festivals.ie.</p>
+                <g:render template="/login/socialLinks"/>
 
                 <h3 class="double-top-spacer">Login</h3>
                 <p>If you already have an account, <g:link controller="login">click here to login</g:link> instead.</p>
@@ -407,7 +394,6 @@
         <asset:image src="spinner.gif" alt="Loading..."/>
     </div>
 
-    <janrain:signInOverlay/>
     <div class="push"></div>
 </div>
 

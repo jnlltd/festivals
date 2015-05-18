@@ -10,12 +10,6 @@
         margin-bottom: 2px;
     }
 
-    @media (max-width: 450px) {
-        #janrain {
-            display: none;
-        }
-    }
-
     .link-btn {
         height: 22px;
     }
@@ -23,6 +17,10 @@
     .img-polaroid {
         max-width: 98%;
         height: auto;
+    }
+
+    .social-links.colored {
+        text-align: center;
     }
     </style>
 
@@ -132,14 +130,11 @@
             <div class="alert spacer">
                 Only <g:link controller="register" action="newUser">registered users</g:link> can submit competition entries.
                 You must <g:link controller="login">login</g:link> before you can enter this competition.
-                If you already have an account with Facebook, Twitter, etc. you can use it to
-                <janrain:signInLink>login/register socially</janrain:signInLink> with Festivals.ie.
             </div>
-
-            <div id="janrain">
-                <janrain:signInEmbedded/>
+            <div style="margin-bottom: 10px;">
+                If you have an account with any of the services below, you can use it to sign-in to Festivals.ie.
             </div>
-
+            <g:render template="/login/socialLinks"/>
         </sec:ifNotLoggedIn>
     </g:form>
 

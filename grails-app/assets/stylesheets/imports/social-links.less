@@ -1,58 +1,62 @@
-.social-links{
-  margin:0;
+.social-links {
+  margin: 0;
 
-    li{
-      display: inline;
+  li {
+    display: inline;
+  }
+
+  i {
+    padding-right: 15px;
+    background: none;
+    vertical-align: middle;
+    font-size: 30px;
+    line-height: 30px;
+    color: @grey;
+
+    &:hover {
+      text-decoration: none;
     }
+  }
 
-    i{
-      padding-right: 15px;
-      background: none;
-      vertical-align: middle;
-      font-size: 30px;
-      line-height: 30px;
-      color: @grey;
+  .twitter-icon:hover {
+    color: #00ACED;
+  }
 
-        &:hover{
-          text-decoration: none;
-        }
-    }
+  .facebook-icon:hover {
+    color: #3C5A98;
+  }
 
-    .twitter-icon:hover{
-      color: #00ACED;
-    }
+  .youtube-icon:hover {
+    color: #E24F43;
+  }
 
-    .facebook-icon:hover{
-      color: #3C5A98;
-    }
+  .yahoo-icon:hover {
+    color: #660F6D;
+  }
 
-    .youtube-icon:hover{
-      color: #E24F43;
-    }
-
-    .yahoo-icon:hover{
-      color: #660F6D;
-    }
-
-    .google-icon:hover{
-      color: #D03717;
-    }
+  .google-icon:hover {
+    color: #D03717;
+  }
 }
 
-#login-modal, #register-modal {
-    .twitter-icon{
-        color: #00ACED;
-    }
+#login-modal, #register-modal, .social-links.colored {
+  .twitter-icon {
+    color: #00ACED;
+  }
 
-    .facebook-icon{
-        color: #3C5A98;
-    }
+  .facebook-icon {
+    color: #3C5A98;
+  }
 
-    .yahoo-icon{
-        color: #660F6D;
-    }
+  .yahoo-icon {
+    color: #660F6D;
+  }
 
-    .google-icon{
-        color: #D03717;
-    }
+  .google-icon {
+    color: #D03717;
+  }
+
+  i:hover {
+    color: @grey;
+  }
 }
