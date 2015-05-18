@@ -31,8 +31,6 @@ import org.pac4j.oauth.client.BaseOAuthClient
 @Secured(['permitAll'])
 class OauthController {
 
-    static allowedMethods = [accessToken: 'POST']
-
     OauthService oauthService
     GrailsApplication grailsApplication
     SpringSecurityService springSecurityService
