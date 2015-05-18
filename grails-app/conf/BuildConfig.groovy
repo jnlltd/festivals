@@ -91,7 +91,6 @@ grails.project.dependency.resolution = {
                 ":export:1.6",
                 ":fields:1.4",
                 ":geocode:0.3",
-                ":janrain:1.1.0",
                 ":less-asset-pipeline:2.1.0",
                 ":searchable:0.6.9",
                 ":simple-captcha:1.0.0",

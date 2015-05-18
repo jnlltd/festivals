@@ -63,10 +63,6 @@ grails.hibernate.cache.queries = false
 // the imports themselves don't need to be compiled, only when they are included in style.less
 grails.assets.excludes = ["imports/*.less"]
 
-// since Grails 2.4.0, this is required for the Janrain JSP taglib
-// http://stackoverflow.com/questions/23796109/using-jsp-taglibs-in-grails-2-4-0
-grails.gsp.tldScanPattern='classpath*:/META-INF/*.tld,/WEB-INF/tld/*.tld'
-
 environments {
 
     development {
@@ -296,11 +292,6 @@ grails.cache.config = {
 }
 
 grails.cache.clearAtStartup	= true
-
-// Setup the login providers here: https://dashboard.janrain.com/
-// Login as domurtag@yahoo.co.uk
-janrain.applicationDomain = "https://festivals-ie.rpxnow.com/"
-janrain.tokenUrl = "${grails.serverURL}/register/socialLoginHandler"
 
 grails.plugins.airbrake.async = true
 grails.plugins.airbrake.includeEventsWithoutExceptions = true

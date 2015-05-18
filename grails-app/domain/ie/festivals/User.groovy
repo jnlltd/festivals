@@ -24,9 +24,6 @@ class User {
     String socialLoginProvider
     Date dateCreated
 
-    /**
-     * This field is populated from the data returned by Janrain login. It is only used by twitter-registered users
-     */
     String socialId
 
     @Override

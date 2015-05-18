@@ -1,4 +1,3 @@
-<%@ taglib prefix="janrain" uri="http://janrain4j.googlecode.com/tags" %>
 <%@ page import="ie.festivals.enums.FestivalType; ie.festivals.Artist; ie.festivals.map.MapFocalPoint; ie.festivals.Festival" %>
 <!DOCTYPE html>
 <!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->

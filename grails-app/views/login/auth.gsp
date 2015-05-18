@@ -1,9 +1,12 @@
-<%@ taglib prefix="janrain" uri="http://janrain4j.googlecode.com/tags" %>
 <head>
     <meta name='layout' content='responsive'/>
     <style type="text/css">
         #remember_me {
             margin-bottom: 5px;
+        }
+
+        .social-links.colored {
+            text-align: center;
         }
     </style>
 
@@ -48,7 +51,7 @@
                 If your Festivals.ie account was created using a social service, you must use this same service (below) to login.
                 Otherwise, please use the form on the left to login instead.
             </p>
-            <janrain:signInEmbedded/>
+            <g:render template="/login/socialLinks"/>
         </div>
     </div>
 </div>

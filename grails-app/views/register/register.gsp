@@ -1,4 +1,3 @@
-<%@ taglib prefix="janrain" uri="http://janrain4j.googlecode.com/tags" %>
 <head>
     <meta name='layout' content='responsive'/>
 </head>
@@ -57,9 +56,11 @@
             <p>
                 If you already have an account with any of the services below, you can use it to register with Festivals.ie.
             </p>
-            <janrain:signInEmbedded/>
+            <div style="text-align: center;">
+                <g:render template="/login/socialLinks"/>
+            </div>
 
-            <h3 class="hi-fi">Why Register?</h3>
+            <h3 class="hi-fi double-top-spacer">Why Register?</h3>
             <g:render template="/login/whyRegister"/>
         </div>
     </div>

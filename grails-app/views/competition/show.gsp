@@ -1,5 +1,3 @@
-<%@ taglib prefix="janrain" uri="http://janrain4j.googlecode.com/tags" %>
-
 <g:set var="competition" value="${entry.competition}"/>
 
 <head>
