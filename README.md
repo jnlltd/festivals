@@ -116,15 +116,21 @@ grails.mail.password=changeme
 
 To disable email sending, set `festival.sendEmail = false` in [Config.groovy](https://github.com/domurtag/festivals/blob/master/grails-app/conf/Config.groovy)
 
-##### Janrain
+##### OAuth2
 
-[Janrain](http://janrain.com/product/social-login/) is used to allow users to register and login to the application 
-using services such as Facebook, Twitter, Google+, etc. It requires
-the following configuration
+OAuth2 is used to allow users to register and login to the application using services such as Facebook, Twitter, 
+Google+, etc. For each provider that you wish to support, a key (AKA a client ID) and a secret must be added
 
 ````
-janrain.apiKey=changeme
-janrain.applicationID=changeme
+oauth.${provider}.key=provider-clientId
+oauth.${provider}.secret=provider-secret
+````
+
+For example, to support the Facebook OAuth2 provider, add the following
+
+````
+oauth.facebook.key=my-facebook-oauth-clientId
+oauth.facebook.secret=my-facebook-oauth-secret
 ````
 
 ##### Airbrake API Key
