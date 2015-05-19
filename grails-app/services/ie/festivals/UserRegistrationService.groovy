@@ -193,6 +193,8 @@ class UserRegistrationService extends AbstractJdbcService {
                 User.findByUsername(socialUserDetails.email)
 
         if (user) {
+            log.info "Callback from $provider found existing user with ID $user.id, social ID $socialUserDetails.id, " +
+                    "social username $socialUserDetails.username, social email $socialUserDetails.email"
             // update legacy social users to use the new ID (see above)
             user.socialId = socialUserDetails.id ?: user.socialId
             user.save(failOnError: true)
@@ -208,6 +210,10 @@ class UserRegistrationService extends AbstractJdbcService {
             // don't try to save the user if they registered with Yahoo or Twitter because their username/email will be null
             if (socialUserDetails.email) {
                 assignRandomPassword(user).save(failOnError: true)
+
+                log.info "Saved a new user in callback from $provider with social ID $socialUserDetails.id, social username " +
+                        "$socialUserDetails.username, social email $socialUserDetails.email"
+
                 String userRoleName = grailsApplication.config.festival.userRoleName
                 Role userRole = Role.findByAuthority(userRoleName)
                 UserRole.create user, userRole
