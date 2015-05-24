@@ -1,7 +1,7 @@
-package ie.festivals.xmlparser.muzu
+package ie.festivals.parser.muzu
 
 import groovy.util.slurpersupport.GPathResult
-import ie.festivals.xmlparser.XmlParser
+import ie.festivals.parser.ApiResponseParser
 
 class MuzuParserTests extends GroovyTestCase {
 
@@ -28,7 +28,7 @@ class MuzuParserTests extends GroovyTestCase {
         testParser('noPlaylistResults.xml', MuzuParser.ARTIST_PLAYLIST)
     }
 
-    private testParser(String xmlFile, XmlParser parser, String expectedResult = null) {
+    private testParser(String xmlFile, ApiResponseParser parser, String expectedResult = null) {
         def xmlResult = loadXml(xmlFile)
         def actualEmbedCode = parser.parse(xmlResult)
         assertEquals expectedResult, actualEmbedCode

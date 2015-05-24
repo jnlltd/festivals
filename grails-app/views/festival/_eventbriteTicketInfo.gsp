@@ -2,7 +2,7 @@
     <thead>
         <tr>
             <th>Ticket Type</th>
-            <th class="no-wrap">Sales End</th>
+            <th class="no-wrap">Status</th>
             <th>Price</th>
         </tr>
     </thead>
@@ -10,15 +10,8 @@
     <g:each in="${tickets}">
         <tr>
             <td>${it.name}</td>
-            <td class="no-wrap">
-                <g:formatDate date="${it.end}"/>
-            </td>
-            <td class="no-wrap">
-                <g:if test="${it.price}">
-                    ${it.currency ? "$it.currency " : ''}
-                    <g:formatNumber number="${it.price}" maxFractionDigits="2"/>
-                </g:if>
-            </td>
+            <td class="no-wrap">${it.status}</td>
+            <td class="no-wrap">${it.price}</td>
         </tr>
     </g:each>
 </table>

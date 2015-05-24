@@ -8,7 +8,7 @@ import ie.festivals.ArtistService
 import ie.festivals.Festival
 import ie.festivals.ImportAudit
 import ie.festivals.Performance
-import ie.festivals.xmlparser.SkiddleXmlFestivalParser
+import ie.festivals.parser.SkiddleXmlFestivalParser
 import org.codehaus.groovy.grails.commons.GrailsApplication
 import org.springframework.transaction.TransactionStatus
 

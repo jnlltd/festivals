@@ -79,7 +79,6 @@ environments {
     test {
         festival.sendEmail = false
         festival.images.artistDir = System.properties['java.io.tmpdir'] + '/artists/'
-        festival.eventbrite.maxResultsPerCountry = 5
 
         grails.serverURL = "http://festivals-test.com"
 
@@ -106,8 +105,7 @@ festival {
     }
 
     eventbrite {
-        feedUrl = 'https://www.eventbrite.com/xml/event_search'
-        maxResultsPerCountry = 100
+        feedUrl = 'https://www.eventbriteapi.com/v3/events/search/'
     }
 
     feedbackEmail = 'info@festivals.ie'

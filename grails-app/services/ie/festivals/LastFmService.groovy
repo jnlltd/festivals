@@ -4,10 +4,10 @@ import groovy.util.slurpersupport.GPathResult
 import groovyx.net.http.URIBuilder
 import ie.festivals.music.Album
 import ie.festivals.music.Track
-import ie.festivals.xmlparser.lastfm.ArtistInfoParser
-import ie.festivals.xmlparser.lastfm.ArtistSearchParser
-import ie.festivals.xmlparser.lastfm.TopAlbumsParser
-import ie.festivals.xmlparser.lastfm.TopTracksParser
+import ie.festivals.parser.lastfm.ArtistInfoParser
+import ie.festivals.parser.lastfm.ArtistSearchParser
+import ie.festivals.parser.lastfm.TopAlbumsParser
+import ie.festivals.parser.lastfm.TopTracksParser
 import org.codehaus.groovy.grails.commons.GrailsApplication
 
 class LastFmService {

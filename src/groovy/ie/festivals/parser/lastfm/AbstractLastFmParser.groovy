@@ -1,8 +1,8 @@
-package ie.festivals.xmlparser.lastfm
+package ie.festivals.parser.lastfm
 
-import ie.festivals.xmlparser.XmlParser
+import ie.festivals.parser.ApiResponseParser
 
-abstract class AbstractLastFmParser<T> implements XmlParser<T> {
+abstract class AbstractLastFmParser<T> implements ApiResponseParser<T> {
 
     protected String getImage(parentElement, size) {
 
