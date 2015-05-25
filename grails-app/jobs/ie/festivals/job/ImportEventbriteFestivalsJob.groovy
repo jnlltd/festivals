@@ -87,7 +87,7 @@ class ImportEventbriteFestivalsJob {
 
                 response.success = { resp, Reader reader ->
 
-                    GPathResult response = new JsonSlurper().parse(reader)
+                    Map response = new JsonSlurper().parse(reader)
 
                     def jsonParser = new EventbriteJsonFestivalParser(groovyPageRenderer)
                     Map<Long, Festival> parsedFestivals = jsonParser.parse(response)
@@ -101,7 +101,7 @@ class ImportEventbriteFestivalsJob {
                 response.failure = { resp, Reader reader ->
                     // In practice the response to most invalid requests is 200, so we need to check the JSON response
                     // for an error field
-                    GPathResult response = new JsonSlurper().parse(reader)
+                    Map response = new JsonSlurper().parse(reader)
                     log.error "Eventbrite event search error for request params: $requestParams. $response.error: ${response.'error_description'}"
                 }
             }
