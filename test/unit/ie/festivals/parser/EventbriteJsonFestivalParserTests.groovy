@@ -33,7 +33,6 @@ class EventbriteJsonFestivalParserTests {
 	        parsedFestivals.each { Long eventId, Festival festival ->
                 assertNotNull eventId
 	            assertFalse festival.approved
-				assertNull festival.type
 				assertFalse festival.hasErrors()
                 assertEquals FestivalSource.EVENTBRITE, festival.source
 	        }

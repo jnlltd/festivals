@@ -57,9 +57,8 @@ class EventbriteJsonFestivalParser implements JsonResponseParser<Map<Long, Festi
                     source: FestivalSource.EVENTBRITE,
                     website: festivalJson.url)
 
-            festival.type = FESTIVAL_TYPE_MAPPING[festivalJson.category.short_name]
-
             log.info "Parsing Eventbrite festival named '$festival.name'"
+            festival.type = FESTIVAL_TYPE_MAPPING[festivalJson.category?.short_name]
 
             def floatParser = { elementName, node = festivalJson ->
 
@@ -80,7 +79,7 @@ class EventbriteJsonFestivalParser implements JsonResponseParser<Map<Long, Festi
             // in the venue node
             festival.latitude = floatParser('latitude', venue)
             festival.longitude = floatParser('longitude', venue)
-            festival.synopsis = festivalJson.description.text
+            festival.synopsis = festivalJson.description?.text
 
             def address = venue.address
             festival.addressLine1 = address.address_1
