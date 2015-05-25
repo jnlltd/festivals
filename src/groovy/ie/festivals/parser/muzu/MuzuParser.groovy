@@ -5,9 +5,9 @@ import org.apache.commons.lang.StringUtils
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Element
 import org.jsoup.select.Elements
-import ie.festivals.parser.ApiResponseParser
+import ie.festivals.parser.XmlResponseParser
 
-enum MuzuParser implements ApiResponseParser<String> {
+enum MuzuParser implements XmlResponseParser<String> {
 
     ARTIST_VIDEO('video'),
     ARTIST_PLAYLIST('channel.videos.video')

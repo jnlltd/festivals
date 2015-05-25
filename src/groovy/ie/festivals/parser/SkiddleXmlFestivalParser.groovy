@@ -15,7 +15,7 @@ import org.apache.commons.lang.StringUtils
 
 import java.text.NumberFormat
 
-class SkiddleXmlFestivalParser implements ApiResponseParser<Map<Long, Festival>> {
+class SkiddleXmlFestivalParser implements XmlResponseParser<Map<Long, Festival>> {
 
     private static final UK_COUNTRY_CODE = 'gbr'
 

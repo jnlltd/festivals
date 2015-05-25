@@ -11,7 +11,7 @@ import ie.festivals.tag.EuropeTagLib
 import org.apache.commons.lang.WordUtils
 
 @Slf4j
-class EventbriteJsonFestivalParser implements ApiResponseParser<Map<Long, Festival>> {
+class EventbriteJsonFestivalParser implements JsonResponseParser<Map<Long, Festival>> {
 
     private static final DATE_FORMAT = "yyyy-MM-dd'T'hh:mm:ss"
     private static final TimeZone UTC = TimeZone.getTimeZone('UTC')
@@ -36,12 +36,12 @@ class EventbriteJsonFestivalParser implements ApiResponseParser<Map<Long, Festiv
     ]
 
     private parseDate(elementName, node) {
-        def date = node."$elementName".text()
+        def date = node."$elementName"
         Date.parse(DATE_FORMAT, date, UTC)
     }
 
     @Override
-    Map<Long, Festival> parse(GPathResult response) {
+    Map<Long, Festival> parse(Map response) {
 
         Map<Long, Festival> parsedFestivals = [:]
 
@@ -64,7 +64,7 @@ class EventbriteJsonFestivalParser implements ApiResponseParser<Map<Long, Festiv
             def floatParser = { elementName, node = festivalJson ->
 
                 log.trace "Parsing float from element '$elementName'"
-                String elementContent = node."$elementName".text()
+                String elementContent = node."$elementName"
 
                 if (elementContent) {
                     elementContent.toFloat()
@@ -108,7 +108,7 @@ class EventbriteJsonFestivalParser implements ApiResponseParser<Map<Long, Festiv
 
             festival.approved = false
 
-            Long eventbriteId = festivalJson.id.text().toLong()
+            Long eventbriteId = festivalJson.id.toLong()
             parsedFestivals[eventbriteId] = festival
         }
         parsedFestivals
@@ -122,7 +122,7 @@ class EventbriteJsonFestivalParser implements ApiResponseParser<Map<Long, Festiv
 
         new EventbriteTicket(
                 name: ticketJson.name,
-                price: ticketJson.cost.display,
+                price: ticketJson.cost?.display,
                 status: status,
                 free: ticketJson.free
         )

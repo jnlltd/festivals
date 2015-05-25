@@ -55,6 +55,12 @@ class ImportEventbriteFestivalsJob {
 
         String twoLetterCountryCode = countryCode.alpha2
         params['venue.country'] = twoLetterCountryCode
+
+        // only include popular events if the country is not ireland
+        if (twoLetterCountryCode != CountryCode.IE.alpha2) {
+            params.popular = true
+        }
+
         params
     }
 

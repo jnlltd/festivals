@@ -11,7 +11,7 @@
         <tr>
             <td>${it.name}</td>
             <td class="no-wrap">${it.status}</td>
-            <td class="no-wrap">${it.price}</td>
+            <td class="no-wrap">${it.free ? 'Free' : it.price}</td>
         </tr>
     </g:each>
 </table>

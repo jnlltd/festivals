@@ -28,7 +28,7 @@ class EventbriteJsonFestivalParserTests {
     void testEventbriteXmlParsing() {
 
         play {
-	        Map<Long, Festival> parsedFestivals = parseFestivals('eventbriteFestivalsResponse.xml')
+	        Map<Long, Festival> parsedFestivals = parseFestivals('eventbriteFestivalsResponse.json')
 
 	        parsedFestivals.each { Long eventId, Festival festival ->
                 assertNotNull eventId
@@ -42,8 +42,8 @@ class EventbriteJsonFestivalParserTests {
 
     private Map<Long, Festival> parseFestivals(String fileName) {
         InputStream festivalFeed = getClass().getResourceAsStream(fileName)
-        GPathResult festivalJson = new JsonSlurper().parse(festivalFeed)
-        Integer expectedFestivals = festivalJson.event.size()
+        Map festivalJson = new JsonSlurper().parse(festivalFeed)
+        Integer expectedFestivals = festivalJson.pagination.page_size
 
         def parser = new EventbriteJsonFestivalParser(mockPageRenderer)
         Map<Long, Festival> parsedFestivals = parser.parse(festivalJson)
