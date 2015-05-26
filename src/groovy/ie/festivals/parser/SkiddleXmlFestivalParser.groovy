@@ -1,4 +1,4 @@
-package ie.festivals.xmlparser
+package ie.festivals.parser
 
 import grails.gsp.PageRenderer
 import grails.plugin.geocode.GeocodingService
@@ -15,7 +15,7 @@ import org.apache.commons.lang.StringUtils
 
 import java.text.NumberFormat
 
-class SkiddleXmlFestivalParser implements XmlParser<Map<Long, Festival>> {
+class SkiddleXmlFestivalParser implements XmlResponseParser<Map<Long, Festival>> {
 
     private static final UK_COUNTRY_CODE = 'gbr'
 

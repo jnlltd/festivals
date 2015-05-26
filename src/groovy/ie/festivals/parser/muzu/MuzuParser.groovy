@@ -1,13 +1,13 @@
-package ie.festivals.xmlparser.muzu
+package ie.festivals.parser.muzu
 
 import groovy.util.slurpersupport.GPathResult
 import org.apache.commons.lang.StringUtils
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Element
 import org.jsoup.select.Elements
-import ie.festivals.xmlparser.XmlParser
+import ie.festivals.parser.XmlResponseParser
 
-enum MuzuParser implements XmlParser<String> {
+enum MuzuParser implements XmlResponseParser<String> {
 
     ARTIST_VIDEO('video'),
     ARTIST_PLAYLIST('channel.videos.video')

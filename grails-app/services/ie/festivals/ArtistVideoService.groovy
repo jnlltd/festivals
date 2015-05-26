@@ -2,9 +2,9 @@ package ie.festivals
 
 import groovy.util.slurpersupport.GPathResult
 import groovyx.net.http.URIBuilder
-import ie.festivals.xmlparser.muzu.MuzuParser
+import ie.festivals.parser.muzu.MuzuParser
 import org.codehaus.groovy.grails.commons.GrailsApplication
-import ie.festivals.xmlparser.XmlParser
+import ie.festivals.parser.XmlResponseParser
 
 
 class ArtistVideoService {
@@ -31,7 +31,7 @@ class ArtistVideoService {
         String embedCode = null
         String playlistUrl = 'http://www.muzu.tv/api/artist/details'
 
-        XmlParser<String> playListParser = MuzuParser.ARTIST_PLAYLIST
+        XmlResponseParser<String> playListParser = MuzuParser.ARTIST_PLAYLIST
 
         if (artist.mbid) {
             def params = getBaseMuzuParams() + [mbid: artist.mbid]

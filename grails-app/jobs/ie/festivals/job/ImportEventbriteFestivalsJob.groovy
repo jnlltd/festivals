@@ -3,13 +3,17 @@ package ie.festivals.job
 import com.neovisionaries.i18n.CountryCode
 import grails.gsp.PageRenderer
 import grails.plugin.geocode.GeocodingService
+import groovy.json.JsonSlurper
 import groovy.util.slurpersupport.GPathResult
+import groovyx.net.http.ContentType
 import groovyx.net.http.HTTPBuilder
+import groovyx.net.http.Method
 import ie.festivals.Festival
 import ie.festivals.ImportAudit
 import ie.festivals.tag.EuropeTagLib
-import ie.festivals.xmlparser.EventbriteXmlFestivalParser
+import ie.festivals.parser.EventbriteJsonFestivalParser
 import org.codehaus.groovy.grails.commons.GrailsApplication
+import org.codehaus.groovy.grails.web.mime.MimeType
 import org.springframework.transaction.TransactionStatus
 
 import static com.neovisionaries.i18n.CountryCode.Assignment.OFFICIALLY_ASSIGNED
@@ -17,6 +21,9 @@ import static groovyx.net.http.ContentType.TEXT
 import static groovyx.net.http.Method.GET
 import static ie.festivals.enums.FestivalSource.EVENTBRITE
 
+/**
+ * Quartz job that imports festivals from the <a href="http://www.eventbrite.com/developer/v3/endpoints/events/">Eventbrite event search API</a>
+ */
 class ImportEventbriteFestivalsJob {
 
     static triggers = {
@@ -27,11 +34,22 @@ class ImportEventbriteFestivalsJob {
 
     GrailsApplication grailsApplication
     PageRenderer groovyPageRenderer
-    GeocodingService geocodingService
 
-    private Map getRequestParams(String threeLetterCountryCode, eventbriteConfig) {
+    /**
+     * Append our access token to the following URL to verify this ID
+     * https://www.eventbriteapi.com/v3/formats/?token=
+     */
+    private FESTIVAL_FORMAT_ID = 5
 
-        Map params = [date: 'Future', max: eventbriteConfig.maxResultsPerCountry, keywords: 'festival']
+    private Map getRequestParams(String threeLetterCountryCode) {
+
+        String todayStart = new Date().format('yyyy-MM-dd') + 'T00:00:00Z'
+
+        Map params = [
+                formats                 : FESTIVAL_FORMAT_ID,
+                format                  : 'json',
+                'start_date.range_start': todayStart
+        ]
 
         // we need to check the assignment type as well because some countries (e.g. Finland) have more than one code
         CountryCode countryCode = CountryCode.values().find {
@@ -39,12 +57,11 @@ class ImportEventbriteFestivalsJob {
         }
 
         String twoLetterCountryCode = countryCode.alpha2
-        params.country = twoLetterCountryCode
+        params['venue.country'] = twoLetterCountryCode
 
-        if (threeLetterCountryCode.equalsIgnoreCase('irl')) {
-            params.category = ['conventions', 'entertainment', 'other', 'performances', 'fairs', 'food', 'music', 'recreation'].join(',')
-        } else {
-            params.category = 'music'
+        // only include popular events if the country is not ireland
+        if (twoLetterCountryCode != CountryCode.IE.alpha2) {
+            params.popular = true
         }
 
         params
@@ -56,56 +73,38 @@ class ImportEventbriteFestivalsJob {
         def eventbriteConfig = grailsApplication.config.festival.eventbrite
         String accessToken = eventbriteConfig.accessToken
         String feedUrl = eventbriteConfig.feedUrl
-        String googleApiKey = grailsApplication.config.festival.googleApiServerKey
-        def beforeFestivalCount = countEventbriteFestivals()
+        def beforeFestivalCount = Festival.countBySource(EVENTBRITE)
 
         EuropeTagLib.ISO3166_3.keySet().each { countryCode ->
 
-            def requestParams = getRequestParams(countryCode.toUpperCase(), eventbriteConfig)
+            def requestParams = getRequestParams(countryCode.toUpperCase())
 
-            new HTTPBuilder().request(feedUrl, GET, TEXT) { req ->
+            def http = new HTTPBuilder(feedUrl)
+            http.request(GET, ContentType.JSON) { req ->
 
-                uri.query = requestParams
                 log.info "Eventbrite request URL: $feedUrl, params: $requestParams"
 
+                headers.Accept = MimeType.JSON.name
                 headers.Authorization = "Bearer $accessToken"
-                headers.Accept = 'application/xml'
+                uri.query = requestParams
 
-                response.success = { resp, Reader reader ->
+                response.success = { resp, json ->
 
-                    GPathResult responseXml = new XmlSlurper().parse(reader)
-                    def errorMessage = responseXml.error_message.text()
+                    def jsonParser = new EventbriteJsonFestivalParser(groovyPageRenderer)
+                    Map<Long, Festival> parsedFestivals = jsonParser.parse(json)
+                    log.info "Successfully parsed ${parsedFestivals.size()} festival(s) from Eventbrite for country $countryCode"
 
-                    if (errorMessage) {
-                        def errorType = responseXml.error_type.text()
-
-                        // If there are no matching results this is not really an error
-                        if (errorType != 'Not Found') {
-                            log.error "Error type: '$errorType'. Error message: $errorMessage. Eventbrite request params $requestParams"
-                        }
-                    } else {
-                        def xmlParser = new EventbriteXmlFestivalParser(groovyPageRenderer, geocodingService, googleApiKey)
-                        Map<Long, Festival> parsedFestivals = xmlParser.parse(responseXml)
-                        log.info "Successfully parsed ${parsedFestivals.size()} festival from Eventbrite for country $countryCode"
-
-                        parsedFestivals.each { Long eventbriteId, Festival festival ->
-                            saveFestival(eventbriteId, festival)
-                        }
+                    parsedFestivals.each { Long eventbriteId, Festival festival ->
+                        saveFestival(eventbriteId, festival)
                     }
                 }
 
-                response.failure = { resp ->
-                    // In practice the response to most invalid requests is 200, so we need to check the JSON response
-                    // for an error field
-                    log.error "An error occurred for Eventbrite request params: $requestParams"
+                response.failure = { resp, json ->
+                    log.error "Eventbrite event search error for request params: $requestParams. $json.error: ${json.'error_description'}"
                 }
             }
         }
-        log.info "Eventbrite import completed ${countEventbriteFestivals() - beforeFestivalCount} festivals imported"
-    }
-
-    private Integer countEventbriteFestivals() {
-        Festival.countBySource(EVENTBRITE)
+        log.info "Eventbrite import completed ${Festival.countBySource(EVENTBRITE) - beforeFestivalCount} festivals imported"
     }
 
     private saveFestival(Long eventId, Festival festival) {

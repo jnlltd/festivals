@@ -1,4 +1,4 @@
-package ie.festivals.xmlparser.lastfm
+package ie.festivals.parser.lastfm
 
 import ie.festivals.Artist
 import groovy.util.slurpersupport.GPathResult

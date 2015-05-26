@@ -1,4 +1,4 @@
-package ie.festivals.xmlparser
+package ie.festivals.parser
 
 import grails.gsp.PageRenderer
 import grails.plugin.geocode.Point
